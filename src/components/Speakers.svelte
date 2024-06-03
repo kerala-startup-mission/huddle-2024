@@ -4,7 +4,7 @@
   let speaker_list = [];
 
   onMount(()=>{
-    fetch(`https://events.startupmission.in/api/event/wss-2021/speakers?category=speaker`)
+    fetch(`https://events.startupmission.in/api/event/huddle-global-2023/speakers?category=speaker`)
         .then(response => response.json())
         .then((json) => {
           speaker_list = json;

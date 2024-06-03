@@ -1,0 +1,273 @@
+---
+import Countdown from "./Countdown.astro";
+
+let stats = [
+    {
+      "count": "15000",
+      "symbol": "+",
+      "text": "Visitors"
+    },
+    {
+      "count": "5000",
+      "symbol": "+",
+      "text": "Startups"
+    },
+    {
+      "count": "400",
+      "symbol": "+",
+      "text": "HNIs"
+    },
+    {
+      "count": "300",
+      "symbol": "+",
+      "text": "Mentors"
+    },
+    {
+      "count": "200",
+      "symbol": "+",
+      "text": "Corporates"
+    },
+    
+    {
+      "count": "150",
+      "symbol": "+",
+      "text": "Investors"
+    },
+   
+    {
+      "count": "150",
+      "symbol": "+",
+      "text": "Speakers"
+    },
+    {
+      "count": "100",
+      "symbol": "+",
+      "text": "Exhibitors"
+    },
+    
+    
+  ];
+
+---
+
+<video src="/bg-huddle-3.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" loop class="video-rotation"></video>
+
+<video src="/bg-huddle-2.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background"></video>
+
+<div id="intro" class="py-24 w-full min-h-screen flex flex-col items-center justify-center absolute top-0 z-[5]">
+  <Countdown time="2024-11-27T09:00"></Countdown>
+
+  <div class="absolute bottom-20 flex items-center flex-col justify-center">
+    <h1 class="font-spl text-white text-5xl">Come Let Huddle Together</h1>
+
+    <svg id="intro-mouse" width="20px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+      <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+      <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+    </svg>
+  </div>
+</div>
+
+<div class="py-24 w-full min-h-screen flex flex-col items-center justify-end absolute top-0 bg-[#c70000] hidden">
+
+</div>
+
+<main id="container" class="min-h-[400vh] flex flex-col items-end justify-end z-1" >
+  <!-- <div class="absolute -z-10 w-full h-full top-0 left-0 bg-black bg-opacity-70"></div>
+  <div class="absolute -z-20 bg-cover bg-center bg-no-repeat w-full h-full top-0 left-0" style="background-image:url('/img/bg.jpeg')"></div>   -->	
+  <section class="relative py-24 min-h-screen w-full bg-black bg-opacity-60 flex flex-col items-center justify-center">
+
+    <div class="flex flex-col md:flex-row gap-5 max-w-4xl w-full items-center justify-center">
+      <div class="md:w-1/3">
+        <img src="/img/huddle_white.svg" alt="huddle logo" class="h-48">
+      </div>
+      <div class="md:w-2/3 text-center space-y-3">
+        <h1 class="text-5xl font-extrabold text-white uppercase">
+          Where the world comes to huddle
+        </h1>
+        <h2 class="text-xl font-bold text-white uppercase">
+          Nov 28, 29, 30 at kovalam, trivandrum
+        </h2>
+        <div class="flex flex-row items-center justify-center gap-4">
+          <button class="bg-[#c70000] border-2 border-[#c70000] text-white rounded-md shadow-lg px-5 py-2">Book Tickets</button>
+          <button class="border-2 border-white text-white rounded-md shadow-lg px-5 py-2">Explore Event</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-0 left-0 px-10 py-4 bg-[#c70000] w-full text-white grid grid-cols-4 md:grid-cols-8">
+  
+      {stats.map((item) => (
+        <div class="text-center">
+          <div class="font-bold text-3xl flex flex-row justify-center items-center">
+            <div>{item.count}</div>
+            <span class="text-xl mb-3">{item.symbol}</span>
+          </div>
+          <div class="text-xm text-yellow-400">{item.text}</div>
+        </div>
+      ))}
+  
+    </div>
+  
+  </section>
+</main>
+
+
+
+<style is:inline>
+  .video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -5;
+  }
+
+  .video-rotation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -2;
+  }
+
+  @keyframes intro-scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(25px); }
+  }
+
+  #intro-mouse{
+    animation-name: intro-scroll;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+</style>
+
+<script is:inline>
+  
+  const video = document.querySelector(".video-background");
+  let src = video.currentSrc || video.src;
+  console.log(video, src);
+
+  const video_rotation = document.querySelector(".video-rotation");
+  let src1 = video_rotation.currentSrc || video_rotation.src;
+  console.log(video_rotation, src);
+
+  video_rotation.play();
+
+  /* Make sure the video is 'activated' on iOS */
+  function once(el, event, fn, opts) {
+    var onceFn = function (e) {
+      el.removeEventListener(event, onceFn);
+      fn.apply(this, arguments);
+    };
+    el.addEventListener(event, onceFn, opts);
+    return onceFn;
+  }
+
+  once(document.documentElement, "touchstart", function (e) {
+    video.play();
+    video.pause();
+
+    video_rotation.play();
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let tl = gsap.timeline({
+    defaults: { duration: 5 },
+    scrollTrigger: {
+      trigger: "#container",
+      start: "top top",
+      end: "bottom bottom",
+      toggleActions: "restart none reverse none",
+      // scrub: true,
+      onUpdate: (self) => {
+        console.log(self);
+      },
+      onEnter: () => {
+        document.body.style.overflowY = "hidden";
+        document.querySelector("#intro").classList.add('hidden');
+
+        video_rotation.pause();
+        document.querySelector(".video-rotation").classList.add('hidden');
+
+        setTimeout(()=>{
+          window.scrollTo({
+            top: document.querySelector("#container").scrollHeight - window.innerHeight,
+            left: 0,
+          });
+          document.body.style.overflowY = "scroll";
+          document.querySelector("#main-nav").style.display = 'inherit';
+        }, 3000);
+
+      },
+      onLeave: () => {
+        document.body.style.overflowY = "scroll";
+        document.querySelector("#main-nav").style.display = 'inherit';
+      },
+      onEnterBack: () => {
+        document.body.style.overflowY = "hidden";
+        document.querySelector("#main-nav").style.display = 'none';
+
+        setTimeout(()=>{
+          window.scrollTo({
+            top: 0,
+            left: 0,
+          });
+          document.body.style.overflowY = "scroll";
+          video_rotation.play();
+        }, 5000);
+        
+      },
+      onLeaveBack: () => {
+        document.body.style.overflowY = "scroll";
+        document.querySelector("#intro").classList.remove('hidden');
+
+        document.querySelector(".video-rotation").classList.remove('hidden');
+        video_rotation.play();
+      }
+
+    }
+  });
+
+  once(video, "loadedmetadata", () => {
+    tl.fromTo(
+      '.video-background',
+      {
+        currentTime: 0
+      },
+      {
+        currentTime: video.duration || 1
+      }
+    );
+  });
+
+  setTimeout(function () {
+    if (window["fetch"]) {
+      fetch(src)
+        .then((response) => response.blob())
+        .then((response) => {
+          var blobURL = URL.createObjectURL(response);
+
+          var t = video.currentTime;
+          once(document.documentElement, "touchstart", function (e) {
+            video.play();
+            video.pause();
+            video_rotation.play();
+          });
+
+          video.setAttribute("src", blobURL);
+          video.currentTime = t + 0.01;
+        });
+    }
+  }, 1000);
+
+</script>

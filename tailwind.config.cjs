@@ -2,6 +2,11 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		fontFamily: {
+			'sans': ['Lato', 'ui-sans-serif', 'system-ui', '-apple-system'],
+			'heading' : ['selimaregular', 'ui-sans-serif', 'system-ui', '-apple-system'],
+			'spl' : ['tajur_puncakregular', 'ui-sans-serif', 'system-ui', '-apple-system']
+		},
 		extend: {},
 	},
 	plugins: [],

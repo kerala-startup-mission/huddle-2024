@@ -1,0 +1,75 @@
+---
+  const { time } = Astro.props;
+---
+<div id="countdown-container" class="flex flex-wrap items-center justify-center gap-10 text-white" data-countdown={time} >
+  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+    <div class="px-3 py-3 text-xl md:text-4xl " data-day >00</div>
+    <div class="text-xs md:text-sm font-medium text-white">Days</div>
+  </div>
+  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+    <div class="px-3 py-3 text-xl md:text-4xl " data-hour>00</div>
+    <div class="text-xs md:text-sm font-medium text-white">Hours</div>
+  </div>
+
+  <div class="hidden lg:block xl:w-[28rem] lg:w-[20rem]"></div>
+
+  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+    <div class="px-3 py-3 text-xl md:text-4xl " data-minutes>00</div>
+    <div class="text-xs md:text-sm font-medium text-white">Minutes</div>
+  </div>
+  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+    <div class="px-3 py-3 text-xl md:text-4xl " data-seconds>00</div>
+    <div class="text-xs md:text-sm font-medium text-white">Seconds</div>
+  </div>
+</div>
+
+<script>
+  function initCounter() {
+    var counter = document.querySelector('[data-countdown]');
+    
+    const countDate = new Date(counter.getAttribute('data-countdown')).getTime();
+
+    const daySelector = counter.querySelector('[data-day]');
+    const hourSelector = counter.querySelector('[data-hour]');
+    const minutesSelector = counter.querySelector('[data-minutes]');
+    const secondsSelector = counter.querySelector('[data-seconds]');
+
+    var interval = setInterval(moveTimer, 1000);
+
+    function moveTimer(){
+
+      const now = new Date().getTime();
+
+      const gap = countDate - now;
+
+      // console.log(gap);
+
+      if(gap < 0){
+        callback()
+      }
+
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      const textDay = Math.floor(gap / day);
+      const textHour = Math.floor((gap % day) / hour);
+      const textMin = Math.floor((gap % hour) / minute);
+      const textSec = Math.floor((gap % minute) / second);
+
+      daySelector.innerText = textDay.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+      hourSelector.innerText = textHour.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+      minutesSelector.innerText = textMin.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+      secondsSelector.innerText = textSec.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+
+    }
+
+    function callback(){
+      clearInterval(interval);
+      
+    }
+  }
+
+  initCounter();
+</script>
