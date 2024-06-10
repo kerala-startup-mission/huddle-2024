@@ -7,7 +7,11 @@ module.exports = {
 			'heading' : ['selimaregular', 'ui-sans-serif', 'system-ui', '-apple-system'],
 			'spl' : ['tajur_puncakregular', 'ui-sans-serif', 'system-ui', '-apple-system']
 		},
-		extend: {},
+		extend: {
+			colors: {
+				'huddle': '#C70000',
+			}
+		},
 	},
 	plugins: [],
 }

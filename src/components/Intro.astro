@@ -203,6 +203,7 @@ let stats = [
           window.scrollTo({
             top: document.querySelector("#container").scrollHeight - window.innerHeight,
             left: 0,
+            behavior: "smooth"
           });
           document.body.style.overflowY = "scroll";
           document.querySelector("#main-nav").style.display = 'inherit';
