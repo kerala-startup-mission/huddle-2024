@@ -50,14 +50,9 @@ let stats = [
 
 ---
 
-<video src="/bg-huddle-4.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" loop class="video-rotation hidden md:block"></video>
+<video src="/bg-huddle-4.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" loop class="video-rotation"></video>
 
-<video src="/bg-huddle-2.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background hidden md:block"></video>
-
-<video src="/huddle-xs-1.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" loop class="video-rotation-xs md:hidden"></video>
-
-<video src="/huddle-xs-2.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background-xs md:hidden"></video>
-
+<video src="/bg-huddle-2.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background"></video>
 
 <div id="intro" class="py-24 w-full min-h-screen flex flex-col items-center justify-center absolute top-0 z-[5]">
   <Countdown time="2024-11-27T09:00"></Countdown>
@@ -191,16 +186,7 @@ let stats = [
   let src1 = video_rotation.currentSrc || video_rotation.src;
   console.log(video_rotation, src1);
 
-  const video_sm = document.querySelector(".video-background-xs");
-  let src_sm = video_sm.currentSrc || video_sm.src;
-  console.log(video_sm, src_sm);
-
-  const video_rotation_sm = document.querySelector(".video-rotation-xs");
-  let src1_sm = video_rotation_sm.currentSrc || video_rotation_sm.src;
-  console.log(video_rotation_sm, src1_sm);
-
   video_rotation.play();
-  video_rotation_sm.play();
 
   /* Make sure the video is 'activated' on iOS */
   function once(el, event, fn, opts) {
@@ -216,11 +202,7 @@ let stats = [
     video.play();
     video.pause();
 
-    video_sm.play();
-    video_sm.pause();
-
     video_rotation.play();
-    video_rotation_sm.play();
   });
 
   gsap.registerPlugin(ScrollTrigger);
@@ -242,7 +224,7 @@ let stats = [
 
         video_rotation.pause();
 
-        document.querySelector(".video-rotation").classList.remove('md:block');
+        document.querySelector(".video-rotation").classList.add('hidden');
 
         setTimeout(()=>{
           window.scrollTo({
@@ -277,69 +259,9 @@ let stats = [
         document.body.style.overflowY = "scroll";
         document.querySelector("#intro").classList.remove('hidden');
 
-        document.querySelector(".video-rotation").classList.add('md:block');
+        document.querySelector(".video-rotation").classList.remove('hidden');
 
         video_rotation.play();
-      }
-
-    }
-  });
-
-  let tl2 = gsap.timeline({
-    defaults: { duration: 5 },
-    scrollTrigger: {
-      trigger: "#container",
-      start: "top top",
-      end: "bottom bottom",
-      toggleActions: "restart none reverse none",
-      // scrub: true,
-      onUpdate: (self) => {
-        console.log(self);
-      },
-      onEnter: () => {
-        document.body.style.overflowY = "hidden";
-        document.querySelector("#intro").classList.add('hidden');
-
-        video_rotation_sm.pause();
-
-        document.querySelector(".video-rotation-xs").classList.add('hidden');
-
-        setTimeout(()=>{
-          window.scrollTo({
-            top: document.querySelector("#container").scrollHeight - window.innerHeight,
-            left: 0,
-            behavior: "smooth"
-          });
-          document.body.style.overflowY = "scroll";
-          document.querySelector("#main-nav").style.display = 'inherit';
-        }, 3000);
-
-      },
-      onLeave: () => {
-        document.body.style.overflowY = "scroll";
-        document.querySelector("#main-nav").style.display = 'inherit';
-      },
-      onEnterBack: () => {
-        document.body.style.overflowY = "hidden";
-        document.querySelector("#main-nav").style.display = 'none';
-
-        setTimeout(()=>{
-          window.scrollTo({
-            top: 0,
-            left: 0,
-          });
-          document.body.style.overflowY = "scroll";
-          video_rotation_sm.play();
-        }, 5000);
-        
-      },
-      onLeaveBack: () => {
-        document.body.style.overflowY = "scroll";
-        document.querySelector("#intro").classList.remove('hidden');
-
-        document.querySelector(".video-rotation-xs").classList.remove('hidden');
-
-        video_rotation_sm.play();
       }
 
     }
@@ -353,16 +275,6 @@ let stats = [
       },
       {
         currentTime: video.duration || 1
-      }
-    );
-
-    tl2.fromTo(
-      '.video-background-xs',
-      {
-        currentTime: 0
-      },
-      {
-        currentTime: video_sm.duration || 1
       }
     );
   });
@@ -383,26 +295,6 @@ let stats = [
 
           video.setAttribute("src", blobURL);
           video.currentTime = t + 0.01;
-        });
-    }
-  }, 1000);
-
-  setTimeout(function () {
-    if (window["fetch"]) {
-      fetch(src_sm)
-        .then((response) => response.blob())
-        .then((response) => {
-          var blobURL = URL.createObjectURL(response);
-
-          var t = video_sm.currentTime;
-          once(document.documentElement, "touchstart", function (e) {
-            video_sm.play();
-            video_sm.pause();
-            video_rotation_sm.play();
-          });
-
-          video_sm.setAttribute("src", blobURL);
-          video_sm.currentTime = t + 0.01;
         });
     }
   }, 1000);
