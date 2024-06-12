@@ -205,7 +205,12 @@ let stats = [
     video_rotation.play();
   });
 
+  /* ---------------------------------- */
+  /* Scroll Control! */
+
   gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.normalizeScroll(true);
 
   let tl = gsap.timeline({
     defaults: { duration: 5 },
@@ -279,6 +284,8 @@ let stats = [
     );
   });
 
+  /* When first coded, the Blobbing was important to ensure the browser wasn't dropping previously played segments, but it doesn't seem to be a problem now. Possibly based on memory availability? */
+
   setTimeout(function () {
     if (window["fetch"]) {
       fetch(src)
@@ -295,6 +302,9 @@ let stats = [
 
           video.setAttribute("src", blobURL);
           video.currentTime = t + 0.01;
+
+          document.querySelector('body').classList.add("loaded")  
+
         });
     }
   }, 1000);

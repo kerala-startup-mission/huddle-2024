@@ -2,22 +2,22 @@
   const { time } = Astro.props;
 ---
 <div id="countdown-container" class="flex flex-wrap items-center justify-center gap-10 text-white" data-countdown={time} >
-  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+  <div class="flex flex-col md:min-w-[7rem] items-center bg-huddle text-white justify-center px-3 py-3 text-center " >
     <div class="px-3 py-3 text-xl md:text-4xl " data-day >00</div>
     <div class="text-xs md:text-sm font-medium text-white">Days</div>
   </div>
-  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+  <div class="flex flex-col md:min-w-[7rem] items-center bg-huddle text-white justify-center px-3 py-3 text-center " >
     <div class="px-3 py-3 text-xl md:text-4xl " data-hour>00</div>
     <div class="text-xs md:text-sm font-medium text-white">Hours</div>
   </div>
 
   <div class="hidden lg:block xl:w-[28rem] lg:w-[20rem]"></div>
 
-  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+  <div class="flex flex-col md:min-w-[7rem] items-center bg-huddle text-white justify-center px-3 py-3 text-center " >
     <div class="px-3 py-3 text-xl md:text-4xl " data-minutes>00</div>
     <div class="text-xs md:text-sm font-medium text-white">Minutes</div>
   </div>
-  <div class="flex flex-col md:min-w-[7rem] items-center border-2 border-white justify-center px-3 py-3 text-center " >
+  <div class="flex flex-col md:min-w-[7rem] items-center bg-huddle text-white justify-center px-3 py-3 text-center " >
     <div class="px-3 py-3 text-xl md:text-4xl " data-seconds>00</div>
     <div class="text-xs md:text-sm font-medium text-white">Seconds</div>
   </div>

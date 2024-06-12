@@ -4,6 +4,7 @@ import Speakers from '../components/Speakers.svelte';
 import Intro from '../components/Intro.astro';
 import Gallery from '../components/Gallery.astro';
 import Videogallery from '../components/Videogallery.svelte';
+import Preloader from '../components/Preloader.astro';
 ---
 
 <Layout  title="Kerala Startup Mission">
@@ -11,6 +12,8 @@ import Videogallery from '../components/Videogallery.svelte';
 	<style is:global>
 		@import '../../node_modules/plyr/dist/plyr.css';
 	</style>
+
+  <Preloader></Preloader>
 
 	<Intro></Intro>
 
@@ -139,5 +142,9 @@ import Videogallery from '../components/Videogallery.svelte';
 		});
 	
 	</script>
+
+  <script>
+    
+  </script>
 
 </Layout>
