@@ -153,5 +153,22 @@ const url = "https://startupmission.kerala.gov.in/";
 		</noscript>
 		<!-- End Facebook Pixel Code -->
 
+		<script>
+			HTMLVideoElement.prototype.playBackwards = function () {
+				this.pause();
+
+				let video = this;
+				let fps = 24;
+				let intervalRewind = setInterval(function () {
+						if (video.currentTime <= 0) {
+								clearInterval(intervalRewind);
+								video.pause();
+						} else {
+								video.currentTime -= 1 / fps;
+						}
+				}, 1000 / fps);
+				
+			};
+		</script>
 	</body>
 </html>
