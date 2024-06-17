@@ -1,0 +1,73 @@
+
+
+<div>
+
+  <div class="video-background"></div>
+
+  <div class="control hidden">
+    <button id="play">Play</button>
+    <button id="reverse">Reverse</button>
+  </div>
+
+</div>
+
+<script>
+  // Video Section
+  import { FastImageSequence } from "@mediamonks/fast-image-sequence";
+
+  function blobToDataURL(blob) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = _e => resolve(reader.result);
+        reader.onerror = _e => reject(reader.error);
+        reader.onabort = _e => reject(new Error("Read aborted"));
+        reader.readAsDataURL(blob);
+    });
+  }
+
+  let fastImageSequence;
+
+  fetch('https://huddle-kl.s3.ap-south-1.amazonaws.com/data.tar').then(async (response) => {
+      const blob = await response.blob();
+      const dataURL = await blobToDataURL(blob);
+
+      console.log(dataURL);
+
+      fastImageSequence = new FastImageSequence(document.querySelector('.video-background'), {
+        name: 'LoadTar',
+        frames: 89,
+        src: [
+          {
+            tarURL: dataURL,
+            imageURL: (i) => {
+              var filename = `adimalathura zoom_${('' + (i + 1)).padStart(3, '0')}.jpeg`;
+              console.log(i, filename);  
+              return filename;
+            },
+          }
+        ],
+        // optional arguments:
+        loop: false, // default false
+        objectFit: 'contain', // default 'cover'
+        fillStyle: '#00000000', // default #00000000
+        clearCanvas: false, // default false
+        // showDebugInfo: true,
+      });
+
+      fastImageSequence.ready().then(()=>{
+        document.querySelector('.control').classList.remove('hidden');
+        console.log(fastImageSequence);
+      });
+
+  });
+
+  document.querySelector('#play').addEventListener('click', function(){
+    fastImageSequence.play(30);
+  });
+
+  document.querySelector('#reverse').addEventListener('click', function(){
+    fastImageSequence.play(-30);
+  });
+
+
+</script>
