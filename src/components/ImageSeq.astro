@@ -2,7 +2,7 @@
 
 <div>
 
-  <div class="video-background"></div>
+  <div class="video-background min-h-screen"></div>
 
   <div class="control hidden space-x-5">
     <button class="px-5 py-2 bg-blue-400 text-white" id="play">Play</button>
@@ -14,16 +14,6 @@
 <script>
   // Video Section
   import { FastImageSequence } from "@mediamonks/fast-image-sequence";
-
-  function blobToDataURL(blob) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = _e => resolve(reader.result);
-        reader.onerror = _e => reject(reader.error);
-        reader.onabort = _e => reject(new Error("Read aborted"));
-        reader.readAsDataURL(blob);
-    });
-  }
 
   let fastImageSequence;
 
@@ -43,7 +33,7 @@
     ],
     // optional arguments:
     loop: false, // default false
-    objectFit: 'contain', // default 'cover'
+    objectFit: 'cover', // default 'cover'
     fillStyle: '#00000000', // default #00000000
     clearCanvas: false, // default false
     showDebugInfo: true,

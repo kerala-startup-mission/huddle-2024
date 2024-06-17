@@ -53,7 +53,7 @@ let stats = [
   
   <!-- <video src="/bg-huddle-2.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background"></video> -->
   
-  <div class="video-background"></div>
+  <div class="video-background min-h-screen"></div>
   
   <main id="container" class="min-h-[400vh] flex flex-col items-end justify-end z-1" >
 
@@ -280,57 +280,41 @@ let stats = [
   // Video Section
   import { FastImageSequence } from "@mediamonks/fast-image-sequence";
 
-  function blobToDataURL(blob) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = _e => resolve(reader.result);
-        reader.onerror = _e => reject(reader.error);
-        reader.onabort = _e => reject(new Error("Read aborted"));
-        reader.readAsDataURL(blob);
+  let fastImageSequence;
+
+  fastImageSequence = new FastImageSequence(document.querySelector('.video-background'), {
+    name: 'LoadTar',
+    frames: 150,
+    src: [
+      {
+        imageURL: (i) => {
+          var filename = `sequence/seq-${('' + (i + 1)).padStart(3, '0')}.jpg`;
+          console.log(i, filename);  
+          return filename;
+        },
+        maxConnectionLimit: 10,
+        maxCachedImages: 150
+      }
+    ],
+    // optional arguments:
+    loop: false, // default false
+    objectFit: 'cover', // default 'cover'
+    fillStyle: '#00000000', // default #00000000
+    clearCanvas: false, // default false
+    showDebugInfo: false,
+  });
+
+  fastImageSequence.ready().then(()=>{
+    console.log(fastImageSequence);
+
+    fastImageSequence.onLoadProgress((progress)=>{
+      console.log(progress);
+
+      if(progress == 1){
+        checkLoaded();
+      }
     });
-  }
-
-  var fastImageSequence;
-
-  function initExampleLoadTar(container) {
-    // load tar file with lowres previews
-    fetch('sequence.tar').then(async (response) => {
-        const blob = await response.blob();
-        const dataURL = await blobToDataURL(blob);
-
-        fastImageSequence = new FastImageSequence(container, {
-          name: 'LoadTar',
-          frames: 89,
-          src: [
-            {
-              tarURL: dataURL,
-              imageURL: (i) => {
-                var filename = `${('' + (i + 1)).padStart(3, '0')}.jpeg`;
-                console.log(i, filename);  
-                return filename;
-              },
-            }
-          ],
-          // optional arguments:
-          loop: true, // default false
-          objectFit: 'contain', // default 'cover'
-          fillStyle: '#00000000', // default #00000000
-          clearCanvas: false, // default false
-          showDebugInfo: true,
-        });
-
-        fastImageSequence.ready().then(()=>{
-          checkLoaded();
-          console.log(fastImageSequence);
-        });
-
-    });
-  }
-
-  
-  const video = document.querySelector(".video-background");
-  
-  initExampleLoadTar(video);
+  });
 
   
 
@@ -342,7 +326,7 @@ let stats = [
     document.body.style.overflowY = "hidden";
     document.querySelector("#earth-container").classList.add('hidden');
 
-    fastImageSequence.play();
+    fastImageSequence.play(30);
 
     setTimeout(()=>{
       window.scrollTo({
@@ -355,7 +339,7 @@ let stats = [
 
       videoEnd = true;
 
-    }, 8000);
+    }, 4000);
 
   }
 
@@ -364,7 +348,7 @@ let stats = [
     document.body.style.overflowY = "hidden";
     document.querySelector("#main-nav").style.display = 'none';
 
-    video.playBackwards();
+    fastImageSequence.play(-30);
 
     setTimeout(()=>{
       window.scrollTo({
@@ -382,11 +366,8 @@ let stats = [
       document.body.style.overflowY = "scroll";
       document.querySelector("#earth-container").classList.remove('hidden');
       
-      video.pause();
-      video.currentTime = 0;
-      
       videoEnd = false;
-    }, 8500);
+    }, 4500);
 
   }
 
@@ -411,7 +392,7 @@ let stats = [
 
       if( scrollPos < document.querySelector("#container").scrollHeight - window.innerHeight - 10  && scrollPos < lastKnownScrollPosition){
         if(videoEnd){
-          // scrollBackward();
+          scrollBackward();
         }
       }
 
