@@ -323,7 +323,7 @@ let stats = [
   let videoEnd = false;
 
   function scrollForward(){
-    document.body.classList.add('overflow-y-hidden')
+    document.body.classList.add('overflow-y-hidden', 'relative')
     document.querySelector("#earth-container").classList.add('hidden');
 
     fastImageSequence.play(30);
@@ -334,7 +334,7 @@ let stats = [
         left: 0,
         behavior: "smooth"
       });
-      document.body.classList.remove('overflow-y-hidden')
+      document.body.classList.remove('overflow-y-hidden', 'relative')
       document.querySelector("#main-nav").style.display = 'inherit';
 
       videoEnd = true;
@@ -345,7 +345,7 @@ let stats = [
 
   function scrollBackward(){
 
-    document.body.classList.add('overflow-y-hidden')
+    document.body.classList.add('overflow-y-hidden', 'relative')
     document.querySelector("#main-nav").style.display = 'none';
 
     fastImageSequence.play(-30);
@@ -363,7 +363,7 @@ let stats = [
         });
       });
 
-      document.body.classList.remove('overflow-y-hidden')
+      document.body.classList.remove('overflow-y-hidden', 'relative')
       document.querySelector("#earth-container").classList.remove('hidden');
       
       videoEnd = false;
