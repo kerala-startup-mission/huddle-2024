@@ -391,13 +391,7 @@ let stats = [
     fastImageSequence.play(30);
 
     setTimeout(()=>{
-      // window.scrollTo({
-      //   top: document.querySelector("#home-container").scrollHeight - window.innerHeight,
-      //   left: 0,
-      //   behavior: "smooth"
-      // });
-
-      enableScroll();
+      
       document.querySelector("#home-container").classList.add('scrolled');
 
       document.querySelector("#main-nav").style.display = 'inherit';
@@ -405,6 +399,18 @@ let stats = [
       videoEnd = true;
 
     }, 4000);
+
+    setTimeout(()=>{
+
+      window.scrollTo({
+        top: 0, //document.querySelector("#home-container").scrollHeight - window.innerHeight,
+        left: 0,
+        behavior: "smooth"
+      });
+
+      enableScroll();
+      
+    }, 9000);
 
   }
 
