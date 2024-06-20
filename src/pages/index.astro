@@ -7,6 +7,7 @@ import Videogallery from '../components/Videogallery.svelte';
 import Preloader from '../components/Preloader.astro';
 import Earth from '../components/EarthImage.astro';
 import Whatsapp from '../components/Whatsapp.astro';
+import ParallelTracks from '../components/ParallelTracks.astro';
 ---
 
 <Layout  title="Kerala Startup Mission">
@@ -22,7 +23,7 @@ import Whatsapp from '../components/Whatsapp.astro';
   <Whatsapp></Whatsapp>
 
   <div class="early-bird">
-    <img src="/img/huddle60.svg" class="h-40" />
+    <img src="/img/huddle60.svg" class="h-24 md:h-40" />
   </div>
 
 	<div id="about" class="px-5 py-24 bg-black">
@@ -90,6 +91,16 @@ import Whatsapp from '../components/Whatsapp.astro';
      
     </div>
   </section> 
+
+  <section class="px-5 pt-24 bg-black">
+    <div class=" mb-8 text-center">
+      <h1 class="text-3xl font-black text-white">Tracks</h1>
+      <p class=" text-4xl text-yellow-400 font-spl">What's in store for you</p>
+    </div>
+    <div class="container mx-auto">
+      <ParallelTracks></ParallelTracks>
+    </div>
+  </section>
 
 	<section class=" pt-24 bg-black">
     <div class="  flex flex-col mx-auto items-center justify-center container p-8">
