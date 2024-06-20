@@ -50,13 +50,13 @@ let stats = [
   ];
 
 ---
-<section>
+<section id="home">
   <div id="earth-container" class="bg-black"></div>
   
   <!-- <video src="/bg-huddle-2.mp4" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" class="video-background"></video> -->
   
   <div id="intro" class="py-24 w-full min-h-screen flex flex-col items-center justify-center absolute top-0 z-[5]">
-    <Countdown time="2024-11-27T09:00"></Countdown>
+    <!-- <Countdown time="2024-11-27T09:00"></Countdown> -->
   
     <div class="absolute bottom-20 flex items-center flex-col justify-center text-white">
       <h1 class="font-spl text-white text-5xl">Come Let Huddle Together</h1>
@@ -93,7 +93,7 @@ let stats = [
             </h2>
             <div class="flex flex-row items-center justify-center gap-4">
               <button onclick="booking_popup('huddle-global-2024')" class="bg-[#c70000] border-2 border-[#c70000] text-white rounded-md shadow-lg px-5 py-2">Book Tickets</button>
-              <button class="border-2 border-white text-white rounded-md shadow-lg px-5 py-2">Explore Event</button>
+              <a href="#about" class="border-2 border-white text-white rounded-md shadow-lg px-5 py-2">Explore Event</a>
             </div>
           </div>
         </div>
@@ -289,7 +289,7 @@ let stats = [
     galaxy.geometry.attributes.color.needsUpdate = true;
 
     if (logo) {
-      const orbitSpeed = -0.0005; // Orbit speed
+      const orbitSpeed = -0.0008; // Orbit speed
       logo.position.x = Math.sin(Date.now() * orbitSpeed) * orbitRadius;
       logo.position.z = Math.cos(Date.now() * orbitSpeed) * orbitRadius;
       logo.position.y = 0; // Keep the logo at the same height
@@ -413,6 +413,7 @@ let stats = [
     setTimeout(()=>{
       
       document.querySelector("#home-container").classList.add('scrolled');
+      document.querySelector('body').classList.add("scrolled");
 
       document.querySelector("#main-nav").style.display = 'inherit';
 

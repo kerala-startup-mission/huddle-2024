@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery.astro';
 import Videogallery from '../components/Videogallery.svelte';
 import Preloader from '../components/Preloader.astro';
 import Earth from '../components/EarthImage.astro';
+import Whatsapp from '../components/Whatsapp.astro';
 ---
 
 <Layout  title="Kerala Startup Mission">
@@ -18,8 +19,13 @@ import Earth from '../components/EarthImage.astro';
 
   <Earth></Earth>
 
+  <Whatsapp></Whatsapp>
 
-	<div class="px-5 py-24 bg-black">
+  <div class="early-bird">
+    <img src="/img/huddle60.svg" class="h-40" />
+  </div>
+
+	<div id="about" class="px-5 py-24 bg-black">
     <div class="container mx-auto">
 
       <div class="flex flex-col md:flex-row gap-10 items-center">
@@ -125,6 +131,22 @@ import Earth from '../components/EarthImage.astro';
   <section class="p-5 text-center text-white " style="background-color: #222;">
     Copyright © 2024 Kerala Startup Mission. All Rights Reserved.
   </section>
+
+  <style is:inline>
+    
+    .early-bird{
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      z-index: 50;
+    }
+
+    .loaded .early-bird{
+      display: block;
+    }
+
+  </style>
 
   <script src="https://eventmanager.startupmission.in/api/script/booking" is:inline></script>
 
