@@ -388,7 +388,13 @@ let stats = [
     console.log(fastImageSequence);
 
     fastImageSequence.onLoadProgress((progress)=>{
-      console.log(progress);
+
+      let percent = Math.floor((progress) * 100) + "%";
+      
+      document.querySelector('.loading-bar .progress').style.width = percent;
+      document.querySelector('.loading-bar .percent').innerHTML = percent;
+
+      console.log(percent);
 
       if(progress == 1){
         checkLoaded();
