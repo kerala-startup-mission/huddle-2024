@@ -187,9 +187,9 @@ let stats = [
   const loader = new THREE.TextureLoader();
   const geometry = new THREE.IcosahedronGeometry(1, detail);
   const material = new THREE.MeshPhongMaterial({
-    map: loader.load("./textures/00_earthmap1k.jpg", checkLoaded()),
-    specularMap: loader.load("./textures/02_earthspec1k.jpg", checkLoaded()),
-    bumpMap: loader.load("./textures/01_earthbump1k.jpg", checkLoaded()),
+    map: loader.load("https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/00_earthmap1k.jpg", checkLoaded()),
+    specularMap: loader.load("https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/02_earthspec1k.jpg", checkLoaded()),
+    bumpMap: loader.load("https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/01_earthbump1k.jpg", checkLoaded()),
     bumpScale: 0.04,
   });
   // material.map.colorSpace = THREE.SRGBColorSpace;
@@ -197,18 +197,18 @@ let stats = [
   earthGroup.add(earthMesh);
 
   const lightsMat = new THREE.MeshBasicMaterial({
-    map: loader.load("./textures/03_earthlights1k.jpg", checkLoaded()),
+    map: loader.load("https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/03_earthlights1k.jpg", checkLoaded()),
     blending: THREE.AdditiveBlending,
   });
   const lightsMesh = new THREE.Mesh(geometry, lightsMat);
   earthGroup.add(lightsMesh);
 
   const cloudsMat = new THREE.MeshStandardMaterial({
-    map: loader.load("./textures/04_earthcloudmap.jpg", checkLoaded()),
+    map: loader.load("https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/04_earthcloudmap.jpg", checkLoaded()),
     transparent: true,
     opacity: 0.5,
     blending: THREE.AdditiveBlending,
-    alphaMap: loader.load('./textures/05_earthcloudmaptrans.jpg', checkLoaded()),
+    alphaMap: loader.load('https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/05_earthcloudmaptrans.jpg', checkLoaded()),
     // alphaTest: 0.3,
   });
   const cloudsMesh = new THREE.Mesh(geometry, cloudsMat);
@@ -235,11 +235,11 @@ let stats = [
 
   // Load Logo
   const logoMtlLoader = new MTLLoader();
-  logoMtlLoader.load('textures/logo-3d.mtl', function(materials) {
+  logoMtlLoader.load('https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/logo-3d.mtl', function(materials) {
       materials.preload();
       const logoObjLoader = new OBJLoader();
       logoObjLoader.setMaterials(materials);
-      logoObjLoader.load('textures/logo-3d.obj', function(object) {
+      logoObjLoader.load('https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/logo-3d.obj', function(object) {
 
         logo = object;
         logo.scale.set(-0.002, 0.002, 0.002); // Set the logo to 1/4th the size of the Earth
@@ -256,7 +256,7 @@ let stats = [
   });
 
   const bg = new THREE.TextureLoader();
-  bg.load('/textures/scene-bg-1.png' , function(texture){
+  bg.load('https://huddle-kl.s3.ap-south-1.amazonaws.com/textures/scene-bg-1.png' , function(texture){
     scene.background = texture;  
     checkLoaded();
   });
