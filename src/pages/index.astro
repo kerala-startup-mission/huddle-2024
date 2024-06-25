@@ -8,6 +8,9 @@ import Preloader from '../components/Preloader.astro';
 import Earth from '../components/EarthImage.astro';
 import Whatsapp from '../components/Whatsapp.astro';
 import ParallelTracks from '../components/ParallelTracks.astro';
+
+import Partner from "../components/Partners.svelte";
+
 ---
 
 <Layout  title="Kerala Startup Mission">
@@ -128,6 +131,15 @@ import ParallelTracks from '../components/ParallelTracks.astro';
 
     </div>
   </section>
+
+  <div class="py-24 bg-huddle">
+    <div class="mb-5 text-center">
+      <h1 class="mb-3 text-3xl font-black text-white">Partners</h1>
+      <p class="text-5xl font-spl text-yellow-400">Our partners cherishing the event</p>
+    </div>
+    <Partner client:load></Partner>
+
+  </div>
 
   <section class="px-8 py-16 sm:px-24  bg-black" >
     <div class="flex flex-col items-center justify-center sm:flex-row">
