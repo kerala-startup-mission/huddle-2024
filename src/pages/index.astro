@@ -10,6 +10,7 @@ import Whatsapp from '../components/Whatsapp.astro';
 import ParallelTracks from '../components/ParallelTracks.astro';
 
 import Partner from "../components/Partners.svelte";
+import Navbar from "../components/Navbar.svelte";
 
 ---
 
@@ -24,6 +25,9 @@ import Partner from "../components/Partners.svelte";
   <Earth></Earth>
 
   <Whatsapp></Whatsapp>
+
+  <Navbar  client:load></Navbar>
+
 
   <div class="early-bird">
     <img src="/img/huddle60.svg" class="h-24 md:h-40" />
@@ -95,7 +99,7 @@ import Partner from "../components/Partners.svelte";
     </div>
   </section> 
 
-  <section class="px-5 pt-24 bg-black">
+  <section class="px-5 pt-24 bg-black" id="tracks">
     <div class=" mb-8 text-center">
       <h1 class="text-3xl font-black text-white">Tracks</h1>
       <p class=" text-4xl text-yellow-400 font-spl">What's in store for you</p>
@@ -159,6 +163,25 @@ import Partner from "../components/Partners.svelte";
   <section class="p-5 text-center text-white " style="background-color: #222;">
     Copyright © 2024 Kerala Startup Mission. All Rights Reserved.
   </section>
+
+
+  <div class="fixed left-0 bottom-12 m-4  z-50 bg-white shadow-md rounded-md hidden  md:w-72 animate__animated  animate__fadeInDown" id="pop_up">
+    <div class="relative overflow-hidden">
+      <img src="/img/2024/sponsorship.png" alt="Your Image" class=" ">
+      <div class="absolute bottom-0 left-0  text-white md:p-2.5 p-1 bg-cover bg-bottom bg- w-full text-center uppercase md:text-lg text-sm font-bold  bg-sdg1 bg-opacity-90">
+        <div class="flex">
+          <a href="https://forms.zohopublic.com/keralastartupmission/form/SponsorshipHuddleGlobal/formperma/VR8pwlKkgjpOg1pKVUf0i8pgFgXZz9s6VN-vE73-CfI" class=" cursor-pointer border text-sm hover:bg-huddle hover:text-white border-huddle p-2 m-auto text-huddle" target="_blank" >Apply Now</a>
+          <a href="https://drive.google.com/file/d/1-1APY44ZjLZR7Dzs6mz_Lq6FtaYUC6Lx/view?usp=sharing" class="p-2 border border-huddle m-auto text-huddle hover:bg-huddle hover:text-white text-sm cursor-pointer" target="_blank" >Sponsorship Deck</a>
+        </div>
+      </div>
+      
+    </div>
+    <button class="absolute -top-2 -left-2 rounded-full bg-slate-900 text-white " id="closePopup">
+      <svg class="h-5 w-5" fill="white" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
 
   <style is:inline>
     
@@ -350,3 +373,15 @@ import Partner from "../components/Partners.svelte";
     }
   }
 </style>
+
+<script is:inline>
+	function functionshow(d) {
+    document.getElementById('pop_up').style.display = 'block';
+	}
+</script>
+
+<script is:inline>
+  document.getElementById('closePopup').addEventListener('click', function() {
+          document.getElementById('pop_up').style.display = 'none';
+      });
+</script>
