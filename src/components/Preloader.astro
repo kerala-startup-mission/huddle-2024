@@ -347,6 +347,27 @@
 
 </div>
 
+<script>
+
+let percent = 0;
+
+
+setInterval(() => {
+
+  if(percent < 25 && !document.querySelector('body').classList.contains("loading")){
+
+    document.querySelector('.loading-bar .progress').style.width = percent + "%";;
+    document.querySelector('.loading-bar .percent').innerHTML = percent + "%";;
+
+    percent++;
+
+  }
+  
+}, 50);
+
+
+</script>
+
 <style lang="scss" is:global>
   .loading-bar{
     position: fixed;

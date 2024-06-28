@@ -383,8 +383,12 @@ let stats = [
 
   fastImageSequence.ready().then(()=>{
     console.log(fastImageSequence);
+    
+    document.querySelector('body').classList.add("loading");
 
     fastImageSequence.onLoadProgress((progress)=>{
+  
+      // return;
 
       let percent = Math.floor((progress) * 100) + "%";
       
