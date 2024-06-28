@@ -61,6 +61,7 @@
             <a href="/#speakers" class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Speakers</a>
             <a href="/#tracks" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Tracks</a>
             <a onclick="functionshow('pop_up')" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">SPONSORSHIP OPPORTUNITIES</a>
+            <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Previous Edition</a>
         
         </div>
         
@@ -123,6 +124,9 @@
                         <a onclick="functionshow('pop_up')" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">SPONSORSHIP OPPORTUNITIES</a>
                     </li>
                     
+                    <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
+                      <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Previous Edition</a>
+                  </li>
             </ul>
         </nav>
     </div>
