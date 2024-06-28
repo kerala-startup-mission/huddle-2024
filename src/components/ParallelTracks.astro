@@ -226,7 +226,7 @@ let tracks1 = [
 
 <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
   {tracks1.map((item) => (
-    <a class={"flipbox readmore-wrapper " + ((tracks1.indexOf(item) % 2 == 0) ? "flip-bottom" : "flip-right") } href={item.link??"#"}>
+    <a class={"flipbox readmore-wrapper " + ((tracks1.indexOf(item) % 2 == 0) ? "flip-bottom" : "flip-right") }>
       <div class="flipbox-wrapper">
         <div class="flipbox-front" style={ item.image ? "background-image: url("+ item.image +")" : "" } >
           <h5 class="title">{item.name}</h5>
