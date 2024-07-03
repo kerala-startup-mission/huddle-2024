@@ -1,0 +1,369 @@
+---
+import Layout from '../layouts/Layout.astro';
+// import Navbar from "../components/2023/Navbar_c.svelte";
+
+---
+
+<Layout>
+    <!-- <Navbar client:load></Navbar> -->
+
+  <div class=" text-center my-auto py-20 px-5 container mx-auto  grid sm:grid-cols-2 grid-cols-1 bg-huddle">
+
+    <div class="text-xl text-white mb-2">
+      Download Now
+    </div>
+    <div class="text-3xl font-bold text-white">
+      Huddle Global App
+    </div>
+
+
+    <div class=" leading-loose my-auto">
+      <div>
+          <img src="/img/app.png">
+      </div>
+    </div>
+    <div class=" flex flex-wrap items-center justify-center gap-5  ">
+        <a href="https://apps.apple.com/in/app/huddle-global/id1658986073" target="_blank"><img src="/img/appstore.png" class=" w-48 "></a>
+        
+        <a href="https://play.google.com/store/apps/details?id=com.huddleglobal" target="_blank"><img src="/img/playstore.png" class="w-48  shadow-2xl"></a>
+    </div>
+
+</Layout>
+
+<style lang="scss" is:global>
+  body{
+    font-family: 'Lato';
+    font-size: 16px;
+    line-height: 24px;
+    background: #c70000;
+    overflow-X: hidden;
+    transition: all 0.5s;
+    color: #eee;
+  }
+
+
+</style>
+
+<script is:inline>
+
+  document.getElementById('closePopup').addEventListener('click', function() {
+          document.getElementById('pop_up').style.display = 'none';
+      });
+
+  
+  </script>
+
+
+
+<script is:inline>
+	function functionshow(d) {
+    document.getElementById('pop_up').style.display = 'block';
+
+  
+	}
+  </script>
+
+  <style is:global>
+ 
+    .roadmap {
+           
+            justify-content: space-between;
+            align-items: center;
+            
+            padding: 20px;
+           
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .event {
+            text-align: center;
+        }
+
+        .event-circle {
+            width: 30px;
+            height: 30px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            display: none;
+        }
+
+
+        .dotted-line {
+          
+            height: 4px;
+            background: repeating-linear-gradient(to right, #ccc, #ccc 10px, transparent 10px, transparent 20px);
+        }
+    </style>
+
+<style lang="scss">
+
+    .flipbox {
+      &.flip-bottom {
+        &:hover {
+          .flipbox-front {
+            transform: rotateX(-180deg);
+          }
+          .flipbox-back {
+            transform: rotateX( 0deg);
+          }
+        }
+        .flipbox-back {
+          transform: rotateX(180deg);
+        }
+      }
+      &.flip-right {
+        &:hover {
+          .flipbox-front {
+            transform: rotateY(-180deg);
+          }
+          .flipbox-back {
+            transform: rotateY( 0deg);
+          }
+        }
+        .flipbox-back {
+          transform: rotateY(180deg);
+        }
+      }
+      &:hover {
+        .readmore-button {
+          visibility: hidden;
+        }
+      }
+      .flipbox-wrapper {
+        text-align: center;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        perspective: 1000px;
+        min-height: 300px;
+        .flipbox-front,
+        .flipbox-back {
+          transform-style: preserve-3d;
+          backface-visibility: hidden;
+          perspective: inherit;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-color: #fff;
+          box-shadow: 0 26px 38px 0 rgba(73, 3, 3, 0.2);
+          transition: transform .8s cubic-bezier(0.5, 0.2, 0.2, 0.8);
+          border-radius: 10px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .flipbox-front {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          background-color: white;
+          color: white;
+          background-size: cover;
+          background-position: center;
+          &::before{
+            content: '';
+            background: white;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+           
+            border-radius: 10px;
+          }
+          .title {
+            position: relative;
+            z-index: 5;
+           
+          }
+        }
+        .flipbox-back {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: #2c2b2b;
+          color: white;
+          padding: 1rem;
+          .title {
+            backface-visibility: hidden;
+            transform: translate3d(0, -10px, 35px) scale(0.86);
+            line-height: 20px;
+            font-size: 10rem;
+            font-weight: 700;
+            opacity: .25;
+          }
+          .content {
+            transform-style: preserve-3d;
+            perspective: inherit;
+            transform: translateZ(70px) scale(0.86);
+            backface-visibility: hidden;
+            font-size: 1rem;
+            font-weight: 300;
+            // padding: 32px;
+          }
+          .readmore-button{
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  
+    .readmore-button {
+      display: inline-flex;
+      transition: all .3s ease-in-out;
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom: -27.5px;
+      border-radius: 50%;
+      background: white;
+      justify-content: center;
+      align-items: center;
+      border: 5px solid #c70000;
+      svg {
+        width: 25px;
+        height:25px;
+        color: #c70000;
+      }
+    }
+  
+    .readmore-wrapper:hover {
+      .readmore-button {
+        animation: bounceReadMore .5s ease-in-out both;
+        opacity: 1;
+        visibility: visible;
+        margin: 0;
+      }
+    }
+  
+    @keyframes bounceReadMore {
+      0% {
+        transform: translateY(-35px) translateZ(20px)
+      }
+      50% {
+        transform: translateY(15px) translateZ(20px)
+      }
+      100% {
+        transform: translateY(0) translateZ(20px)
+      }
+    }
+  
+    .button{
+      position: relative;
+      display: block;
+      width: 200px;
+      height: 45px;
+      line-height: 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      overflow: hidden;
+      border-radius: 50px;
+      border: 2px solid white;
+      transition: all 2s ease;
+  
+      &:hover{
+        color: #fff;
+        position: relative;
+        z-index: 1;
+  
+        &::before{
+          left: 0%;
+          right: auto;
+          width: 100%;
+          z-index: -1;
+        }
+  
+        &::after{
+  
+        }
+      }
+  
+      &::before{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 0px;
+        content: '';
+        background: #ef5e5e;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+      }
+  
+      &::after{
+        content: "";
+        position: absolute;
+        height: 0%;
+        left: 50%;
+        top: 50%;
+        width: 150%;
+        transition: all 0.75s ease 0s;
+      }
+    }
+  </style>
+  <style lang="scss">
+    .button1{
+     position: relative;
+     display: block;
+     width: 100px;
+     height: 30px;
+     line-height: 24px;
+     color: #fff;
+     font-size: 10px;
+     font-weight: 300;
+     text-align: center;
+     text-transform: uppercase;
+     overflow: hidden;
+     border-radius: 50px;
+     border: 2px solid white;
+     transition: all 2s ease;
+ 
+     &:hover{
+       color: #fff;
+       position: relative;
+       z-index: 1;
+ 
+       &::before{
+         left: 0%;
+         right: auto;
+         width: 100%;
+         z-index: -1;
+       }
+ 
+       &::after{
+ 
+       }
+     }
+ 
+     &::before{
+       position: absolute;
+       top: 0px;
+       right: 0px;
+       height: 100%;
+       width: 0px;
+       content: '';
+       background: #ef5e5e;
+       transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+     }
+ 
+     &::after{
+       content: "";
+       position: absolute;
+       height: 0%;
+       left: 50%;
+       top: 50%;
+       width: 150%;
+       transition: all 0.75s ease 0s;
+     }
+   }
+ </style>
