@@ -6,6 +6,7 @@
   export let title;
   export let label;
   export let category;
+  export let slug;
 
   let full_view = true;
 
@@ -33,7 +34,7 @@
   }
 
   onMount(()=>{
-    fetch(`https://events.startupmission.in/api/event/huddle-global-2024/speakers?category=${category}`)
+    fetch(`https://events.startupmission.in/api/event/${slug}/speakers?category=${category}`)
         .then(response => response.json())
         .then((json) => {
           speaker_list = json;

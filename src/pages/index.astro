@@ -91,17 +91,42 @@ import Navbar from "../components/Navbar.svelte";
       <img src="/img/dots.svg" alt="dots" class="absolute w-20 opacity-25 top-2 left-2">
       <img src="/img/dots.svg" alt="dots" class="absolute w-20 opacity-25 bottom-2 right-2">
       <div class=" mx-auto items-center justify-center mb-20">
-        <h1 class=" text-5xl text-yellow-400 font-spl text-center">Powerpacked speakers awaits you</h1>
+        <h1 class=" text-5xl text-yellow-300 font-spl text-center">Powerpacked speakers awaits you</h1>
         <h1 class=" text-5xl font-black text-white text-center">Our Speakers</h1>
       </div>
 
 
       <div class="container mx-auto mb-20" id="government">
-        <Speakers title="Government" label="" category="government" client:load/>
+        <Speakers title="Government" label="" slug="huddle-global-2024" category="government" client:load/>
       </div>
 
       <div class="container mx-auto mb-20" id="industry">
-        <Speakers title="Industry" label="" category="speaker" client:load/>
+        <Speakers title="Industry" label="" slug="huddle-global-2024" category="speaker" client:load/>
+      </div>
+
+     
+    </div>
+  </section> 
+
+  <section  class="px-5 py-24 bg-black" id="speakers">
+    <div class="container relative mx-auto">
+      
+      <img src="/img/dots.svg" alt="dots" class="absolute w-20 opacity-25 top-2 left-2">
+      <img src="/img/dots.svg" alt="dots" class="absolute w-20 opacity-25 bottom-2 right-2">
+     
+
+      <div class=" mx-auto items-center justify-center mb-20">
+        <h1 class=" text-5xl text-yellow-300 font-spl text-center">Inspiring Voices from last year</h1>
+        <h1 class=" text-3xl font-black text-white text-center">Speakers @2023</h1>
+      </div>
+
+
+      <div class="container mx-auto mb-20" id="government">
+        <Speakers title="Government" label="" slug="huddle-global-2023" category="government" client:load/>
+      </div>
+
+      <div class="container mx-auto mb-20" id="industry">
+        <Speakers title="Industry" label="" slug="huddle-global-2023" category="speaker" client:load/>
       </div>
 
 
@@ -109,7 +134,7 @@ import Navbar from "../components/Navbar.svelte";
     </div>
   </section> 
 
-  <section class="px-5 pt-24 bg-black" id="tracks">
+  <section class="px-5  bg-black" id="tracks">
     <div class=" mb-8 text-center">
       <h1 class="text-3xl font-black text-white">Tracks</h1>
       <p class=" text-4xl text-yellow-400 font-spl">What's in store for you</p>
