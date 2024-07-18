@@ -7,6 +7,8 @@ import Videogallery from '../components/Videogallery.svelte';
 import Preloader from '../components/Preloader.astro';
 
 import Hero from '../components/Hero.astro';
+import NewHero from '../components/newhome.astro';
+
 import Whatsapp from '../components/Whatsapp.astro';
 import ParallelTracks from '../components/ParallelTracks.astro';
 
@@ -28,7 +30,7 @@ import Navbar from "../components/Navbar.svelte";
 
   <Whatsapp></Whatsapp>
 
-  <Navbar  client:load></Navbar>
+  <Navbar client:load></Navbar>
 
 
   <div class="early-bird">
@@ -115,6 +117,10 @@ import Navbar from "../components/Navbar.svelte";
       <div class="container mx-auto mb-20" id="industry">
         <Speakers title="Industry" label="" slug="huddle-global-2024" category="speaker" client:load/>
       </div>
+
+      <!-- <div class="container mx-auto mb-20" id="industry">
+        <Speakers title="Investors" label="" slug="huddle-global-2024" category="investor" client:load/>
+      </div> -->
 
      
     </div>
