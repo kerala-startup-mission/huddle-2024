@@ -4,11 +4,11 @@
     export let menu_open;
   
     let y = 0;
-    let pageHeight = 0;
+    let pageHeight = 250;
   
-    onMount(() => {
-      pageHeight = window.innerHeight * 1.1; // Set pageHeight to double the window height
-    });
+    // onMount(() => {
+    //   pageHeight = window.innerHeight * 1.1; // Set pageHeight to double the window height
+    // });
   
     $: scrolled = y > pageHeight;
   
@@ -43,7 +43,7 @@
   
   
   
-   <div id="main-nav" style="display:none;" class="fixed space-x-4 md:space-x-0 min-h-fit w-screen sm:min-h-0  left-0 top-0 
+   <div id="navbar"  class="fixed space-x-4 md:space-x-0 min-h-fit w-screen sm:min-h-0  left-0 top-0 
    flex sm:items-center
     ease-in-out transition-all transform duration-300
     z-50  py-2
