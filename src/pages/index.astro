@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Speakers from '../components/Speakers.svelte';
+import Speakers2023 from '../components/Speakers2023.svelte';
+
 
 import Gallery from '../components/Gallery.astro';
 import Videogallery from '../components/Videogallery.svelte';
@@ -98,13 +100,10 @@ import Navbar from "../components/Navbar.svelte";
      
     </div>
 
-    <div class=" mx-auto items-center justify-center flex ">
-      <a id="speakers_show" class=" button_black border border-black" >View More</a>
-    </div>
-
+  
   </section> 
 
-  <section  class="px-5 py-24 bg-black hidden" id="previous_speakers">
+  <section  class="px-5 py-24 bg-black" id="previous_speakers">
     <div class="container relative mx-auto">
       
       <img src="/img/dots.svg" alt="dots" class="absolute w-20 opacity-25 top-2 left-2">
@@ -118,17 +117,12 @@ import Navbar from "../components/Navbar.svelte";
 
 
       <div class="container mx-auto mb-20" id="government">
-        <Speakers title="Government" label="" slug="huddle-global-2023" category="government" client:load/>
+        <Speakers2023 title="Government" label="" slug="huddle-global-2023" category="government" client:load/>
       </div>
 
       <div class="container mx-auto mb-20" id="industry">
-        <Speakers title="Industry" label="" slug="huddle-global-2023" category="speaker" client:load/>
+        <Speakers2023 title="Industry" label="" slug="huddle-global-2023" category="speaker" client:load/>
       </div>
-
-
-    <div class=" mx-auto items-center justify-center flex ">
-      <a id="speakers_hide" class=" hidden button border border-black" >View Less</a>
-    </div>
 
     </div>
   </section> 
