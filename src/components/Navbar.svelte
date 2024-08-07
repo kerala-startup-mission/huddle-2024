@@ -62,7 +62,7 @@
             <a href="/#tracks" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Tracks</a>
             <a onclick="functionshow('pop_up')" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">SPONSORSHIP OPPORTUNITIES</a>
             <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Previous Edition</a>
-        
+            <!-- <a href="/nearby_attractions" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Nearby Attractions</a> -->
         </div>
         
         <div class="flex sm:hidden  bg-white my-auto spl_cursor  ">    
@@ -108,7 +108,7 @@
         <nav>
             <ul class=" md:text-sm gap-2 font-data">
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100">
-                        <a href="/2023"  class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Home</a>
+                        <a href="/#home"  class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Home</a>
                     </li>
 
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
@@ -116,7 +116,7 @@
                     </li>
 
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
-                        <a href="/#track" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Track</a>
+                        <a href="/#tracks" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Track</a>
                     </li>
 
                     
@@ -126,7 +126,11 @@
                     
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
                       <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Previous Edition</a>
-                  </li>
+                    </li>
+
+                    <!-- <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
+                      <a href="/nearby_attractions" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Nearby Attractions</a>
+                    </li> -->
             </ul>
         </nav>
     </div>
