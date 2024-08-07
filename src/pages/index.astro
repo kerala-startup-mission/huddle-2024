@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Speakers from '../components/Speakers.svelte';
 import Speakers2023 from '../components/Speakers2023.svelte';
+import TopBar from "../components/TopBar.astro";
 
 
 import Gallery from '../components/Gallery.astro';
@@ -15,6 +16,7 @@ import ParallelTracks from '../components/ParallelTracks.astro';
 
 import Partner from "../components/Partners.svelte";
 import Navbar from "../components/Navbar.svelte";
+import SocialLinks from "../components/SocialLinks.astro";
 
 ---
 
@@ -223,19 +225,25 @@ import Navbar from "../components/Navbar.svelte";
     <div class="flex flex-col items-center justify-center sm:flex-row">
       <div class="flex flex-col items-center text-center text-white ">
         <img src="/img/huddle_white.svg" alt="KSUM Logo" class="w-48">
-        <p>Point of Contact:</p>
-        <p class="text-xl font-bold">
-          Vishal B  <span class="text-base font-normal">vishal@startupmission.in</span>
-        </p>
-        <p class="text-xl font-bold">
-          Nasif NM  <span class="text-base font-normal">nasif@startupmission.in</span>
-        </p>
+        <p>Contact @</p>
+        <div class=" md:flex-row flex-col flex gap-4">
+          <p class="text-xl font-bold">
+           <span class="text-base font-normal"><a href="mailto:huddleglobal@startupmission.in">huddleglobal@startupmission.in</a></span>
+          </p>
+         
+        </div>
         
       </div>
     </div>
   </section>
-  <section class="p-5 text-center text-white " style="background-color: #222;">
-    Copyright © 2024 Kerala Startup Mission. All Rights Reserved.
+
+  <section class="p-5 text-center text-white flex md:flex-row flex-col gap-6 md:items-center md:justify-center" style="background-color: #222;">
+    <div>
+      <ul class="flex space-x-4">
+        <SocialLinks></SocialLinks>
+      </ul>
+    </div>
+   <div class=" flex text-center items-center justify-center"> Copyright © 2024 Kerala Startup Mission. All Rights Reserved.</div>
   </section>
 
 
