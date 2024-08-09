@@ -1,0 +1,44 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+---
+<div class="p-2 bg-white text-gray-600 border-b-4 border-huddle">
+  <div class="container mx-auto">
+    <div class="flex justify-between items-center ">
+      <div class="md:flex hidden space-x-4 ">
+        <div class="flex items-center text-sm  space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+            <path d="M15 7a2 2 0 0 1 2 2"></path>
+            <path d="M15 3a6 6 0 0 1 6 6"></path>
+          </svg>
+          <span>+91 80470 80471</span>
+        </div>
+
+        <div class="flex items-center text-sm  space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <polyline points="3 7 12 13 21 7"></polyline>
+          </svg>
+          <span>prajeet@startupmission.in</span>
+        </div>
+      </div>
+      
+      <div>
+        <ul class="flex space-x-4">
+          <SocialLinks></SocialLinks>
+          <li><a href="/nearby_attractions" class=" text-huddle animate-pulse text-sm" >Nearby Attractions</a></li>
+        </ul>
+
+      </div>
+
+      <!-- <button id="menu_button" class="fixed z-50 block w-10 h-10 px-2 py-1 ml-auto text-xl leading-none transition duration-150 bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer right-5 hover:shadow lg:hidden focus:outline-none" type="button">
+        <span class="block absolute w-6 h-0.5 rounded-sm bg-white top-3 duration-500" ></span>
+        <span class="block absolute w-6 transition transform h-0.5 rounded-sm bg-white duration-500"></span>
+        <span class="block absolute w-6 transition transform h-0.5 rounded-sm bg-white duration-500"></span>
+        <span class="block absolute w-6 h-0.5 rounded-sm bg-white bottom-2.5 duration-500" ></span>
+      </button> -->
+    </div>
+  </div>
+</div>

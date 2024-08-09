@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from "../components/Navbar.svelte";
+import Hotels from "../components/Hotels.svelte";
+import Places from "../components/Places.svelte";
+
+
+
+
+---
+<!-- // import MarketingAgenda from "../../components/MarketingAgenda.svelte"; -->
+
+<Layout>
+  <Navbar client:load></Navbar>
+
+  
+
+	<section class=" pb-24 pt-32 px-5  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
+		<div class="absolute z-[1] w-full h-full top-0 left-0 bg-black bg-opacity-40"></div>
+
+		<div class="container mx-auto text-center z-[2]">
+      <p class="text-5xl font-spl text-yellow-400">plan your visit</p>
+
+      <div class="text-3xl md:text-4xl font-bold mb-5 text-huddle">Nearby Attractions</div>
+
+      <div class="text-base md:text-xl mb-5  mx-auto">
+        <div class="mb-10 text-center">
+          <!-- <h1 class="mb-3 text-3xl font-black text-white">Nearby attractions</h1> -->
+          <!-- <p class="text-5xl font-spl text-yellow-400">plan your visit</p> -->
+        </div>
+        <Places client:load></Places>
+			</div>
+
+
+      <div class="text-base md:text-xl mb-5 mt-24  mx-auto">
+        <div class="mb-10 text-center">
+          <h1 class="text-3xl md:text-4xl font-bold mb-5 text-huddle">Hotels near venue</h1>
+        </div>
+        <Hotels client:load></Hotels>
+			</div>
+    </div>
+	</section>
+
+
+
+  <div class="fixed left-0 bottom-12 m-4  z-50 bg-white shadow-md rounded-md   md:w-72 animate__animated  animate__fadeInDown" id="pop_up" style="display: none;">
+    <div class="relative overflow-hidden">
+      <img src="/img/2024/sponsorship.png" alt="Your Image" class=" ">
+      <div class="absolute bottom-0 left-0  text-white md:p-2.5 p-1 bg-cover bg-bottom bg- w-full text-center uppercase md:text-lg text-sm font-bold  bg-sdg1 bg-opacity-90">
+        <div class="flex">
+          <a href="https://forms.zohopublic.com/keralastartupmission/form/SponsorshipHuddleGlobal/formperma/VR8pwlKkgjpOg1pKVUf0i8pgFgXZz9s6VN-vE73-CfI" class=" cursor-pointer border text-sm hover:bg-huddle hover:text-white border-huddle p-2 m-auto text-huddle" target="_blank" >Apply Now</a>
+          <a href="https://drive.google.com/file/d/1-1APY44ZjLZR7Dzs6mz_Lq6FtaYUC6Lx/view?usp=sharing" class="p-2 border border-huddle m-auto text-huddle hover:bg-huddle hover:text-white text-sm cursor-pointer" target="_blank" >Sponsorship Deck</a>
+        </div>
+      </div>
+      
+    </div>
+    <button class="absolute -top-2 -left-2 rounded-full bg-slate-900 text-white " id="closePopup">
+      <svg class="h-5 w-5" fill="white" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div> 
+
+</Layout>
+
+<style lang="scss" is:global>
+  body{
+    font-family: 'Lato';
+    font-size: 16px;
+    line-height: 24px;
+    background: #111111;
+    overflow-X: hidden;
+    transition: all 0.5s;
+    color: #eee;
+  }
+
+</style>
+
+<script is:inline>
+
+  document.getElementById('closePopup').addEventListener('click', function() {
+          document.getElementById('pop_up').style.display = 'none';
+      });
+
+  
+  </script>
+
+
+
+<script is:inline>
+	function functionshow(d) {
+    document.getElementById('pop_up').style.display = 'block';
+
+  
+	}
+  </script>

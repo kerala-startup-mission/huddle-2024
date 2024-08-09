@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Kerala Arts and Crafts Village",
+        "image": "hotels/f1c170_16d86233622d4c5dab33375aab4565f0~mv2.webp",
+        "location":"https://www.kacvkovalam.org/"
+        
+    },
+        {
+            "title": "Poovar Island",
+            "image": "hotels/p1.jpg",
+            "location":"https://www.google.com/maps/dir/Somatheeram+Beach,+9248%2B22C,+Adimalathura,+Kazhivoor,+Kerala+695521/Poovar+Island+Resort,+K.P.+VII%2F911,+Pozhiyoor,+Kulathoor,+Kerala+695513/@8.3538914,77.0154552,1440m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x3b05a986372cfba1:0xfe3274b92917af52!2m2!1d77.0150218!2d8.3550661!1m5!1m1!1s0x3b05a999ab9f3cc3:0x1f8fe8eaeee7badd!2m2!1d77.0817971!2d8.3073682!3e0?authuser=0&hl=en&entry=ttu"
+            
+        },
+        {
+            "title": "Kovalam Beach",
+            "image": "hotels/p2.jpg",
+            "location":"https://www.google.com/maps/dir/Somatheeram+Beach,+9248%2B22C,+Adimalathura,+Kazhivoor,+Kerala+695521/CX6G%2B6MH+Kovalam+Tourist+Village,+Trivandrum+Bypass+Rd,+Vazhamuttom,+Thiruvananthapuram,+Kovalam,+Kerala+695527/@8.3549392,77.0130346,1441m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x3b05a986372cfba1:0xfe3274b92917af52!2m2!1d77.0150218!2d8.3550661!1m5!1m1!1s0x3b05a51064555555:0x47d0c99366c53e83!2m2!1d76.9766516!2d8.4105806!3e0?authuser=0&hl=en&entry=ttu"
+            
+        },
+        {
+            "title": "Aazhimala Siva Temple",
+            "image": "hotels/p3.jpg",
+            "location":"https://www.google.com/maps/place/Azhimala+Beach/@8.3570401,77.012581,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05afe08fdc2c3d:0xed1b59f59b65ee1e!8m2!3d8.3570401!4d77.012581!16s%2Fg%2F11qqc2d3s7?authuser=0&hl=en&entry=ttu"
+            
+        },
+        {
+            "title": "Vizhinjam Lighthouse",
+            "image": "hotels/p4.jpg",
+            "location":"https://www.google.com/maps/place/Vizhinjam+Lighthouse+(Kovalam+Lighthouse)/@8.3825726,76.9804753,17.25z/data=!4m14!1m7!3m6!1s0x3b05a5960e90dc0f:0x6c20be6dc7c83670!2sVizhinjam+Lighthouse+(Kovalam+Lighthouse)!8m2!3d8.3829234!4d76.9798227!16s%2Fm%2F011x3w7z!3m5!1s0x3b05a5960e90dc0f:0x6c20be6dc7c83670!8m2!3d8.3829234!4d76.9798227!16s%2Fm%2F011x3w7z?authuser=0&hl=en&entry=ttu"
+            
+        },
+        {
+            "title": "Pozhikkara Beach",
+            "image": "hotels/p5.jpg",
+            "location":"https://www.google.com/maps/place/Pozhikkara+Beach/@8.4248334,76.9577427,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05a5b8ca4fa201:0x6f764ee057e4ba0c!8m2!3d8.4248334!4d76.9577427!16s%2Fg%2F11j5jgdz0g?authuser=0&hl=en&entry=ttu"
+            
+        },
+        {
+            "title": "Rock Cut Cave Temple",
+            "image": "hotels/p6.jpg",
+            "location":"https://www.google.com/maps/place/Rock+Cut+Cave+Temple/@8.3825061,76.991425,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05a596a1439201:0xef06cdc9b13da2e!8m2!3d8.3825061!4d76.991425!16s%2Fm%2F02rjsgl?authuser=0&hl=en&entry=ttu"
+            
+        },
+        {
+            "title": "Chowara Beach",
+            "image": "hotels/p7.jpg",
+            "location":"https://www.google.com/maps/place/Chowara+Beach/@8.3561421,77.012179,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05af55072742ed:0x2e6e6dee4507696c!8m2!3d8.3561421!4d77.012179!16s%2Fg%2F11n0thjd63?authuser=0&hl=en&entry=ttu"
+            
+        },
+        {
+            "title": "Somatheeram Beach",
+            "image": "hotels/p8.jpg",
+            "location":"https://www.google.com/maps/place/Somatheeram+Beach/@8.3550661,77.0150218,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05a986372cfba1:0xfe3274b92917af52!8m2!3d8.3550661!4d77.0150218!16s%2Fg%2F11ng55fp9c?authuser=0&hl=en&entry=ttu"
+            
+        }
+      ]
+    
+      
