@@ -38,7 +38,7 @@
         {#each data as item (item.id)}
             {#if item.attributes.partners && item.attributes.partners.data.length > 0}
                 <div class={"flex flex-col flex-wrap text-center mx-auto items-center justify-center " + ((item.attributes.partners.data.length > 7) ? "md:col-span-7" : "md:col-span-" + item.attributes.partners.data.length)}>
-                    <div class="text-center pb-2">
+                    <div class="text-center pb-2 pt-6">
                         {#if item.attributes.Type}
                             <h2 class="text-sm font-semibold text-white">{item.attributes.Type}</h2>
                         {/if}
