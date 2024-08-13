@@ -153,7 +153,7 @@ import SocialLinks from "../components/SocialLinks.astro";
       
     </div>
   </div>
-
+  
  
 
  
@@ -282,28 +282,29 @@ import SocialLinks from "../components/SocialLinks.astro";
 
   <script src="https://eventmanager.startupmission.in/api/script/booking" is:inline></script>
 
-	<script>
+  <script >
 		
-		import Plyr from 'plyr';
-		var player = new Plyr("#youtube_player");
-	
-		document.querySelector('.youtube-button').addEventListener('click', function () {
-			document.querySelector('.youtube-popup').classList.remove('hidden');
-			player.play();
-		});
-	
-		document.querySelector('.close-video').addEventListener('click', function () {
-			document.querySelector('.youtube-popup').classList.add('hidden');
-			player.stop();
-		});
-	
-	</script>
-
-  <script>
-    
+    import Plyr from 'plyr';
+    var player = new Plyr("#youtube_player");
+  
+    document.querySelector('.youtube-button').addEventListener('click', function () {
+      document.querySelector('.youtube-popup').classList.remove('hidden');
+      player.play();
+    });
+  
+    document.querySelector('.close-video').addEventListener('click', function () {
+      document.querySelector('.youtube-popup').classList.add('hidden');
+      player.stop();
+    });
+  
   </script>
+  
 
 </Layout>
+
+
+
+
 
 <style lang="scss" is:global>
  #pop_up{
@@ -629,29 +630,5 @@ import SocialLinks from "../components/SocialLinks.astro";
 </script>
 
 
-<script>
-  document.getElementById('speakers_show').addEventListener('click', function() {
-      const toggleElement = document.getElementById('previous_speakers');
-      const button_id = document.getElementById('speakers_show');
-      const button_idd = document.getElementById('speakers_hide');
-
-      toggleElement.classList.remove('hidden');
-      button_id.classList.add('hidden');
-      button_idd.classList.remove('hidden');
-  });
-</script>
 
 
-<script>
-  document.getElementById('speakers_hide').addEventListener('click', function() {
-      const toggleElement = document.getElementById('previous_speakers');
-      const button_id = document.getElementById('speakers_show');
-      const button_idd = document.getElementById('speakers_hide');
-
-      toggleElement.classList.add('hidden');
-      button_id.classList.remove('hidden');
-      button_idd.classList.remove('hidden');
-
-
-  });
-</script>
