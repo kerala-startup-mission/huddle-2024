@@ -264,6 +264,24 @@ import SocialLinks from "../components/SocialLinks.astro";
     </button>
   </div> 
 
+
+
+  <div class="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white shadow-md rounded-md md:w-96 w-52 animate__animated animate__fadeInDown" id="roadshow">
+    <div class="relative overflow-hidden">
+      <a href="https://ksum.in/HGRoadshow" target="_blank"> 
+        <img src="/img/roadshow.jpeg" alt="Your Image" class=" ">
+      </a>
+    </div>
+    <button class="absolute -top-2 -left-2 rounded-full bg-slate-900 text-white" id="roadshowclose">
+        <svg class="h-5 w-5" fill="white" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+  </div>
+
+
+
+  
   <style is:inline>
     
     .early-bird{
@@ -318,6 +336,19 @@ import SocialLinks from "../components/SocialLinks.astro";
     }
   }
 </style>
+
+<style lang="scss" is:global>
+  #roadshow{
+   display: none;
+   
+  }
+ 
+  .scrolled{ 
+     #roadshow{
+       display: block;
+     }
+   }
+ </style>
 
 <style is:global>
    button.collision {
@@ -626,6 +657,18 @@ import SocialLinks from "../components/SocialLinks.astro";
 <script is:inline>
   document.getElementById('closePopup').addEventListener('click', function() {
           document.getElementById('pop_up').style.display = 'none';
+      });
+</script>
+
+<!-- <script is:inline>
+	function functionshow(d) {
+    document.getElementById('roadshow').style.display = 'block';
+	}
+</script> -->
+
+<script is:inline>
+  document.getElementById('roadshowclose').addEventListener('click', function() {
+          document.getElementById('roadshow').style.display = 'none';
       });
 </script>
 
