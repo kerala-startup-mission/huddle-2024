@@ -61,6 +61,12 @@ let tracks1 = [
     "content":"The Women Zone at Huddle Global 2024 empowers women in tech, business, and innovation. It features Women in Leadership Talks, the Women Entrepreneurs Expo, and the Women Innovators Hub, showcasing female-led startups and offering mentorship. With exclusive bootcamps and masterclasses, it provides valuable insights and skills for women-led startups, celebrating achievements and fostering growth across industries.",
     "link":""
   },
+  {
+    "image":"/img/2024/AAD00463.jpeg",
+    "name":"Bootcamp",
+    "content":' ',
+    "link":"/bootcamp"
+  },
 
 ];
 ---
@@ -232,19 +238,48 @@ let tracks1 = [
 
 <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
   {tracks1.map((item) => (
-    <a class={"flipbox readmore-wrapper " + ((tracks1.indexOf(item) % 2 == 0) ? "flip-bottom" : "flip-right") }>
-      <div class="flipbox-wrapper">
-        <div class="flipbox-front" style={ item.image ? "background-image: url("+ item.image +")" : "" } >
-          <h5 class="title">{item.name}</h5>
-        </div>
-        <div class="flipbox-back">
-          <div class="content">
-            {item.content}
+    item.link ? (
+      <a
+        href={item.link} target="_blank"
+        class={"flipbox readmore-wrapper " + ((tracks1.indexOf(item) % 2 === 0) ? "flip-bottom" : "flip-right")}
+      >
+        <div class="flipbox-wrapper">
+          <div
+            class="flipbox-front"
+            style={item.image ? "background-image: url(" + item.image + ")" : ""}
+          >
+            <h5 class="title">{item.name}</h5>
           </div>
-          
+          <div class="flipbox-back">
+            <div class="content">
+              {item.content}
+            </div>
+            <div class="">
+              <img src="/img/2024/arrow.png" class="w-20">
+            </div>
+          </div>
+        </div>
+      </a>
+    ) : (
+      <div
+        class={"flipbox readmore-wrapper " + ((tracks1.indexOf(item) % 2 === 0) ? "flip-bottom" : "flip-right")}
+      >
+        <div class="flipbox-wrapper">
+          <div
+            class="flipbox-front"
+            style={item.image ? "background-image: url(" + item.image + ")" : ""}
+          >
+            <h5 class="title">{item.name}</h5>
+          </div>
+          <div class="flipbox-back">
+            <div class="content">
+              {item.content}
+            </div>
+          </div>
         </div>
       </div>
-    </a>
+    )
   ))}
 </div>
+
 

@@ -3,6 +3,7 @@ const { title } = Astro.props;
 
 import BackTop from "../components/BackTop.svelte";
 import Navbar from "../components/Navbar.astro";
+import SocialLinks from "../components/SocialLinks.astro";
 
 const description = "Kerala Startup Mission is the central agency of the Government of Kerala for entrepreneurship development and incubation activities in Kerala, India.";
 const url = "https://startupmission.kerala.gov.in/";
@@ -173,5 +174,15 @@ const url = "https://startupmission.kerala.gov.in/";
 				
 			};
 		</script>
+
+		<section class="p-5 text-center text-white flex md:flex-row flex-col gap-6 md:items-center md:justify-center" style="background-color: #222;">
+			<div>
+			<ul class="flex space-x-4">
+				<SocialLinks></SocialLinks>
+			</ul>
+			</div>
+		<div class=" flex text-center items-center justify-center"> Copyright © 2024 Kerala Startup Mission. All Rights Reserved.</div>
+		</section>
+
 	</body>
 </html>

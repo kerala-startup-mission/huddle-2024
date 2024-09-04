@@ -44,10 +44,9 @@
   
   
    <div id="navbar"  class="fixed space-x-4 md:space-x-0 min-h-fit w-screen sm:min-h-0  left-0 top-0 
-   flex sm:items-center
+   flex sm:items-center bg-black
     ease-in-out transition-all transform duration-300
     z-50  py-2
-    {scrolled?'bg-black':'bg-transparent'}
    ">
   
    <div class="w-full container mx-auto  flex justify-between px-4">
@@ -64,11 +63,12 @@
             <!-- <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Previous Edition</a> -->
             <!-- <a href="/nearby_attractions" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Nearby Attractions</a> -->
             <a href="https://pages.razorpay.com/huddle-price-lock" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm"> Pre-Book your slot</a>
-            <a href="/bootcamp" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Bootcamp</a>
+            <a href="/bootcamp"  class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Bootcamp</a>
+
         </div>
        
         <div class="flex  items-center justify-center  bg-white my-auto spl_cursor  ">    
-             <div on:click="{()=> menu_open = !menu_open }" class="z-50 items-center justify-center my-auto spl_cursor md:pt-4 pt-1  bg-black absolute cursor-pointer top-3 md:right-8 right-4 w-10 h-10 md:text-xl text-xs ml-auto transition duration-150 hover:shadow py-1 border border-solid border-transparent rounded bg-transparent block outline-none focus:outline-none" type="button">
+             <div on:click="{()=> menu_open = !menu_open }" class="z-50 items-center justify-center my-auto spl_cursor md:pt-4 pt-1  bg-black absolute cursor-pointer top-3 md:right-8 right-4 w-10 h-10 md:text-xl text-xs ml-auto transition duration-150 hover:shadow py-1 border border-solid border-transparent rounded  block outline-none focus:outline-none" type="button">
                 <div class="block absolute w-6 h-0.5 rounded-sm bg-white top-5  duration-500 { menu_open ? 'opacity-0':'' }" ></div>
                 <div class="block absolute w-6 h-0.5 rounded-sm bg-white top-6 duration-500 { menu_open ? 'transform rotate-45':'' }"></div>
                 <div class="block absolute w-6 h-0.5 rounded-sm bg-white top-7 duration-500 { menu_open ? 'transform -rotate-45':'' }"></div>
@@ -92,7 +92,7 @@
    ">
   
     <div class="flex bg-white top-4 absolute spl_cursor">    
-        <button on:click="{()=> menu_open = !menu_open }" class="z-50 spl_cursor bg-black cursor-pointer fixed right-5 w-10 h-10 text-xl ml-auto transition duration-150 hover:shadow leading-none px-2 py-1 border border-solid border-transparent rounded bg-transparent block outline-none focus:outline-none" type="button">
+        <button on:click="{()=> menu_open = !menu_open }" class="z-50 spl_cursor bg-black cursor-pointer fixed right-5 w-10 h-10 text-xl ml-auto transition duration-150 hover:shadow leading-none px-2 py-1 border border-solid border-transparent rounded  block outline-none focus:outline-none" type="button">
             <span class="block spl_cursor absolute w-6 h-1 rounded-sm bg-white top-3 duration-500 { menu_open ? 'opacity-0':'' }" ></span>
             <span class="block spl_cursor absolute w-6 h-1 rounded-sm bg-white duration-500 { menu_open ? 'transform rotate-45':'' }"></span>
             <span class="block spl_cursor absolute w-6 h-1 rounded-sm bg-white duration-500 { menu_open ? 'transform -rotate-45':'' }"></span>
@@ -103,7 +103,7 @@
   
   
     <div class="w-fit container mx-auto sm:items-center sm:justify-between">
-        <div class="mb-8  font-medium sm:bg-transparent p-5 sm:p-0 rounded-md flex items-center justify-center">
+        <div class="mb-8  font-medium  p-5 sm:p-0 rounded-md flex items-center justify-center">
             <img src="/img/huddle_white.svg" alt="logo" class="h-14">
         </div>
   
@@ -137,7 +137,6 @@
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
                       <a href="/bootcamp" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Bootcamp</a>
                     </li>
-
             </ul>
         </nav>
     </div>
