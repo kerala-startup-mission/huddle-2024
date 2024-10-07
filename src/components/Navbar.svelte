@@ -63,7 +63,7 @@
             <a onclick="functionshow('pop_up')" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">SPONSORSHIP OPPORTUNITIES</a>
             <!-- <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Previous Edition</a> -->
             <!-- <a href="/nearby_attractions" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Nearby Attractions</a> -->
-            <a href="https://pages.razorpay.com/huddle-price-lock" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm"> Pre-Book your slot</a>
+            <a href="/productlaunch" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm"> Product Launch</a>
             <a href="/bootcamp" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Bootcamp</a>
         </div>
        
