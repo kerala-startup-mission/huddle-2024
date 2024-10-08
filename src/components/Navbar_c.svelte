@@ -125,6 +125,10 @@
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
                         <a onclick="functionshow('pop_up')" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">SPONSORSHIP OPPORTUNITIES</a>
                     </li>
+
+                    <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex ">
+                      <a href="/productlaunch" target="_blank" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Product Launch</a>
+                    </li>
                     
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100  flex">
                       <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Previous Edition</a>
