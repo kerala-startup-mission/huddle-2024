@@ -97,8 +97,8 @@
     <div class="">
       {#each mentorTypes as mentorType (mentorType.id)}
         <div>
-          <h3 class="text-sm pt-8 pb-2 text-start font-semibold text-black">{mentorType.attributes.mentortype}</h3>
-          <div class=" w-full flex flex-col gap-4 text-start items-start justify-start ">
+          <h3 class="text-xs pt-8 pb-2 text-start font-semibold text-black uppercase">{mentorType.attributes.mentortype}</h3>
+          <div class=" w-full flex flex-col gap-3 text-start items-start justify-start ">
             {#each mentorType.attributes.mentors.data as mentor (mentor.id)}
               <div class="p-3  w-full flex flex-col cursor-pointer" data-target="{mentor.id}" on:click={() => chatMessage(mentor)}>
                 <div class="flex flex-row ">
