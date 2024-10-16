@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layoutapp.astro';
 import Navbar from "../components/Navbarsub.svelte";
 import Mentors from '../components/Mentors.svelte';
 
@@ -7,8 +7,10 @@ import Mentors from '../components/Mentors.svelte';
 
 
     
+<Layout>
 
     <div class=" mx-auto py-10 bg-[#f7f3f3]">
         <Mentors client:load></Mentors>
     </div>
+</Layout
 
