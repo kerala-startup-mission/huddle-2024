@@ -98,20 +98,20 @@
       {#each mentorTypes as mentorType (mentorType.id)}
         <div>
           <h3 class="text-xs pt-8 pb-2 text-start font-semibold text-black uppercase">{mentorType.attributes.mentortype}</h3>
-          <div class=" w-full flex flex-col gap-3 text-start items-start justify-start ">
+          <div class=" w-full flex flex-col gap-2 text-start items-start justify-start ">
             {#each mentorType.attributes.mentors.data as mentor (mentor.id)}
-              <div class="p-3  w-full flex flex-col cursor-pointer" data-target="{mentor.id}" on:click={() => chatMessage(mentor)}>
+              <div class="py-1 w-full flex flex-col cursor-pointer" data-target="{mentor.id}" on:click={() => chatMessage(mentor)}>
                 <div class="flex flex-row ">
                   {#if mentor.attributes.image.data}
                     <div class=" flex my-auto">
-                      <img src="https://cms.startupmission.in{mentor.attributes.image.data.attributes.url}" class="my-auto  flex w-20 h-20 rounded-full border-[2.5px] border-huddle ">
+                      <img src="https://cms.startupmission.in{mentor.attributes.image.data.attributes.url}" class="my-auto  flex w-16 h-16 rounded-full border-[2.9px] border-huddle ">
                     </div>
                   {/if}
                   <div class="text-black flex flex-col px-3 text-start">
-                    <div class="pb-0 text-base font-semibold pt-2">{mentor.attributes.name}</div>
+                    <div class="pb-0 text-sm font-semibold pt-2">{mentor.attributes.name}</div>
                     <!-- <div class="p-2 text-sm"><SvelteMarkdown source={mentor.attributes.pname}></SvelteMarkdown></div> -->
-                    <div class="text-sm">{mentor.attributes.designation}</div>
-                    <div class="text-sm">{mentor.attributes.organisation}</div>
+                    <div class="text-xs">{mentor.attributes.designation}</div>
+                    <div class="text-xs">{mentor.attributes.organisation}</div>
 
                     
                   </div>
