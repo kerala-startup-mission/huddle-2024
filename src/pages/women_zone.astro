@@ -1,0 +1,396 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from "../components/Navbar_c.svelte";
+
+
+
+---
+<!-- // import MarketingAgenda from "../components/MarketingAgenda.svelte"; -->
+
+<Layout>
+  <Navbar client:load></Navbar>
+
+  
+
+	<section class="py-24 px-5 z-[10]  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
+		<div class="absolute z-[1] w-full h-full top-0 left-0 bg-black bg-opacity-40"></div>
+
+		<div class="container mx-auto text-center z-[2] pt-10">
+            <div class="text-6xl md:text-8xl font-bold mb-5 text-huddle">Women Zone</div>
+
+            <div class="text-base md:text-xl mb-5 max-w-4xl mx-auto">
+               The Women Zone at Huddle Global 2024 empowers women in tech, business, and innovation. It features Women in Leadership Talks, the Women Entrepreneurs Expo, and the Women Innovators Hub, showcasing female-led startups and offering mentorship. With exclusive bootcamps and masterclasses, it provides valuable insights and skills for women-led startups, celebrating achievements and fostering growth across industries.,
+            </div>
+        </div>
+
+        <div class="lg:px-20 md:px-10 px-5 z-10 pt-10">
+          <p class=" text-white md:text-3xl font-bold md:pt-8 px-3">ElevateHer: Investment Pathway for Women Founders</p>
+            <div class=" flex md:flex-row flex-col ">
+                <div class="flex md:items-end md:justify-end text-end md:w-1/3 w-full">
+                    <img src="/img/womenzone/IMG-20241017-WA0007.jpg" class="p-6 z-10  md:items-end md:justify-end">
+                </div>
+                <div class="p-6 flex flex-col md:w-2/3 w-full items-start justify-start">
+                    <p class="text-white text-justify pt-4">
+                      ElevateHer: Investment Pathway for Women Founders is an empowering 3-week "Online Investment Readiness Program" designed exclusively for a select cohort of women-led startups. The program focuses on upskilling participants in areas such as investor pitch deck development, refining their storytelling abilities, and mastering the art of the elevator pitch through hands-on mock pitch sessions.
+                    </p>
+                    <p class="text-white text-justify pt-4">
+                      The journey culminates at Huddle Global 2024, featuring a Pitch "Competition" where these startups will present to top women venture capitalists and angel investors. This event provides an exceptional opportunity for women entrepreneurs to secure external investments and accelerate their business growth.                    </p>
+                    <div class=" pt-10 flex">
+                        <a class="button z-50 " href="https://ksum.in/ElevateHER"  target="_blank">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        </div>
+	</section>
+
+  
+
+    <div class="fixed left-0 bottom-12 m-4  z-50 bg-white shadow-md rounded-md   md:w-72 animate__animated  animate__fadeInDown" id="pop_up" style="display: none;">
+        <div class="relative overflow-hidden">
+          <img src="/img/2024/sponsorship.png" alt="Your Image" class=" ">
+          <div class="absolute bottom-0 left-0  text-white md:p-2.5 p-1 bg-cover bg-bottom bg- w-full text-center uppercase md:text-lg text-sm font-bold  bg-sdg1 bg-opacity-90">
+            <div class="flex">
+              <a href="https://forms.zohopublic.com/keralastartupmission/form/SponsorshipHuddleGlobal/formperma/VR8pwlKkgjpOg1pKVUf0i8pgFgXZz9s6VN-vE73-CfI" class=" cursor-pointer border text-sm hover:bg-huddle hover:text-white border-huddle p-2 m-auto text-huddle" target="_blank" >Apply Now</a>
+              <a href="https://drive.google.com/file/d/1-1APY44ZjLZR7Dzs6mz_Lq6FtaYUC6Lx/view?usp=sharing" class="p-2 border border-huddle m-auto text-huddle hover:bg-huddle hover:text-white text-sm cursor-pointer" target="_blank" >Sponsorship Deck</a>
+            </div>
+          </div>
+          
+        </div>
+        <button class="absolute -top-2 -left-2 rounded-full bg-slate-900 text-white " id="closePopup">
+          <svg class="h-5 w-5" fill="white" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div> 
+</Layout>
+
+<style lang="scss" is:global>
+  body{
+    font-family: 'Lato';
+    font-size: 16px;
+    line-height: 24px;
+    background: black;
+    overflow-X: hidden;
+    transition: all 0.5s;
+    color: #eee;
+  }
+
+</style>
+
+<script is:inline>
+
+  document.getElementById('closePopup').addEventListener('click', function() {
+          document.getElementById('pop_up').style.display = 'none';
+      });
+
+  
+  </script>
+
+<style is:global>
+    button.collision {
+     text-decoration: none;
+     color: #fff;
+     text-transform: uppercase;
+     font-family: 'Poppins', sans-serif;
+     font-weight: bold;
+     display: block;
+     height: 50px;
+     width: 150px;
+     overflow: hidden;
+     line-height: 50px;
+     text-align: center;
+     position: relative;
+     border: 1px solid #C70000;
+   }
+ 
+   button.collision::before,
+   button.collision::after {
+     position: absolute;
+     content: '';
+     width: 20px;
+     height: 20px;
+     background:#C70000;
+     top: 50%;
+     border-radius: 50%;
+     z-index: -1;
+   }
+ 
+   button.collision::before {
+     transform: translate(-50%, -50%);
+     left: -20px;
+   }
+ 
+   button.collision::after {
+     transform: translate(50%, -50%);
+     right: -20px;
+   }
+ 
+   button.collision:hover::before {
+     animation: move-left .8s both;
+     animation-direction: alternate;
+   }
+   button.collision:hover::after {
+     animation: move-right .8s both;
+     animation-direction: alternate;
+   }
+ 
+   button.collision:hover{
+     animation: button-color .8s both;
+   }
+ 
+   @keyframes button-color {
+     0% {
+       color: #fff;
+     }
+     100% {
+       color: #c70000;
+     }
+   }
+ 
+   @keyframes move-left {
+     0% {
+       left: -20px;
+     }
+     50% {
+       left: 50%;
+       width: 20px;
+       height: 20px;
+     }
+     100% {
+       left: 50%;
+       height: 400px;
+       width: 400px;
+     }
+   }
+ 
+   @keyframes move-right {
+     0% {
+       right: -20px;
+     }
+     50% {
+       right: 50%;
+       width: 20px;
+       height: 20px;
+     }
+     100% {
+       right: 50%;
+       height: 400px;
+       width: 400px;
+     }
+   }
+ 
+   .button{
+     position: relative;
+     display: block;
+     width: 200px;
+     height: 45px;
+     line-height: 40px;
+     color: #fff;
+     font-size: 16px;
+     font-weight: 500;
+     text-align: center;
+     text-transform: uppercase;
+     overflow: hidden;
+     border-radius: 50px;
+     border: 2px solid #c70000;
+     transition: all 2s ease;
+ 
+     &:hover{
+       color: #fff;
+       position: relative;
+       z-index: 1;
+ 
+       &::before{
+         left: 0%;
+         right: auto;
+         width: 100%;
+         z-index: -1;
+       }
+ 
+       &::after{
+ 
+       }
+     }
+ 
+     &::before{
+       position: absolute;
+       top: 0px;
+       right: 0px;
+       height: 100%;
+       width: 0px;
+       content: '';
+       background: #c70000;
+       transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+     }
+ 
+     &::after{
+       content: "";
+       position: absolute;
+       height: 0%;
+       left: 50%;
+       top: 50%;
+       width: 150%;
+       transition: all 0.75s ease 0s;
+     }
+   }
+ </style>
+ 
+ <style is:global>
+   button.collision {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    display: block;
+    height: 50px;
+    width: 150px;
+    overflow: hidden;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #C70000;
+  }
+ 
+  button.collision::before,
+  button.collision::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background:#C70000;
+    top: 50%;
+    border-radius: 50%;
+    z-index: -1;
+  }
+ 
+  button.collision::before {
+    transform: translate(-50%, -50%);
+    left: -20px;
+  }
+ 
+  button.collision::after {
+    transform: translate(50%, -50%);
+    right: -20px;
+  }
+ 
+  button.collision:hover::before {
+    animation: move-left .8s both;
+    animation-direction: alternate;
+  }
+  button.collision:hover::after {
+    animation: move-right .8s both;
+    animation-direction: alternate;
+  }
+ 
+  button.collision:hover{
+    animation: button-color .8s both;
+  }
+ 
+  @keyframes button-color {
+    0% {
+      color: #fff;
+    }
+    100% {
+      color: #c70000;
+    }
+  }
+ 
+  @keyframes move-left {
+    0% {
+      left: -20px;
+    }
+    50% {
+      left: 50%;
+      width: 20px;
+      height: 20px;
+    }
+    100% {
+      left: 50%;
+      height: 400px;
+      width: 400px;
+    }
+  }
+ 
+  @keyframes move-right {
+    0% {
+      right: -20px;
+    }
+    50% {
+      right: 50%;
+      width: 20px;
+      height: 20px;
+    }
+    100% {
+      right: 50%;
+      height: 400px;
+      width: 400px;
+    }
+  }
+ 
+  .button_black{
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 45px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    border-radius: 50px;
+    border: 2px solid #0f0e0e;
+    transition: all 2s ease;
+ 
+    &:hover{
+      color: #fff;
+      position: relative;
+      z-index: 1;
+ 
+      &::before{
+        left: 0%;
+        right: auto;
+        width: 100%;
+        z-index: -1;
+      }
+ 
+      &::after{
+ 
+      }
+    }
+ 
+    &::before{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 100%;
+      width: 0px;
+      content: '';
+      background: #0e0d0d;
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+ 
+    &::after{
+      content: "";
+      position: absolute;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      width: 150%;
+      transition: all 0.75s ease 0s;
+    }
+  }
+ </style>
+ 
+
+<script is:inline>
+	function functionshow(d) {
+    document.getElementById('pop_up').style.display = 'block';
+
+  
+	}
+  </script>

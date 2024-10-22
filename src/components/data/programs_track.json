@@ -1,4 +1,95 @@
-[
+[ 
+        {
+        "title": "Hotel Port Palace",
+        "image": "hotels/h13.jpg",
+        "id":"h13",
+        "website":"https://portpalacekovalam.com/",
+        "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KdeuExaJpQU7MV0NT4qBX3e-&daddr=Hotel+Port+Palace,+Kattachalkuzhi+Mangalattukonam+Rd,+Mukkola,+Vizhinjam,+Kovalam,+Kerala+695521",
+        "address":"Kattachalkuzhi Mangalattukonam Rd, Mukkola, Vizhinjam, Kovalam, Kerala 695521",
+        "number":"0471 248 6262"
+        },
+
+        {
+            "title": "Abad Harmonia | Resort in Kovalam",
+            "image": "hotels/h4.avif",
+            "id":"h4",
+            "website":"https://www.abadhotels.com/harmonia-resort-kovalam/",
+            "location":"https://www.google.com/maps/dir//Abad+Harmonia+%7C+Resort+in+Kovalam,+Chowara,+PO,+Kovalam,+Kerala+695501/@8.3556949,76.93808,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a509aaaaaaab:0xd42989511799e1d4!2m2!1d77.0204584!2d8.3557189?hl=en-GB&entry=ttu",
+            "address":"Chowara, PO, Kovalam, Kerala 695501",
+            "number":"0471 226 9665"
+        },
+
+        {
+            "title": "Somatheeram Ayurveda Village",
+            "image": "hotels/2.jpg",
+            "id":"h10",
+            "website":"https://www.somatheeram.net/",
+            "location":"https://www.google.com/maps/dir//Somatheeram+Ayurveda+Village,+Kovalam,+Chowara,+PO,+Thiruvananthapuram,+Kerala+695501/@8.3578884,76.933245,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af55190eb749:0xaf48ba49760565c5!2m2!1d77.0156469!2d8.3578969?hl=en-GB&entry=ttu",
+            "address":"Kovalam, Chowara, PO, Thiruvananthapuram, Kerala 695501",
+            "number":"0471 226 8101"
+        },
+
+        {
+            "title": "Manaltheeram Ayurveda Beach Village",
+            "image": "hotels/h7.jpg",
+            "id":"h7",
+            "website":"https://manaltheeram.com/",
+            "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KaWKqr1_vAU7MR78tcfNbsSZ&daddr=Manaltheeram+Ayurveda+Beach+Village,+Manaltheeram+Road,+Kovalam,+Chowara,+Kerala+695501",
+            "address":"Manaltheeram Road, Kovalam, Chowara, Kerala 695501",
+            "number":"0471 226 6222"
+        },
+
+        {
+            "title": "The Ocean Park Beach Resort",
+            "image": "hotels/h9.jpg",
+            "id":"h9",
+            "website":"",
+            "location":"https://www.google.com/maps/dir//The+Ocean+Park+Beach+Resort,+Post+Office,+Light+House+Beach,+Kovalam,+Vizhinjam,+Thiruvananthapuram,+Kerala+695521/@8.3847338,76.8975694,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a5bb0e46b2b7:0x38ae375e1744ddd7!2m2!1d76.9799713!2d8.3847423?hl=en-GB&entry=ttu",
+            "address":"Post Office, Light House Beach, Kovalam, Vizhinjam, Thiruvananthapuram, Kerala 695521",
+            "number":"080890 40600"
+        },
+
+        {
+            "title": "Orion Seaview Beach Hotel",
+            "image": "hotels/h11.jpg",
+            "id":"h11",
+            "website":"http://www.orionbeachresort.com/",
+            "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KQ_ckA6WpQU7MfHkX-uK9Y1Q&daddr=Orion+Seaview+Beach+Hotel,+P.O,+Light+House+Rd,+Light+House+Beach,+Vizhinjam,+Kovalam,+Kerala+695521",
+            "address":"P.O, Light House Rd, Light House Beach, Vizhinjam, Kovalam, Kerala 695521",
+            "number":"094003 23992"
+        },
+        {
+            "title": "Pebble Coast Resort",
+            "image": "hotels/h12.jpg",
+            "id":"h12",
+            "website":"",
+            "location":"https://www.google.com/maps/dir//Pebble+Coast+Resort,+H+No+XI,+307+,+Near+Somatheeram+Beach+Resort,+Chowara,+Kovalam,+Kerala+695501/@8.3580331,76.9313465,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af8403371633:0x3958377b3d877e67!2m2!1d77.0137484!2d8.3580416?hl=en-GB&entry=ttu",
+            "address":"H No XI, 307 , Near Somatheeram Beach Resort, Chowara, Kovalam, Kerala 695501",
+            "number":"099953 63673"
+        },
+        {
+            "title": "Hotel Sea View Palace - The Beach Hotel",
+            "image": "hotels/h6.jpg",
+            "id":"h6",
+            "website":"http://www.hotelseaviewpalace.com/Kovalam-Hotels/",
+            "location":"https://www.google.com/maps/dir//Hotel+Sea+View+Palace+-+The+Beach+Hotel,+Light+House+Beach+Rd,+Light+House+Beach,+Vizhinjam,+Kovalam,+Kerala+695527/@8.3852489,76.897133,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a5bb10dc11f3:0xd190147513e0064c!2m2!1d76.9795348!2d8.3852575?hl=en-GB&entry=ttu",
+            "address":"Light House Beach Rd, Light House Beach, Vizhinjam, Kovalam, Kerala 695527",
+            "number":"081119 63233"
+        },
+        {
+            "title": "Treebo Trend Green Palm Resorts",
+            "image": "hotels/h2.jpg",
+            "id":"h2",
+            "website":"https://www.treebo.com/hotels-in-thiruvananthapuram/treebo-trend-green-palm-resorts-kovalam-3436/?checkin=2023-09-23&checkout=2023-09-24&hotel_id=3436&rateplan=EP&roomconfig=1-0&roomtype=oak&utm_campaign=hotelgreenpalmresorts&utm_medium=gplus&utm_source=Partnerships",
+            "location":"https://www.google.com/maps/dir//Treebo+Trend+Green+Palm+Resorts,+Kovalam+Beach,+near+Avaduthura+Temple,+Thiruvananthapuram,+Kerala+695521/@8.3893069,76.897454,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a50f3806a0d3:0x35ed3bb76961eb80!2m2!1d76.9798559!2d8.3893155?hl=en-GB&entry=ttu",
+            "address":"Kovalam Beach, near Avaduthura Temple, Thiruvananthapuram, Kerala 695521",
+            "number":"093228 00100"
+        },
+
+
+
+
+    
     {
         "title": "Niraamaya Retreats Surya Samudra Kovalam",
         "image": "hotels/1.avif",
@@ -9,33 +100,9 @@
         "number":"080 4510 4510"
         
     },
-    {
-        "title": "Hotel Port Palace",
-        "image": "hotels/h13.jpg",
-        "id":"h13",
-        "website":"https://portpalacekovalam.com/",
-        "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KdeuExaJpQU7MV0NT4qBX3e-&daddr=Hotel+Port+Palace,+Kattachalkuzhi+Mangalattukonam+Rd,+Mukkola,+Vizhinjam,+Kovalam,+Kerala+695521",
-        "address":"Kattachalkuzhi Mangalattukonam Rd, Mukkola, Vizhinjam, Kovalam, Kerala 695521",
-        "number":"0471 248 6262"
-    },
-    {
-        "title": "Somatheeram Ayurveda Village",
-        "image": "hotels/2.jpg",
-        "id":"h10",
-        "website":"https://www.somatheeram.net/",
-        "location":"https://www.google.com/maps/dir//Somatheeram+Ayurveda+Village,+Kovalam,+Chowara,+PO,+Thiruvananthapuram,+Kerala+695501/@8.3578884,76.933245,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af55190eb749:0xaf48ba49760565c5!2m2!1d77.0156469!2d8.3578969?hl=en-GB&entry=ttu",
-        "address":"Kovalam, Chowara, PO, Thiruvananthapuram, Kerala 695501",
-        "number":"0471 226 8101"
-    },
-    {
-        "title": "Treebo Trend Green Palm Resorts",
-        "image": "hotels/h2.jpg",
-        "id":"h2",
-        "website":"https://www.treebo.com/hotels-in-thiruvananthapuram/treebo-trend-green-palm-resorts-kovalam-3436/?checkin=2023-09-23&checkout=2023-09-24&hotel_id=3436&rateplan=EP&roomconfig=1-0&roomtype=oak&utm_campaign=hotelgreenpalmresorts&utm_medium=gplus&utm_source=Partnerships",
-        "location":"https://www.google.com/maps/dir//Treebo+Trend+Green+Palm+Resorts,+Kovalam+Beach,+near+Avaduthura+Temple,+Thiruvananthapuram,+Kerala+695521/@8.3893069,76.897454,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a50f3806a0d3:0x35ed3bb76961eb80!2m2!1d76.9798559!2d8.3893155?hl=en-GB&entry=ttu",
-        "address":"Kovalam Beach, near Avaduthura Temple, Thiruvananthapuram, Kerala 695521",
-        "number":"093228 00100"
-    },
+   
+    
+    
     {
         "title": "Suntara Beach Resort",
         "image": "hotels/h3.jpg",
@@ -45,15 +112,7 @@
         "address":"Azhimala Temple Rd, Adimalathura, Vizhinjam, Kazhivoor, Kerala 695521",
         "number":"094475 86333"
     },
-    {
-        "title": "Abad Harmonia | Resort in Kovalam",
-        "image": "hotels/h4.avif",
-        "id":"h4",
-        "website":"https://www.abadhotels.com/harmonia-resort-kovalam/",
-        "location":"https://www.google.com/maps/dir//Abad+Harmonia+%7C+Resort+in+Kovalam,+Chowara,+PO,+Kovalam,+Kerala+695501/@8.3556949,76.93808,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a509aaaaaaab:0xd42989511799e1d4!2m2!1d77.0204584!2d8.3557189?hl=en-GB&entry=ttu",
-        "address":"Chowara, PO, Kovalam, Kerala 695501",
-        "number":"0471 226 9665"
-    },
+    
     {
         "title": "Shantitheeram Residency",
         "image": "hotels/h5.jpg",
@@ -63,24 +122,8 @@
         "address":"9257+9H6, Manaltheeram Rd, Adimalathura, Vizhinjam, Kottukal, Kerala 695521",
         "number":"077199 64888"
     },
-    {
-        "title": "Hotel Sea View Palace - The Beach Hotel",
-        "image": "hotels/h6.jpg",
-        "id":"h6",
-        "website":"http://www.hotelseaviewpalace.com/Kovalam-Hotels/",
-        "location":"https://www.google.com/maps/dir//Hotel+Sea+View+Palace+-+The+Beach+Hotel,+Light+House+Beach+Rd,+Light+House+Beach,+Vizhinjam,+Kovalam,+Kerala+695527/@8.3852489,76.897133,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a5bb10dc11f3:0xd190147513e0064c!2m2!1d76.9795348!2d8.3852575?hl=en-GB&entry=ttu",
-        "address":"Light House Beach Rd, Light House Beach, Vizhinjam, Kovalam, Kerala 695527",
-        "number":"081119 63233"
-    },
-    {
-        "title": "Manaltheeram Ayurveda Beach Village",
-        "image": "hotels/h7.jpg",
-        "id":"h7",
-        "website":"https://manaltheeram.com/",
-        "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KaWKqr1_vAU7MR78tcfNbsSZ&daddr=Manaltheeram+Ayurveda+Beach+Village,+Manaltheeram+Road,+Kovalam,+Chowara,+Kerala+695501",
-        "address":"Manaltheeram Road, Kovalam, Chowara, Kerala 695501",
-        "number":"0471 226 6222"
-    },
+    
+   
     {
         "title": "The Travancore Heritage",
         "image": "hotels/h8.jpg",
@@ -89,33 +132,8 @@
         "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=Kc3WTqIJpQU7MX8NgvgOIobs&daddr=The+Travancore+Heritage,+Poovar+-+Vizhinjam+Rd,+Adimalathura,+Chowara,+Kottukal,+Kerala+695501",
         "address":"Poovar - Vizhinjam Rd, Adimalathura, Chowara, Kottukal, Kerala 695501",
         "number":"0471 350 5303"
-    },
-    {
-        "title": "The Ocean Park Beach Resort",
-        "image": "hotels/h9.jpg",
-        "id":"h9",
-        "website":"",
-        "location":"https://www.google.com/maps/dir//The+Ocean+Park+Beach+Resort,+Post+Office,+Light+House+Beach,+Kovalam,+Vizhinjam,+Thiruvananthapuram,+Kerala+695521/@8.3847338,76.8975694,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a5bb0e46b2b7:0x38ae375e1744ddd7!2m2!1d76.9799713!2d8.3847423?hl=en-GB&entry=ttu",
-        "address":"Post Office, Light House Beach, Kovalam, Vizhinjam, Thiruvananthapuram, Kerala 695521",
-        "number":"080890 40600"
-    },
-    {
-        "title": "Orion Seaview Beach Hotel",
-        "image": "hotels/h11.jpg",
-        "id":"h11",
-        "website":"http://www.orionbeachresort.com/",
-        "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KQ_ckA6WpQU7MfHkX-uK9Y1Q&daddr=Orion+Seaview+Beach+Hotel,+P.O,+Light+House+Rd,+Light+House+Beach,+Vizhinjam,+Kovalam,+Kerala+695521",
-        "address":"P.O, Light House Rd, Light House Beach, Vizhinjam, Kovalam, Kerala 695521",
-        "number":"094003 23992"
-    },
-    {
-        "title": "Pebble Coast Resort",
-        "image": "hotels/h12.jpg",
-        "id":"h12",
-        "website":"",
-        "location":"https://www.google.com/maps/dir//Pebble+Coast+Resort,+H+No+XI,+307+,+Near+Somatheeram+Beach+Resort,+Chowara,+Kovalam,+Kerala+695501/@8.3580331,76.9313465,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af8403371633:0x3958377b3d877e67!2m2!1d77.0137484!2d8.3580416?hl=en-GB&entry=ttu",
-        "address":"H No XI, 307 , Near Somatheeram Beach Resort, Chowara, Kovalam, Kerala 695501",
-        "number":"099953 63673"
     }
+    
+   
    
   ]
