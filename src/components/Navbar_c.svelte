@@ -257,9 +257,27 @@
                       <a href="/nearby_attractions" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Nearby Attractions</a>
                     </li>
 
-                    <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
+                    <!-- <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
                       <a href="/bootcamp" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Bootcamp</a>
-                    </li>
+                    </li> -->
+
+
+                    <div class="relative">
+                      <button on:mouseenter={toggleDropdownsm} on:mouseleave={closeDropdownsm} class="flex md:hidden cursor-pointer  px-5 py-2 duration-700 md:py-1 uppercase text-white group-hover:text-yellow-400 font-bold">
+                        Women Zone 
+                        <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+            
+                      <!-- Dropdown Content -->
+                      <ul on:mouseleave={closeDropdownsm} on:mouseenter={toggleDropdownsm} class="absolute bg-black mt-2 py-2 w-48 rounded-lg shadow-lg transition duration-300 transform scale-95 origin-top {dropdownOpensm ? 'scale-100 opacity-100' : 'opacity-0'}">
+                        <!-- <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/productlaunch">Product Launch</a></li> -->
+                        <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/bootcamp">Bootcamp</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/women_zone">ElevateHer</a></li>
+  
+                      </ul>
+                    </div>
 
             </ul>
         </nav>
