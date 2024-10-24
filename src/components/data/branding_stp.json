@@ -1,0 +1,88 @@
+[
+    {
+        "title": "Antioxidant Rich Papaya Candy",
+        "image": "/branding/Antioxidant Rich Papaya Candy.png",
+        "image1": "/branding/Antioxidant Rich Papaya Candy.png",
+        "id":"b1",
+        "desc":"Candies available in the market are artificially coloured using artificial/synthetic dyes that will lead to chronic health effects. Fruit candy is consumed by all age groups therefore, immediate attention is required to make them safe with incorporation of natural biocolourants. The developed papaya candy is made from the processed products from raw papaya and beetroots available in the market. Use of beetroot colorants can replace synthetic colour and enhance antioxidant potential of papaya candy. Additionally, the developed product has no synthetic preservative. Product can be used in both the ways (1) a value added ready-to-eat functional product and (2) a functional food ingredient. ",
+        "tech":"Technology developed by",
+        "details":"ICAR - Indian Agricultural Research Institute (IARI), New Delhi",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
+    },
+   
+    {
+        "title": "Millets and sprouted legume-based beverage",
+        "image": "/branding/Millets and sprouted legume-based beverage.png",
+        "image1": "/branding/Millets and sprouted legume-based beverage.png",
+        "id":"b3",
+        "desc":"In recent years, functional beverages have become popular among people who want specific health benefits from their foods and beverages. This beverage is made from sorghum and finger millets that contain resistant starch also proteins, minerals, vitamins, and phytochemicals. Green gram and soybeans are excellent sources of protein, dietary fibre, vitamins, and minerals. Sprouting increases protein and dietary fiber; reduces tannin and phytic acid and increases mineral bioavailability and is therefore incorporated in mixes to enhance the nutrient content of diets. Jaggery, is another ingredient that is a natural and traditional sweetener made by concentrating sugarcane juice. Buttermilk is another ingredient that is an excellent source of minerals, vitamins, enzymes, and protein.",
+        "tech":"Technology developed by",
+        "details":"ICAR-Central Institute of Agricultural Engineering (CIAE), Bhopal, Madhya Pradesh",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
+    },
+    {
+        "title": "Cashew Apple Crunch",
+        "image": "/branding/Cashew Apple Crunch.png",
+        "image1": "/branding/Cashew Apple Crunch.png",
+        "id":"b4",
+        "desc":"Cashew apple is an accessory fruit of the cashew tree. Cashew apples are nutritionally rich in ascorbic acid, sugars, minerals, and other anti-oxidants. It can be used for preparing value-added products such as Cashew Apple crunch.The crunch is a sugar-treated chewing, crunchy bite. It is prepared by utilizing the wasted cashew apples and then treating the same in a various sugar concentration and then made in the form of chewing bytes.",
+        "tech":"Technology developed by",
+        "details":"ICAR-Central Coastal Agricultural Research Institute (CCARI), Goa",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
+    },
+    {
+        "title": "Instant Chicken Soup Mix",
+        "image": "/branding/Instant Chicken Soup Mix .png",
+        "image1": "/branding/Instant Chicken Soup Mix .png",
+        "id":"b5",
+        "desc":"This is a simple technology for the preparation of instant soup mix by utilizing tough and fibrous meat from spent hens. The quality of reconstituted soup is almost similar to conventional chicken soup from broth and ensures better hygiene because of limited processing steps. The developed instant soup mix is a good source of animal proteins and minerals and is very low in fat content.  The prepared instant chicken soup mix can be easily stored at room temperature, reconstituted, and served as when required. The soup has appealing  appearance, color, consistency, flavor, meat flavor intensity, and overall palatability.The instant soup mix had a shelf life of up to 3 months at room temperature.",
+        "tech":"Technology developed by",
+        "details":"ICAR-Indian Veterinary Research Institute (IVRI), Bareilly (UP)",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
+    },
+    {
+        "title": "Milk protein-enriched iron fortified Bajra biscuit",
+        "image": "/branding/Milk protein-enriched iron fortified Bajra biscuit.png",
+        "image1": "/branding/Bajra biscuit.png",
+        "id":"b6",
+        "desc":"Milk protein-enriched iron fortified Bajra biscuit is prepared by using a composite of Bajra (pearl millet) flour, wheat flour, shortening, dairy ingredients (rich in milk proteins) and fortified with suitable iron salt. Application of dairy ingredients assists in substitution of wheat flour with pearl millet flour to the maximum extent.Optimized biscuits will provide 15.0% of calorie, 20% protein, 7.6% iron and 9% of daily calcium requirement of RDA per 100 g of product.Processing technology can be adopted with the existing infrastructure of bakery unit and can provide opportunity to diversify the product profile towards health foods.",
+        "tech":"Technology developed by",
+        "details":"ICAR-National Dairy Research Institute (NDRI), Karnal, Haryana",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
+    },
+    {
+        "title": "Enriched Yoghurt",
+        "image": "/branding/Enriched Yoghurt.png",
+        "image1": "/branding/Enriched Yoghurt.png",
+        "id":"b7",
+        "desc":"Yogurt is a well-known milk-based dietary product. Recently, acceptance of flavored yogurt has increased. The enriched yogurt having antioxidant activities was prepared by adding fine wine lees. The fine wine lees have a natural color and aroma with antioxidant properties. This product was prepared with the idea of giving different dairy products rich in natural color, aroma, and nutritional, and antioxidant properties. ",
+        "tech":"Technology developed by",
+        "details":"ICAR-National Research Centre for Grapes (NRCG), Pune, Maharashtra",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
+    },
+   
+    {
+        "title": "Functional Pasta from Cassava",
+        "image": "/branding/Functional Pasta from Cassava 1.png",
+        "image1": "/branding/Functional Pasta from Cassava 1.png",
+        "id":"b9",
+        "desc":"Rising consumer awareness about healthy life style includes consumption of functional foods. Functional pasta is a functionally important value-added food made from cassava. The pasta is enriched with carotene and betanin. It has low glycemic and high digestive tolerance. It also has enhanced nutritive value like high protein content or functional value like high dietary fiber content.",
+        "tech":"Technology Developed by",
+        "details":"ICAR - Central Tuber Crops Research Institute Sreekariyam, Thiruvananthapuram, Kerala, India.",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
+    }
+  ]
