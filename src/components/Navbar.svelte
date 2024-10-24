@@ -74,21 +74,23 @@
           <!-- <a href="/bootcamp" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Bootcamp</a> -->
           <a href="/productlaunch" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm"> Product Launch</a>
 
-          <div class="relative">
-            <button on:mouseenter={toggleDropdown} on:mouseleave={closeDropdown} class="md:flex cursor-pointer hidden px-4 py-3 duration-700 md:py-1 uppercase text-white group-hover:text-yellow-400 text-sm">
-              Women Zone 
-              <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-  
-            <!-- Dropdown Content -->
-            <ul on:mouseleave={closeDropdown} on:mouseenter={toggleDropdown} class="absolute bg-black mt-2 py-2 w-48 rounded-lg shadow-lg transition duration-300 transform scale-95 origin-top {dropdownOpen ? 'scale-100 opacity-100' : 'opacity-0'}">
-               
-              <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/bootcamp">Bootcamp</a></li>
-              <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/women_zone">ElevateHer</a></li>
-
-            </ul>
+          <div class=" md:flex hidden">
+              <div class=" relative">
+                <button on:mouseenter={toggleDropdown} on:mouseleave={closeDropdown} class="md:flex cursor-pointer hidden px-4 py-3 duration-700 md:py-1 uppercase text-white group-hover:text-yellow-400 text-sm">
+                  Women Zone 
+                  <svg class="w-4 h-4 ml-1 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+      
+                <!-- Dropdown Content -->
+                <ul on:mouseleave={closeDropdown} on:mouseenter={toggleDropdown} class="absolute bg-black mt-2 py-2 w-48 rounded-lg shadow-lg transition duration-300 transform scale-95 origin-top {dropdownOpen ? 'scale-100 opacity-100' : 'opacity-0'}">
+                   
+                  <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/bootcamp">Bootcamp</a></li>
+                  <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/women_zone">ElevateHer</a></li>
+    
+                </ul>
+              </div>
           </div>
 
       </div>
