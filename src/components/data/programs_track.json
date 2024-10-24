@@ -9,36 +9,7 @@
         "number":"0471 248 6262"
         },
 
-        {
-            "title": "Abad Harmonia | Resort in Kovalam",
-            "image": "hotels/h4.avif",
-            "id":"h4",
-            "website":"https://www.abadhotels.com/harmonia-resort-kovalam/",
-            "location":"https://www.google.com/maps/dir//Abad+Harmonia+%7C+Resort+in+Kovalam,+Chowara,+PO,+Kovalam,+Kerala+695501/@8.3556949,76.93808,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a509aaaaaaab:0xd42989511799e1d4!2m2!1d77.0204584!2d8.3557189?hl=en-GB&entry=ttu",
-            "address":"Chowara, PO, Kovalam, Kerala 695501",
-            "number":"0471 226 9665"
-        },
-
-        {
-            "title": "Somatheeram Ayurveda Village",
-            "image": "hotels/2.jpg",
-            "id":"h10",
-            "website":"https://www.somatheeram.net/",
-            "location":"https://www.google.com/maps/dir//Somatheeram+Ayurveda+Village,+Kovalam,+Chowara,+PO,+Thiruvananthapuram,+Kerala+695501/@8.3578884,76.933245,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af55190eb749:0xaf48ba49760565c5!2m2!1d77.0156469!2d8.3578969?hl=en-GB&entry=ttu",
-            "address":"Kovalam, Chowara, PO, Thiruvananthapuram, Kerala 695501",
-            "number":"0471 226 8101"
-        },
-
-        {
-            "title": "Manaltheeram Ayurveda Beach Village",
-            "image": "hotels/h7.jpg",
-            "id":"h7",
-            "website":"https://manaltheeram.com/",
-            "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KaWKqr1_vAU7MR78tcfNbsSZ&daddr=Manaltheeram+Ayurveda+Beach+Village,+Manaltheeram+Road,+Kovalam,+Chowara,+Kerala+695501",
-            "address":"Manaltheeram Road, Kovalam, Chowara, Kerala 695501",
-            "number":"0471 226 6222"
-        },
-
+      
         {
             "title": "The Ocean Park Beach Resort",
             "image": "hotels/h9.jpg",
@@ -87,21 +58,6 @@
         },
 
 
-
-
-    
-    {
-        "title": "Niraamaya Retreats Surya Samudra Kovalam",
-        "image": "hotels/1.avif",
-        "id":"h1",
-        "website":"https://www.niraamaya.com/surya-samudra-kovalam-resort/",
-        "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KRPNTgP5pQU7MZRBTknu3wrL&daddr=Niraamaya+Retreats+Surya+Samudra+Kovalam,+P.O,+Pulinkudi+Rd,+Vizhinjam,+Mullur,+Kazhivoor,+Kerala+695521",
-        "address":"P.O, Pulinkudi Rd, Vizhinjam, Mullur, Kazhivoor, Kerala 695521",
-        "number":"080 4510 4510"
-        
-    },
-   
-    
     
     {
         "title": "Suntara Beach Resort",
@@ -121,18 +77,9 @@
         "location":"https://www.google.com/maps/dir//9257%2B9H6+Shantitheeram+Residency,+Manaltheeram+Rd,+Adimalathura,+Vizhinjam,+Kottukal,+Kerala+695521/@8.3584066,76.9315038,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af54f98d28fb:0x1a43431fcf718328!2m2!1d77.0139057!2d8.3584151?hl=en-GB&entry=ttu",
         "address":"9257+9H6, Manaltheeram Rd, Adimalathura, Vizhinjam, Kottukal, Kerala 695521",
         "number":"077199 64888"
-    },
+    }
     
    
-    {
-        "title": "The Travancore Heritage",
-        "image": "hotels/h8.jpg",
-        "id":"h8",
-        "website":"https://www.thetravancoreheritage.com/",
-        "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=Kc3WTqIJpQU7MX8NgvgOIobs&daddr=The+Travancore+Heritage,+Poovar+-+Vizhinjam+Rd,+Adimalathura,+Chowara,+Kottukal,+Kerala+695501",
-        "address":"Poovar - Vizhinjam Rd, Adimalathura, Chowara, Kottukal, Kerala 695501",
-        "number":"0471 350 5303"
-    }
     
    
    
