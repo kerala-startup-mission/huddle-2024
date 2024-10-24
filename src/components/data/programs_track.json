@@ -1,85 +1,264 @@
 [ 
-        {
-        "title": "Hotel Port Palace",
-        "image": "hotels/h13.jpg",
-        "id":"h13",
-        "website":"https://portpalacekovalam.com/",
-        "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KdeuExaJpQU7MV0NT4qBX3e-&daddr=Hotel+Port+Palace,+Kattachalkuzhi+Mangalattukonam+Rd,+Mukkola,+Vizhinjam,+Kovalam,+Kerala+695521",
-        "address":"Kattachalkuzhi Mangalattukonam Rd, Mukkola, Vizhinjam, Kovalam, Kerala 695521",
-        "number":"0471 248 6262"
-        },
-
-      
-        {
-            "title": "The Ocean Park Beach Resort",
-            "image": "hotels/h9.jpg",
-            "id":"h9",
-            "website":"",
-            "location":"https://www.google.com/maps/dir//The+Ocean+Park+Beach+Resort,+Post+Office,+Light+House+Beach,+Kovalam,+Vizhinjam,+Thiruvananthapuram,+Kerala+695521/@8.3847338,76.8975694,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a5bb0e46b2b7:0x38ae375e1744ddd7!2m2!1d76.9799713!2d8.3847423?hl=en-GB&entry=ttu",
-            "address":"Post Office, Light House Beach, Kovalam, Vizhinjam, Thiruvananthapuram, Kerala 695521",
-            "number":"080890 40600"
-        },
-
-        {
-            "title": "Orion Seaview Beach Hotel",
-            "image": "hotels/h11.jpg",
-            "id":"h11",
-            "website":"http://www.orionbeachresort.com/",
-            "location":"https://www.google.com/maps?hl=en-GB&gl=IN&um=1&ie=UTF-8&fb=1&sa=X&geocode=KQ_ckA6WpQU7MfHkX-uK9Y1Q&daddr=Orion+Seaview+Beach+Hotel,+P.O,+Light+House+Rd,+Light+House+Beach,+Vizhinjam,+Kovalam,+Kerala+695521",
-            "address":"P.O, Light House Rd, Light House Beach, Vizhinjam, Kovalam, Kerala 695521",
-            "number":"094003 23992"
-        },
-        {
-            "title": "Pebble Coast Resort",
-            "image": "hotels/h12.jpg",
-            "id":"h12",
-            "website":"",
-            "location":"https://www.google.com/maps/dir//Pebble+Coast+Resort,+H+No+XI,+307+,+Near+Somatheeram+Beach+Resort,+Chowara,+Kovalam,+Kerala+695501/@8.3580331,76.9313465,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af8403371633:0x3958377b3d877e67!2m2!1d77.0137484!2d8.3580416?hl=en-GB&entry=ttu",
-            "address":"H No XI, 307 , Near Somatheeram Beach Resort, Chowara, Kovalam, Kerala 695501",
-            "number":"099953 63673"
-        },
-        {
-            "title": "Hotel Sea View Palace - The Beach Hotel",
-            "image": "hotels/h6.jpg",
-            "id":"h6",
-            "website":"http://www.hotelseaviewpalace.com/Kovalam-Hotels/",
-            "location":"https://www.google.com/maps/dir//Hotel+Sea+View+Palace+-+The+Beach+Hotel,+Light+House+Beach+Rd,+Light+House+Beach,+Vizhinjam,+Kovalam,+Kerala+695527/@8.3852489,76.897133,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a5bb10dc11f3:0xd190147513e0064c!2m2!1d76.9795348!2d8.3852575?hl=en-GB&entry=ttu",
-            "address":"Light House Beach Rd, Light House Beach, Vizhinjam, Kovalam, Kerala 695527",
-            "number":"081119 63233"
-        },
-        {
-            "title": "Treebo Trend Green Palm Resorts",
-            "image": "hotels/h2.jpg",
-            "id":"h2",
-            "website":"https://www.treebo.com/hotels-in-thiruvananthapuram/treebo-trend-green-palm-resorts-kovalam-3436/?checkin=2023-09-23&checkout=2023-09-24&hotel_id=3436&rateplan=EP&roomconfig=1-0&roomtype=oak&utm_campaign=hotelgreenpalmresorts&utm_medium=gplus&utm_source=Partnerships",
-            "location":"https://www.google.com/maps/dir//Treebo+Trend+Green+Palm+Resorts,+Kovalam+Beach,+near+Avaduthura+Temple,+Thiruvananthapuram,+Kerala+695521/@8.3893069,76.897454,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a50f3806a0d3:0x35ed3bb76961eb80!2m2!1d76.9798559!2d8.3893155?hl=en-GB&entry=ttu",
-            "address":"Kovalam Beach, near Avaduthura Temple, Thiruvananthapuram, Kerala 695521",
-            "number":"093228 00100"
-        },
 
 
-    
+
+
     {
-        "title": "Suntara Beach Resort",
-        "image": "hotels/h3.jpg",
-        "id":"h3",
-        "website":"https://www.suntarabeachresort.com/index.html",
-        "location":"https://www.google.com/maps/dir//Suntara+Beach+Resort,+Azhimala+Temple+Rd,+Adimalathura,+Vizhinjam,+Kazhivoor,+Kerala+695521/@8.3589902,76.9295195,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05a509aaaaaaab:0x50fc868a08a67445!2m2!1d77.0119231!2d8.3589978?hl=en-GB&entry=ttu",
-        "address":"Azhimala Temple Rd, Adimalathura, Vizhinjam, Kazhivoor, Kerala 695521",
-        "number":"094475 86333"
+        "title": "The Leela Kovalam, a Raviz Hotel",
+        "image": "hotels/leela.png",
+        "id":"h1",
+        "website":"https://www.theleela.com/the-leela-kovalam-a-raviz-hotel",
+        "location":"https://maps.app.goo.gl/qFy1hZ4ziJYXGBDD7",
+        "address":"Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527",
+        "number":"4716691111",
+        "star":5
     },
-    
     {
-        "title": "Shantitheeram Residency",
-        "image": "hotels/h5.jpg",
+        "title": "Gokulam Grand Turtle on the Beach",
+        "image": "hotels/turtile-on-beach-main-image 1.png",
+        "id":"h2",
+        "website":"https://www.turtleonthebeach.com/",
+        "location":"https://maps.app.goo.gl/pfDnGTzr8D3jYBSt6",
+        "address":"TC 63, 512 TO 523, Beach Rd, Kovalam, Kerala 695527",
+        "number":"9539001475",
+        "star":5
+    },
+    {
+        "title": "Swagath Holiday Resorts",
+        "image": "hotels/gallery6 1.png",
+        "id":"h3",
+        "website":"http://www.swagathresort.com/",
+        "location":"https://maps.app.goo.gl/M2gnH6Ss8Q2HmUdy8",
+        "address":"Kovalam Beach Rd, near Upasana Hospital, Kovalam, Kerala 695527",
+        "number":"9847060880",
+        "star":3
+    },
+    {
+        "title": "Getaway Beach Resort Kovalam",
+        "image": "hotels/head-1536x1010 1.png",
+        "id":"h4",
+        "website":"https://www.getawaybeachresort.com/",
+        "location":"https://maps.app.goo.gl/tMujNLgcJ7Qo1qiB7",
+        "address":"1, 1638, Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527",
+        "number":"4712485900",
+        "star":4
+    },
+
+    {
+        "title": "Hotel Sea Face Kovalam",
+        "image": "hotels/banner1 1.png",
         "id":"h5",
-        "website":"",
-        "location":"https://www.google.com/maps/dir//9257%2B9H6+Shantitheeram+Residency,+Manaltheeram+Rd,+Adimalathura,+Vizhinjam,+Kottukal,+Kerala+695521/@8.3584066,76.9315038,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3b05af54f98d28fb:0x1a43431fcf718328!2m2!1d77.0139057!2d8.3584151?hl=en-GB&entry=ttu",
-        "address":"9257+9H6, Manaltheeram Rd, Adimalathura, Vizhinjam, Kottukal, Kerala 695521",
-        "number":"077199 64888"
+        "website":"http://www.seaface.com/",
+        "location":"https://maps.app.goo.gl/aMM5DF7L57qqphjb6",
+        "address":"NUP Hawah Beach, Beach Rd, Kovalam, Thiruvananthapuram, Kerala 695527",
+        "number":"4712481835",
+        "star":3
+    },
+
+    {
+        "title": "The Neelakanta",
+        "image": "hotels/v1-3 1.png",
+        "id":"h6",
+        "website":"http://www.theneelakantakovalam.com/",
+        "location":"https://maps.app.goo.gl/iaJbCJZmbtdkbwzM7",
+        "address":"The Neelakanta, Light House Beach Rd, Kovalam, Kerala 695521",
+        "number":"4712480321",
+        "star":3
+    },
+    {
+        "title": "Pop Tavern Private Pool Villa Kovalam by VOYE HOMES",
+        "image": "hotels/3d6fc98a-ee43-4a0b-b4ad-b8c3ce9ae34b 1.png",
+        "id":"h7",
+        "website":"https://voyehomes.com/pop-tavern-villa-by-voye-homes-aj",
+        "location":"https://maps.app.goo.gl/ZCKdrtcpDwkeLhre6",
+        "address":"Beach Rd, Kovalam, Kerala 695527",
+        "number":"9539690660",
+        "star":4.5
+    },
+    {
+        "title": "Country Club Kovalam Beach",
+        "image": "hotels/Clubbing 1.png",
+        "id":"h8",
+        "website":"http://www.countryclubworld.com/",
+        "location":"https://maps.app.goo.gl/2Z2bMH12Nir2JdQ89",
+        "address":"No 64 Country Spa Road Nedumam Land mark -Thunduvila, Devi Temple Road, P.O, Kovalam, Thiruvananthapuram, Kerala 695527",
+        "number":"7994449135",
+        "star":3
+    },
+    {
+        "title": "KTDC Samudra",
+        "image": "hotels/samudra-inner-banner 1.png",
+        "id":"h9",
+        "website":"https://www.ktdc.com/samudra",
+        "location":"https://maps.app.goo.gl/jvux6a2TrzYSvFZc9",
+        "address":"Kovalam, Thiruvananthapuram, Kerala 695527",
+        "number":"4712480089",
+        "star":3
+    },
+    {
+        "title": "The Byke Puja Samudra Beach Resort Kovalam",
+        "image": "hotels/Exter-13 1.png",
+        "id":"h10",
+        "website":"https://www.thebyke.com/hotels/the-byke-puja-samudra-kovalam/",
+        "location":"https://maps.app.goo.gl/RFFyfRkckdRo9Cdf6",
+        "address":"Samudra Beach, VP 1, GV Raja Rd, Kovalam, Kerala 695527",
+        "number":"7353922669",
+        "star":3
+    },
+    {
+        "title": "Uday Samudra Leisure Beach Hotel",
+        "image": "hotels/UDS_Kovalam_15_blww1g 1.png",
+        "id":"h11",
+        "website":"https://www.udshotels.com/uday-samudra-leisure-beach-hotel-spa/",
+        "location":"https://maps.app.goo.gl/w9nSJneMUbejpAna6",
+        "address":"Samudra Beach, UDS Corporate Office, GV Raja Rd, Thiruvananthapuram, Kerala 695527",
+        "number":"4712483111",
+        "star":5
+    },
+    {
+        "title": "Taj Green Cove Resort & Spa, Kovalam",
+        "image": "hotels/c5ecb3702acb39cef1098acc222db3df2dde4a14-912x966 1.png",
+        "id":"h12",
+        "website":"https://www.tajhotels.com/en-in/hotels/taj-green-cove?utm_source=Google&utm_campaign=Taj-Green-Cove-Kovalam&utm_medium=Local",
+        "location":"https://maps.app.goo.gl/NHWL51qdsKZ9qUna8",
+        "address":"G. V. Raja, Road, Vattappara, Thiruvananthapuram, Kerala 695527",
+        "number":"4716613000",
+        "star":5
+    },
+    {
+        "title": "Molly's Retreat",
+        "image": "hotels/rs=w_1535,m 1 (1).png",
+        "id":"h13",
+        "website":"http://www.mollysretreatkovalam.com/",
+        "location":"https://maps.app.goo.gl/4eALxghgT2xQMH2N7",
+        "address":"Samudra, Beach Rd, Kovalam, Kerala 695527",
+        "number":"6238943425",
+        "star":3
+    },
+    {
+        "title": "Amara Ayurveda Retreat",
+        "image": "hotels/11.png",
+        "id":"h14",
+        "website":"http://www.amaraayurveda.com/",
+        "location":"https://maps.app.goo.gl/UbwMdjo12WnPfjhn8",
+        "address":"Amara Ayurveda Retreat Vgrp 369 A K S Road, Zeon Kunnu Kovalam, Thiruvananthapuram, Kerala 695527",
+        "number":"8086019333",
+        "star":4
+    },
+    {
+        "title": "Aadisaktthi Leisure Resort Kovalam",
+        "image": "hotels/551dc9_1599b8cb640c453abefb716376c2f635~mv2 1.png",
+        "id":"h15",
+        "website":"https://adsresorts.in/",
+        "location":"https://maps.app.goo.gl/AzM2GZ2Y7C2oQvJ1A",
+        "address":"227/A, KS Rd, Vellar, Kovalam, Kerala 695527",
+        "number":"9633178787",
+        "star":4
+    },
+    {
+        "title": "Sagara Beach Resort",
+        "image": "hotels/Homepage-About-us 1.png",
+        "id":"h16",
+        "website":"http://www.sagarakovalam.com/",
+        "location":"https://maps.app.goo.gl/snUj4CZ5bxiWvpCj9",
+        "address":"Light House Rd, Vizhinjam, Kovalam, Kerala 695523",
+        "number":"4713999000",
+        "star":3
+    },
+    {
+        "title": "Treebo Trend Green Palm Resorts",
+        "image": "hotels/Common_11_ 1.png",
+        "id":"h17",
+        "website":"https://www.treebo.com/hotels-in-thiruvananthapuram/treebo-trend-green-palm-resorts-kovalam-3436/?utm_source=Partnerships&utm_medium=gplus&utm_campaign=hotelgreenpalmresorts",
+        "location":"https://maps.app.goo.gl/6auWm7f2PqEoL9bw7",
+        "address":"Kovalam Beach, near Avaduthura Temple, Thiruvananthapuram, Kerala 695521",
+        "number":"9322800100",
+        "star":3
+    },
+    {
+        "title": "Soma Palmshore",
+        "image": "/hotels/seafacing 1.png",
+        "id":"h18",
+        "website":"http://www.somapalmshore.com/",
+        "location":"https://maps.app.goo.gl/aH8BnR1u8dXipyBi6",
+        "address":"Light House Rd, Kovalam, Kerala 695521",
+        "number":"4712266111",
+        "star":3
+    },
+    {
+        "title": "La Promenade Hotel",
+        "image": "hotels/1a 1.png",
+        "id":"h19",
+        "website":"http://www.lapromenadehotel.com/",
+        "location":"https://maps.app.goo.gl/Aw6rqSiJPqc98zG18",
+        "address":"kovalam junction Opposite Federal Bank ATM, Thiruvananthapuram, Kerala 695527",
+        "number":"4712487711",
+        "star":2
+    },
+    {
+        "title": "Lagoona Beach Resort",
+        "image": "hotels/Lobby-Lagoona 1.png",
+        "id":"h20",
+        "website":"http://www.lagoonabeachresort.com/",
+        "location":"https://maps.app.goo.gl/46pYVkCABEjPHwpL8",
+        "address":"TC 65/3034(2, Kovalam Rd, Pachalloor, Thiruvananthapuram, Kerala 695027",
+        "number":"7994003555",
+        "star":4
+    },
+    {
+        "title": "Beach & Lake Ayurvedic Resort, Kovalam",
+        "image": "hotels/1758577151 1.png",
+        "id":"h21",
+        "website":"http://www.beachandlakeresort.com/",
+        "location":"https://maps.app.goo.gl/hmzZ8dU3hhSnucTE7",
+        "address":"Pozhikkara Beach, Pachalloor, Kovalam, Thiruvananthapuram, Kerala 695027",
+        "number":"9400812086",
+        "star":3
+    },
+    {
+        "title": "Travancore Island Resort",
+        "image": "hotels/deluxe_room 1.png",
+        "id":"h22",
+        "website":"https://travancoreislandresorts.com/",
+        "location":"https://maps.app.goo.gl/eQuMFyfD9ZgwnHxa7",
+        "address":"Travancore Island Resort, Edayar Bridge, Edayar, Thiruvallam, Thiruvananthapuram, Kerala 695027",
+        "number":"8089192120",
+        "star":3
+    },
+    {
+        "title": "Hotel Port Palace",
+        "image": "hotels/spotlight-4 1.png",
+        "id":"h3",
+        "website":"http://www.portpalacekovalam.com/",
+        "location":"https://maps.app.goo.gl/A4PsUj3kgy3PJMri6",
+        "address":"Kattachalkuzhi Mangalattukonam Rd, Mukkola, Vizhinjam, Kovalam, Kerala 695521",
+        "number":"4712484242",
+        "star":3
+    },
+    {
+        "title": "View Heights Resort",
+        "image": "hotels/team_details 1.png",
+        "id":"h24",
+        "website":"https://www.theviewheights.com/",
+        "location":"https://maps.app.goo.gl/C4rSHhb5CFWxtT7N8",
+        "address":"Beach Road, Kovalam, Thiruvananthapuram, Kerala 695527",
+        "number":"4716455550",
+        "star":3
+    },
+    {
+        "title": "Samudra Theeram Beach Resort",
+        "image": "hotels/aa42e5_59c210cd254048e3bba23415b5a4b7e3~mv2_d_7006_5189_s_4_2 1.png",
+        "id":"h25",
+        "website":"http://www.samudratheeram.com/",
+        "location":"https://maps.app.goo.gl/5kf4CvFSYYoTRk1b7",
+        "address":"I T D C Grove Beach, Kovalam, Kerala 695527",
+        "number":"4712488244",
+        "star":3
     }
     
-   
+    
+    
+    
     
    
    

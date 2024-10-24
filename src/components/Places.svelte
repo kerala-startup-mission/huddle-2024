@@ -9,7 +9,7 @@
     <div class="md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 grid gap-3">
         {#each programs as program}
         <a href={program.location ?? "#"} target="_blank">
-            <div class="card relative cursor-pointer border-2 group hover:opacity-70 hover:bg-black h-[40vh] overflow-hidden hover:duration-700">
+            <div class=" relative cursor-pointer  group hover:opacity-70 hover:bg-black h-[40vh] overflow-hidden hover:duration-700">
                 <img src={`/img/${program.image}`} alt={program.title} class="w-full h-full object-cover hover:scale-125 duration-700">
                 <div class="tooltip absolute bottom-0 right-0 m-3 bg-black text-white text-sm p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-end flex z-40">
                     {program.title}

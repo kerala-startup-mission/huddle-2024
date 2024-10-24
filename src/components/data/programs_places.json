@@ -1,20 +1,15 @@
 [
-    {
-        "title": "Kerala Arts and Crafts Village",
-        "image": "hotels/f1c170_16d86233622d4c5dab33375aab4565f0~mv2.webp",
-        "location":"https://www.kacvkovalam.org/"
-        
-    },
+   
         {
             "title": "Poovar Island",
             "image": "hotels/p1.jpg",
-            "location":"https://www.google.com/maps/dir/Somatheeram+Beach,+9248%2B22C,+Adimalathura,+Kazhivoor,+Kerala+695521/Poovar+Island+Resort,+K.P.+VII%2F911,+Pozhiyoor,+Kulathoor,+Kerala+695513/@8.3538914,77.0154552,1440m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x3b05a986372cfba1:0xfe3274b92917af52!2m2!1d77.0150218!2d8.3550661!1m5!1m1!1s0x3b05a999ab9f3cc3:0x1f8fe8eaeee7badd!2m2!1d77.0817971!2d8.3073682!3e0?authuser=0&hl=en&entry=ttu"
+            "location":"https://www.google.com/maps/place/Poovar+Island+Resort/@8.3073682,77.0817971,17z/data=!3m1!4b1!4m9!3m8!1s0x3b05a999ab9f3cc3:0x1f8fe8eaeee7badd!5m2!4m1!1i2!8m2!3d8.3073682!4d77.0817971!16s%2Fg%2F11b5s2df6t?authuser=0&hl=en&entry=ttu"
             
         },
         {
             "title": "Kovalam Beach",
             "image": "hotels/p2.jpg",
-            "location":"https://www.google.com/maps/dir/Somatheeram+Beach,+9248%2B22C,+Adimalathura,+Kazhivoor,+Kerala+695521/CX6G%2B6MH+Kovalam+Tourist+Village,+Trivandrum+Bypass+Rd,+Vazhamuttom,+Thiruvananthapuram,+Kovalam,+Kerala+695527/@8.3549392,77.0130346,1441m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x3b05a986372cfba1:0xfe3274b92917af52!2m2!1d77.0150218!2d8.3550661!1m5!1m1!1s0x3b05a51064555555:0x47d0c99366c53e83!2m2!1d76.9766516!2d8.4105806!3e0?authuser=0&hl=en&entry=ttu"
+            "location":"https://www.google.com/maps/place/Kovalam+Tourist+Village/@8.4105547,76.9767275,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05a51064555555:0x47d0c99366c53e83!8m2!3d8.4105547!4d76.9767275!16s%2Fg%2F11sskrmk1g?authuser=0&hl=en&entry=ttu"
             
         },
         {
