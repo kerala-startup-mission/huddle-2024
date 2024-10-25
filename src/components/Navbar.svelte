@@ -178,7 +178,7 @@
                     </button>
           
                     <!-- Dropdown Content -->
-                    <ul on:mouseleave={closeDropdownsm} on:mouseenter={toggleDropdownsm} class="absolute bg-black mt-2 py-2 w-48 rounded-lg shadow-lg transition duration-300 transform scale-95 origin-top {dropdownOpensm ? 'scale-100 opacity-100' : 'opacity-0'}">
+                    <ul on:mouseleave={closeDropdownsm} on:mouseenter={toggleDropdownsm} class="absolute flex flex-col md:hidden bg-black mt-2 py-2 w-48 rounded-lg shadow-lg transition duration-300 transform scale-95 origin-top {dropdownOpensm ? 'scale-100 opacity-100' : 'opacity-0'}">
                       <!-- <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/productlaunch">Product Launch</a></li> -->
                       <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/bootcamp">Bootcamp</a></li>
                       <li class="px-4 py-2 hover:bg-gray-600 text-white"><a href="/women_zone">ElevateHer</a></li>
