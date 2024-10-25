@@ -84,5 +84,17 @@
         "details1":"",
         "mandatory1":"",
         "mandatory2":""
+    },
+    {
+        "title": "'Shrimp on the Go'- Ready to eat masala shrimp",
+        "image": "/branding/'Shrimp on the Go' -RTE masala shrimp 1.png",
+        "image1": "/branding/'Shrimp on the Go' -RTE masala shrimp 1.png",
+        "id":"b10",
+        "desc":"ICAR-CIFT has developed a value added fish product called 'Shrimp on the Go'. This is a ready to eat masala shrimp that can be consumed as a snack food.",
+        "tech":"Technology Developed by",
+        "details":"ICAR-CIFT",
+        "details1":"",
+        "mandatory1":"",
+        "mandatory2":""
     }
   ]
