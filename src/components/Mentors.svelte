@@ -124,7 +124,7 @@
 
 <svelte:window bind:scrollY={y} on:scroll={checkScroll} />
 
-<div class="sm:px-6 p-4">
+<div class="sm:px-6 px-4">
   <!-- Dropdown for filtering by stage -->
   <!-- The SVG icon, acting as a clickable trigger for the dropdown -->
 <div>
@@ -166,10 +166,10 @@
 
 <!-- Display the selected stage -->
 <!-- <p>Selected Stage: {selectedStage || "All Stages"}</p> -->
-  <div class="">
+  <div class=" py-0">
     {#each filteredData as mentorType (mentorType.id)}
       <div>
-        <h3 class="text-xs pt-8 pb-2 text-start font-semibold text-black uppercase">
+        <h3 class="text-xs pt-6 pb-2 text-start font-semibold text-black uppercase">
           {mentorType.attributes.mentortype}
         </h3>
         <div class="w-full flex flex-col gap-2 text-start items-start justify-start">
