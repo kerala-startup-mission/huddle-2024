@@ -136,9 +136,17 @@
       <div class="flex">
         <div class=" flex flex-col">
           <button on:click={toggleDropdown} class="flex p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="w-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
-            </svg>
+            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_271_2)">
+              <path d="M6.00161 9V16.88C5.96161 17.18 6.06161 17.5 6.29161 17.71C6.68161 18.1 7.31161 18.1 7.70161 17.71L9.71161 15.7C9.94161 15.47 10.0416 15.16 10.0016 14.87V9H10.0316L15.7916 1.62C16.1316 1.19 16.0516 0.56 15.6216 0.22C15.4316 0.08 15.2216 0 15.0016 0H1.00161C0.781607 0 0.571606 0.08 0.381606 0.22C-0.0483939 0.56 -0.128394 1.19 0.211606 1.62L5.97161 9H6.00161Z" fill="#C70000"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_271_2">
+              <rect width="17.0013" height="18.0025" fill="white" transform="matrix(-1 0 0 1 17.0015 0)"/>
+              </clipPath>
+              </defs>
+              </svg>
+              
           </button>
         </div>
       </div>
