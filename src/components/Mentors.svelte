@@ -124,7 +124,7 @@
 
 <svelte:window bind:scrollY={y} on:scroll={checkScroll} />
 
-<div class="sm:px-6 sm:m-0 m-4">
+<div class="sm:px-6 p-4">
   <!-- Dropdown for filtering by stage -->
   <!-- The SVG icon, acting as a clickable trigger for the dropdown -->
 <div>
@@ -145,7 +145,7 @@
     </div>
     {#if showDropdown}
     <!-- Dropdown menu -->
-    <div class=" text-start w-full mt-2 rounded-md shadow-lg bg-white  bordr-b-0 ring-black ring-opacity-5 z-10">
+    <div class=" text-start w-full  rounded-md shadow-lg bg-white  bordr-b-0 ring-black ring-opacity-5 z-10">
       <div class="pt-1">
         <button on:click={() => selectStage("")} class="w-full border-b-2  text-start px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All Stages</button>
         {#each stpStages as stage}
