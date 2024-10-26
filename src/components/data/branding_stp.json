@@ -72,7 +72,20 @@
         "mandatory1":"",
         "mandatory2":""
     },
-   
+    {
+        "title": "Fruit roll-up",
+        "image": "/branding/Fruit roll-up.png",
+        "image1": "/branding/Fruit roll-up.png",
+        "id":"b11",
+        "desc":"Fruit roll-up is a type of confectionery made from fruit puree that has been dried into a thin, flexible sheet.By implementing the specific formulation and innovative drying technology developed by CSIR-NIIST, the manufacturers can produce high-quality fruit roll-ups that meet consumer expectations for flavor, nutrition, and safety. The roll-up is lightweight, portable, and easy to store, making it an ideal snack for on-the-go consumption.",
+        "tech":"Technology Developed by",
+        "details":"CSIR - National Institute For Interdisciplinary Science and Technology (NIIST) Industrial Estate P.O, Pappanamcode, Thiruvananthapuram, Kerala 695019",
+        "mandatory2":"100% Natural Ingredients",
+        "mandatory3":"Customizable Flavors",
+        "mandatory1":"Flavor Preservation",
+        "mandatory4":"Shelf-Stable",
+        "details1":""
+    },
     {
         "title": "Functional Pasta from Cassava",
         "image": "/branding/Functional Pasta from Cassava 1.png",
@@ -92,7 +105,7 @@
         "id":"b10",
         "desc":"ICAR-CIFT has developed a value added fish product called 'Shrimp on the Go'. This is a ready to eat masala shrimp that can be consumed as a snack food.",
         "tech":"Technology Developed by",
-        "details":"ICAR-CIFT",
+        "details":"IICAR - Central Institute of Fisheries Technology Kochi, Kerala",
         "details1":"",
         "mandatory1":"",
         "mandatory2":""
