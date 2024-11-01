@@ -17,13 +17,14 @@
     "sass": "^1.54.4",
     "svelte": "^3.49.0",
     "svelte-markdown": "^0.2.3"
-
   },
   "dependencies": {
     "@mediamonks/fast-image-sequence": "^1.0.1",
     "axios": "^1.7.2",
     "flowbite": "^2.4.1",
+    "luxon": "^3.5.0",
     "plyr": "^3.7.8",
+    "simplur": "^4.0.0",
     "swiper": "^8.3.2",
     "tailwindcss-scoped-groups": "^2.0.0",
     "three": "^0.165.0"

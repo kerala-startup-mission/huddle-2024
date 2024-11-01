@@ -67,8 +67,10 @@
       <div class="flex my-auto "style="font-family: Museo-Sans, sans-serif;">
           <a href="/#home"  class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Home</a>
           <a href="/#speakers" class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Speakers</a>
+          <a href="/#agenda" class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Agenda</a>
+          
           <a href="/#tracks" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Tracks</a>
-          <a onclick="functionshow('pop_up')" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">SPONSORSHIP OPPORTUNITIES</a>
+          <!-- <a onclick="functionshow('pop_up')" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">SPONSORSHIP OPPORTUNITIES</a> -->
           <!-- <a href="https://2023.huddleglobal.co.in/" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Previous Edition</a> -->
           <!-- <a href="/nearby_attractions" target="_blank" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Nearby Attractions</a> -->
           <!-- <a href="/bootcamp" class="md:flex cursor-pointer hidden px-4 py-3 duration-700  md:py-1 uppercase text-white group-hover:text-yellow-400  text-sm">Bootcamp</a> -->
@@ -139,6 +141,11 @@
                       <a href="/#speakers" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Speakers</a>
                   </li>
 
+                  <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
+                    <a href="/#agenda" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Agenda</a>
+                  </li>
+
+
 
                   <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
                       <a href="/#tracks" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">Track</a>
@@ -146,7 +153,7 @@
 
 
                  
-                  <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
+                  <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 lex">
                       <a onclick="functionshow('pop_up')" class="md:text-white cursor-pointer text-white font-bold hover:text-black uppercase ">SPONSORSHIP OPPORTUNITIES</a>
                   </li>
                  

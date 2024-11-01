@@ -1,0 +1,186 @@
+---
+let tracks1 = [
+
+{
+  "image":"/img/close_the_deal/businesses-steel-banner.jpg",
+  "name":"Steel/ Iron Ore Business (IOB) Vedanta Sparkn",
+  "link"  :"/close_the_deal/vedanta_steel",
+},
+{
+  "image":"/img/close_the_deal/businesses-oil-gas_banner.jpg",
+  "name":"Cairn Oil & Gas Vedanta",
+  "link"  :"/close_the_deal/Vedanta_oil_gas",
+},
+{
+  "image":"/img/close_the_deal/businesses_aluminium_banner.jpg",
+  "name":"Vedanta Aluminium",
+  "link"  :"/close_the_deal/Vedanta_aluminium",
+},
+{
+  "image":"/img/close_the_deal/businesses_zinc_lead_silver_banner.jpg",
+  "name":"Hindustan Zinc Limited (HZL), Vedanta Resources' copper and Vedanta Zinc International (VZI) ,by Vedanta Spark",
+  "link"  :"/close_the_deal/vedanta_spark",
+}
+]
+---
+
+
+<style lang="scss">
+
+  .flipbox {
+    
+    .flipbox-wrapper {
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+      perspective: 1000px;
+      min-height: 300px;
+      .flipbox-front,
+      .flipbox-back {
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        perspective: inherit;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        box-shadow: 0 26px 38px 0 rgb(0 0 0 / 20%);
+        transition: transform .8s cubic-bezier(0.5, 0.2, 0.2, 0.8);
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .flipbox-front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: white;
+        color: white;
+        background-size: cover;
+        background-position: center;
+        &::before{
+          content: '';
+          background: #000;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          opacity: 50%;
+          border-radius: 10px;
+        }
+        .title {
+          position: relative;
+          z-index: 5;
+          text-align: center;
+          width: 100%;
+          perspective: inherit;
+          backface-visibility: hidden;
+          font-size: 28px;
+          font-weight: 900;
+          line-height: 1.2;
+          text-shadow: 2px 2px 3px rgba(0, 0, 0, .75);
+        }
+      }
+     
+    }
+  }
+
+  .readmore-button {
+    display: inline-flex;
+    transition: all .3s ease-in-out;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: -27.5px;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    background: #fd226a;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+  }
+
+  .readmore-wrapper:hover {
+    .readmore-button {
+      animation: bounceReadMore .5s ease-in-out both;
+      opacity: 1;
+      visibility: visible;
+      margin: 0;
+    }
+  }
+
+  @keyframes bounceReadMore {
+    0% {
+      transform: translateY(-35px) translateZ(20px)
+    }
+    50% {
+      transform: translateY(15px) translateZ(20px)
+    }
+    100% {
+      transform: translateY(0) translateZ(20px)
+    }
+  }
+
+
+</style>
+
+<div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+   
+  {tracks1.map((item,index) => (
+    <a  href={item.link??"#"}  class="">
+      <div
+        class={"flipbox cursor-pointer readmore-wrapper " + ((index % 2 === 0) ? "flip-bottom" : "flip-right")}
+        
+      >
+        <div class="flipbox-wrapper">
+          <div
+            class="flipbox-front flex flex-col relative group"
+            style={"background-image: url(" + item.image + ")"}
+          >
+            <h5 class="title">{item.name}</h5>
+            <div class=" absolute bottom-2">
+              <img src="/img/2024/arrow.png" class="w-8 group-hover:scale-125 duration-700">
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+))}
+
+  </div>
+  
+
+  
+  <script is:inline>
+    function showPopup(imageUrl) {
+      const popupImage = document.getElementById('popupImage');
+      popupImage.src = imageUrl;
+      
+      const imagePopup = document.getElementById('imagePopup');
+      imagePopup.classList.remove('hidden');
+    }
+  
+    function closePopup() {
+      const imagePopup = document.getElementById('imagePopup');
+      imagePopup.classList.add('hidden');
+    }
+  
+    document.querySelectorAll('.flipbox').forEach(flipbox => {
+      flipbox.addEventListener('click', function() {
+        const popupUrl = this.getAttribute('data-popup');
+        showPopup(popupUrl);
+      });
+    });
+  
+    document.getElementById('closePopupButton').addEventListener('click', closePopup);
+  </script>
+  

@@ -17,6 +17,8 @@ import Partner from "../components/Partners.svelte";
 import Navbar from "../components/Navbar.svelte";
 import SocialLinks from "../components/SocialLinks.astro";
 
+import Agenda from "../components/Agenda.svelte";
+
 ---
 
 <Layout  title="Kerala Startup Mission">
@@ -143,6 +145,24 @@ import SocialLinks from "../components/SocialLinks.astro";
       <ParallelTracks></ParallelTracks>
     </div>
   </section>
+
+
+
+
+  <section id="agenda" class="px-5 pb-24 pt-10 bg-black">
+    <div class="container mx-auto">
+
+      <div class="text-center">
+        <div class="mb-2 text-5xl text-yellow-400 font-spl">What's in store for you</div>
+        <div class="mb-10 text-3xl font-black text-white">Agenda</div>
+      </div>
+
+      <Agenda client:load></Agenda>
+
+    </div>
+  </section>
+
+
 
 
 	<div class=" z-50 fixed top-0 left-0  hidden w-full h-screen p-5 bg-black bg-opacity-50 youtube-popup backdrop-filter backdrop-blur-sm">
