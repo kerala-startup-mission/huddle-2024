@@ -119,7 +119,7 @@
                         {#if Object.entries(speakers).length}
                           <div class="mt-4 ml-4">
                             {#each Object.entries(speakers) as [category, speaker_list]}
-                              <div class="font-bold uppercase text-pink-300 mb-3">
+                              <div class="font-bold text-xs uppercase text-pink-300 mb-3">
                                 { simplur`${[speaker_list.length,null]}${category}[|s]` }
                               </div>
     
