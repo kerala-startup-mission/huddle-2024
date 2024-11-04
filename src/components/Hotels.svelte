@@ -79,12 +79,12 @@
 
                                         <div class="flex gap-4 pt-6">
                                             {#if program.website}
-                                                <div class="text-white bg-huddle px-3 py-1">
-                                                    <a href={program.website ?? "#"} class="text-sm" target="_blank">WEBSITE</a>
+                                                <div class="text-white bg-huddle px-2 text-center items-center justify-center flex ">
+                                                    <a href={program.website ?? "#"} class="text-xs text-center items-center justify-center flex p-2" target="_blank">WEBSITE</a>
                                                 </div>
                                             {/if}
-                                            <div class="text-black border-2 bg-white px-3 py-1 border-black">
-                                                <a href={program.location ?? "#"} class="text-sm" target="_blank">LOCATION</a>
+                                            <div class="text-black border-2 bg-white px-2 text-center items-center justify-center flex border-black">
+                                                <a href={program.location ?? "#"} class="text-xs text-center items-center justify-center flex p-2" target="_blank">LOCATION</a>
                                             </div>
                                         </div>
                                     </div>
