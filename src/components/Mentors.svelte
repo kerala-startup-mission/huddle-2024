@@ -129,9 +129,9 @@
   <!-- The SVG icon, acting as a clickable trigger for the dropdown -->
 <div>
 
-    <div class=" flex w-full justify-between ">
+    <!-- <div class=" flex w-full justify-between ">
       <div class="flex  ">
-        <!-- <p>{selectedStage || "All Stages"}</p> -->
+        <p>{selectedStage || "All Stages"}</p>
       </div>
       <div class="flex">
         <div class=" flex flex-col">
@@ -150,18 +150,32 @@
           </button>
         </div>
       </div>
-    </div>
-    {#if showDropdown}
+    </div> -->
+
     <!-- Dropdown menu -->
-    <div class=" text-start w-full  rounded-md shadow-lg bg-white  bordr-b-0 ring-black ring-opacity-5 z-10">
-      <div class="pt-1">
-        <button on:click={() => selectStage("")} class="w-full border-b-2  text-start px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All Stages</button>
+    <div class="text-start  rounded-md bordr-b-0 z-10">
+      <div class="pt-1 flex flex-row flex-wrap gap-2">
+        <!-- Button for "All" stages -->
+        <button 
+          on:click={() => selectStage("")} 
+          class="rounded-full border border-black text-center p-2 px-3 text-xs 
+          {selectedStage === '' ? 'bg-huddle text-white' : 'text-gray-700 hover:bg-gray-100'}">
+          All
+        </button>
+    
+        <!-- Buttons for each stage -->
         {#each stpStages as stage}
-          <button on:click={() => selectStage(stage)} class="w-full border-b-2 text-start px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{stage}</button>
+          <button 
+            on:click={() => selectStage(stage)} 
+            class="rounded-full border border-black text-center p-2 px-3 text-xs 
+            {selectedStage === stage ? 'bg-huddle text-white' : 'text-gray-700 hover:bg-gray-100'}">
+            {stage === "Beta Launched/ Early Revenue stage" ? "Revenue stage" : stage}
+          </button>
         {/each}
       </div>
     </div>
-  {/if}
+    
+    
 </div>
 
 <!-- Display the selected stage -->
