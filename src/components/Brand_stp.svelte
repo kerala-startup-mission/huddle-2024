@@ -35,7 +35,7 @@
                 <div class="pt-2 ">
                     <div class="text-white w-full  text-start pb-2 text-lg flex font-normal" style="font-family: Jost, sans-serif;">{program.title}</div>
                 </div>
-                <div class="h-0.5 bg-white bg-opacity-50 bottom-4 absolute z-[10] group-hover:opacity-50 group-hover:bg-huddle w-full">
+                <div class="h-0.5 bg-white bg-opacity-50 bottom-4 absolute z-[10]  group-hover:bg-huddle w-full">
                     <div class="py-2 text-white" style="font-family: Jost, sans-serif;">
                         <div class="text-xs flex gap-4 pt-2 ">
                             <div>
