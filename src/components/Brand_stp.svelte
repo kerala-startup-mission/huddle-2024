@@ -97,7 +97,7 @@
                                 <div class=" flex items-end justify-end flex-col">
                                     <div class=" text-black md:text-sm  text-xs  md:pt-3 pt-1 pb-1 font-semibold" >{program.tech}</div>
                                     <div class=" text-black md:text-sm  text-xs font-extralight md:py-2 py-1  " >{program.details}</div>
-                                    <div class=" text-black  md:text-sm text-xs font-extralight " >{program.details1}</div>
+                                    <div class=" text-huddle  md:text-sm text-xs font-extralight " >{program.details1}</div>
     
                                 </div>
                                {#if program.link}
