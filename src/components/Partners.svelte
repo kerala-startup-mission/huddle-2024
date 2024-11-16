@@ -4,12 +4,13 @@
 
     let data = [];
     let loading = false;
+    let page = 1;
 
     async function getData() {
         loading = true;
 
         try {
-            const response = await axios.get(`https://cms.startupmission.in/api/partnershiptypes?populate=*,partners.Image`);
+            const response = await axios.get(`https://cms.startupmission.in/api/partnershiptypes?populate=*,partners.Image&&pagination[page]=${page}&pagination[pageSize]=100`);
             data = response.data.data;
 
             // Sort data based on the order attribute of partnership types
@@ -31,6 +32,21 @@
     }
 
     onMount(getData);
+
+    function checkScroll(){
+      let scroll_distance = document.body.scrollHeight - window.innerHeight;
+      // console.log(y, scroll_distance, scroll_distance - threshold);
+  
+      if(loading) return;
+  
+      if(y > scroll_distance - threshold){
+        if(page < meta.pagination.pageCount){
+          page++;
+          getData();
+        } 
+      }
+  
+    }
 </script>
 
 <div class="px-8 items-center justify-center text-center mx-auto">
