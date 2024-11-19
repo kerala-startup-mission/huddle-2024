@@ -85,7 +85,7 @@
   
     var alert_data = {
       type: "alert",
-      data: "Feature coming soon"
+      data: "Feature Not Available"
     };
     if (item.attributes.externalid) {
       window.ReactNativeWebView?.postMessage(JSON.stringify(navigate));

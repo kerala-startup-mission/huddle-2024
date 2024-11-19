@@ -22,6 +22,7 @@
     "@mediamonks/fast-image-sequence": "^1.0.1",
     "axios": "^1.7.2",
     "flowbite": "^2.4.1",
+    "lucide-svelte": "^0.460.1",
     "luxon": "^3.5.0",
     "plyr": "^3.7.8",
     "simplur": "^4.0.0",
