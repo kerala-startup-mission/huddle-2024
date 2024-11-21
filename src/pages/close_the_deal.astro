@@ -2,122 +2,350 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from "../components/Navbar_c.svelte";
 
-let investors = [
-  {
-    "image" : "/img/close_the_deal/landt.png",
-    "link"  :"/close_the_deal/landt",
-    "title":"L&T Digital Energy Solutions"
-  },
-  {
-    "image" : "/img/close_the_deal/hdfc.png",
-    "link"  :"/close_the_deal/hdfc",
-    "title":"HDFC Bank"
-  },
-  {
-    "image" : "/img/close_the_deal/yesbank.png",
-    "link"  :"/close_the_deal/yesbank",
-    "title":"YES Bank"
-  },
-  {
-    "image" : "/img/close_the_deal/bosch (1).png",
-    "link"  :"/close_the_deal/bosch",
-    "title":"Bosch"
-  },
-  {
-    "image" : "/img/close_the_deal/vedanta.png",
-    "link"  :"/close_the_deal/Vedanta",
-    "title":"Vedanta Spark"
-  },
-  {
-    "image" : "/img/close_the_deal/nova.png",
-    "link"  :"/close_the_deal/saint_gobain",
-    "title":"Saint Gobain"
-  },
-  {
-    "image" : "/img/close_the_deal/idfcfb.png",
-    "link"  :"/close_the_deal/idfc",
-    "title":"IDFC First Bank"
-  },
-  {
-    "image" : "/img/close_the_deal/nabard.png",
-    "link"  :"/close_the_deal/nabard",
-    "title":"NABARD"
-  }
-];
+let tracks1 = [
+{
+  "image": "/img/close_the_deal/gov.png",
+  "link":"/government",
+  "name": "Government Departments"
+ },
+ {
+  "image": "/img/close_the_deal/164326897561f24b6fc923a.jpg",
+  "link":"/corporate",
+  "name": "Corporates"
+ }
 
+ 
+];
 ---
-<!-- // import MarketingAgenda from "../components/MarketingAgenda.svelte"; -->
+
+<style lang="scss">
+
+  .flipbox {
+    &.flip-bottom {
+      &:hover {
+        .flipbox-front {
+          transform: rotateX(-180deg);
+        }
+        .flipbox-back {
+          transform: rotateX( 0deg);
+        }
+      }
+      .flipbox-back {
+        transform: rotateX(180deg);
+      }
+    }
+    &.flip-right {
+      &:hover {
+        .flipbox-front {
+          transform: rotateY(-180deg);
+        }
+        .flipbox-back {
+          transform: rotateY( 0deg);
+        }
+      }
+      .flipbox-back {
+        transform: rotateY(180deg);
+      }
+    }
+    &:hover {
+      .readmore-button {
+        animation-delay: 500ms !important;
+      }
+    }
+    .flipbox-wrapper {
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
+      perspective: 1000px;
+      min-height: 300px;
+      .flipbox-front,
+      .flipbox-back {
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        perspective: inherit;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        box-shadow: 0 26px 38px 0 rgb(0 0 0 / 20%);
+        transition: transform .8s cubic-bezier(0.5, 0.2, 0.2, 0.8);
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .flipbox-front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: white;
+        color: white;
+        background-size: cover;
+        background-position: center;
+        &::before{
+          content: '';
+          background: #000;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          opacity: 50%;
+          border-radius: 10px;
+        }
+        .title {
+          position: relative;
+          z-index: 5;
+          text-align: center;
+          width: 100%;
+          transform: translate3d(0, 0, 70px) scale(0.86);
+          transform-style: preserve-3d;
+          perspective: inherit;
+          backface-visibility: hidden;
+          font-size: 35px;
+          font-weight: 900;
+          line-height: 1.2;
+          text-shadow: 2px 2px 3px rgba(0, 0, 0, .75);
+        }
+      }
+      .flipbox-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #c70000;
+        color: white;
+        padding: 1rem;
+        .title {
+          backface-visibility: hidden;
+          transform: translate3d(0, -10px, 35px) scale(0.86);
+          line-height: 20px;
+          font-size: 10rem;
+          font-weight: 700;
+          opacity: .25;
+        }
+        .content {
+          transform-style: preserve-3d;
+          perspective: inherit;
+          transform: translateZ(70px) scale(0.86);
+          backface-visibility: hidden;
+          font-size: 1rem;
+          font-weight: 300;
+          // padding: 32px;
+        }
+      }
+    }
+  }
+
+  .readmore-button {
+    display: inline-flex;
+    transition: all .3s ease-in-out;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: -27.5px;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    background: #fd226a;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+  }
+
+  .readmore-wrapper:hover {
+    .readmore-button {
+      animation: bounceReadMore .5s ease-in-out both;
+      opacity: 1;
+      visibility: visible;
+      margin: 0;
+    }
+  }
+
+  @keyframes bounceReadMore {
+    0% {
+      transform: translateY(-35px) translateZ(20px)
+    }
+    50% {
+      transform: translateY(15px) translateZ(20px)
+    }
+    100% {
+      transform: translateY(0) translateZ(20px)
+    }
+  }
+
+
+</style>
 
 <Layout>
-  <Navbar client:load></Navbar>
+    <Navbar client:load></Navbar>
 
-  
 
-	<section class="pt-24 pb-20 px-5 z-[10]  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
+	<section class=" bg-black py-24 px-5  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
 		<div class="absolute z-[1] w-full h-full top-0 left-0 bg-black bg-opacity-40"></div>
 
-		<div class="container mx-auto text-center z-[2] pt-10">
-            <div class="text-6xl md:text-8xl font-bold mb-5 text-huddle">Close the deal</div>
+		<div class="container mx-auto text-center z-[2]">
+      <div class="text-6xl md:text-8xl font-bold mb-5 text-huddle">Close the deal</div>
 
-            <div class="text-base md:text-xl max-w-4xl mx-auto">
-                Get your Deal from Huddle Global. CTD will get you connected with corporates and Government. If the product is good and can be adopted by respective partners, get your deal closed at Huddle Global.
-            </div>
-        </div>
-
+      <div class="text-base md:text-xl mb-5 max-w-4xl mx-auto">
+				Get your Deal from Huddle Global. CTD will get you connected with corporates and Government. If the product is good and can be adopted by respective partners, get your deal closed at Huddle Global.
+			</div>
+    </div>
 	</section>
 
-    <section class=" px-5">
-		<div class="container mx-auto">
-            <!-- <a class="button  flex text-center mb-10  border rounded-full w-fit px-6 py-1 "  href="/2023/close_the_deal" >Back</a> -->
-                        
-                <div class=" grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 gap-3 ">
 
-                    {investors.map((item) => (
-                        <a  href={item.link??"#"}  class=" items-center justify-center text-center flex ">
 
-                            <div class="p-3 group rounded-md shadow-md  bg-white w-2/3 h-60 md:h-72 md:w-60  flex flex-col relative cursor-pointer">
-                                <div class="rounded-md overflow-hidden">
-                                <img src={item.image} alt="Partner logo  " class=" group-hover:scale-110 duration-500">
-                                </div>
-                                <div class=" text-[#002060] py-8">
-                                    <h1 class=" text-lg text-center uppercase " >{item.title}</h1>
-                                </div>
-                                <div class=" bg-huddle w-fit rounded-full p-1 animate-pulse absolute bottom-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                    ))}
 
-        </div>
-
-            <div class="flex items-end justify-end">
-                <a class=" border border-huddle  flex text-center my-10 rounded-full w-fit px-4 text-sm py-1 "  href="/#tracks" >Back</a>
+ 
+  <div class="grid gap-8 md:grid-cols-2 mx-auto md:w-1/2 container mx-auto pb-24">
+    {tracks1.map((item) => (
+      <a class={"flipbox readmore-wrapper " + ((tracks1.indexOf(item) % 2 == 0) ? "flip-bottom" : "flip-right") } href={item.link??"#"} >
+        <div class="flipbox-wrapper">
+          <div class="flipbox-front" style={ item.image ? "background-image: url("+ item.image +")" : "" } >
+            <h5 class="title">{item.name}</h5>
+          </div>
+          <div class="flipbox-back">
+            <div class=" text-xl">
+              {item.name}
             </div>
-       
-	</section>
-
-  
-
-    <div class="fixed left-0 bottom-12 m-4  z-50 bg-white shadow-md rounded-md   md:w-72 animate__animated  animate__fadeInDown" id="pop_up" style="display: none;">
-        <div class="relative overflow-hidden">
-          <img src="/img/2024/sponsorship.png" alt="Your Image" class=" ">
-          <div class="absolute bottom-0 left-0  text-white md:p-2.5 p-1 bg-cover bg-bottom bg- w-full text-center uppercase md:text-lg text-sm font-bold  bg-sdg1 bg-opacity-90">
-            <div class="flex">
-              <a href="https://forms.zohopublic.com/keralastartupmission/form/SponsorshipHuddleGlobal/formperma/VR8pwlKkgjpOg1pKVUf0i8pgFgXZz9s6VN-vE73-CfI" class=" cursor-pointer border text-sm hover:bg-huddle hover:text-white border-huddle p-2 m-auto text-huddle" target="_blank" >Apply Now</a>
-              <a href="https://drive.google.com/file/d/1-1APY44ZjLZR7Dzs6mz_Lq6FtaYUC6Lx/view?usp=sharing" class="p-2 border border-huddle m-auto text-huddle hover:bg-huddle hover:text-white text-sm cursor-pointer" target="_blank" >Sponsorship Deck</a>
+            <div class="readmore-button">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
             </div>
           </div>
-          
         </div>
+      </a>
+    ))}
+  </div>
+  
+
+	<!-- <section class="">
+    
+		<div class=" mx-auto items-center justify-center px-3">
+			<div class=" flex sm:flex-row flex-col sm:min-h-[50vh] min-h-[80vh] mx-auto justify-center gap-8">
+          
+         <div class="sm:w-1/4 w-full relative shadow-2xl border p-2 overflow-hidden">
+          <a href="/government" target="_blank" class="h-full    group " >
+            <img src="/img/374017-kerala-secretariat 1.png" class=" h-full object-cover">
+            <div class="  mx-auto text-center items-center justify-center flex " >
+             <div class=" bg-white py-2 absolute bottom-0 inset-x-0 md:text-xl   font-bold text-center text-huddle mx-auto flex items-center justify-center ">
+               Government Departments
+             </div>
+           </div>
+           </a>
+         </div>
+          
+         <div class="sm:w-1/4 w-full relative">
+          <a href="/corporate" target="_blank" class="h-full   mx-auto group ">
+            <img src="/img/164326897561f24b6fc923a.jpg" class=" h-full">
+            <div class="  mx-auto text-center items-center justify-center flex " >
+              <div class=" bg-white py-2 absolute bottom-0 inset-x-0 md:text-xl   font-bold text-center text-huddle mx-auto flex items-center justify-center ">
+                Corporates
+              </div>
+            </div>
+           
+          </a>
+         </div>
+
+        </div>
+		</div>
+	</section> -->
+
+
+
+
+  <!-- <section class=" px-5 bg-black  py-24">
+<h1 class=" text-huddle text-xl text-center font-bold mb-10"> Important Dates</h1>
+    <div class="roadmap  w-screen  mx-auto grid sm:grid-cols-5 grid-cols-2">
+      <div class="  flex event">
+        <div class="event">
+          <div class="event-circle">1</div>
+          <div class="event-description">
+            <p class=" w-24 h-24 bg-huddle rounded-full p-2 text-center mx-auto items-center justify-center flex ">25 September 2023</p>
+            <p class=" p-4">Inviting applications from startups</p>
+          </div>
+         </div>
+          <div class="dotted-line w-full flex mx-auto my-auto"></div>
+      </div>
+      
+      <div class="  flex event">
+        <div class="event">
+          <div class="event-circle">2</div>
+          <div class="event-description">
+            <p class=" w-24 h-24 text- bg-huddle rounded-full p-2 text-center mx-auto items-center justify-center flex "> 
+              20 October 2023
+            </p>
+            <p class=" md:p-4 p-1">Last date for submitting  application</p>
+          </div>
+         </div>
+          <div class="dotted-line w-full flex mx-auto my-auto"></div>
+      </div>
+
+      <div class="  flex event">
+        <div class="event">
+          <div class="event-circle">3</div>
+          <div class="event-description">
+            <p class=" w-24 h-24 bg-huddle rounded-full p-2 text-center mx-auto items-center justify-center flex ">21 October 2023</p>
+            <p class=" p-4">Initial Screening from KSUM</p>
+          </div>
+         </div>
+          <div class="dotted-line w-full flex mx-auto my-auto"></div>
+      </div>
+
+      <div class="  flex event">
+        <div class="event">
+          <div class="event-circle">4</div>
+          <div class="event-description">
+            <p class=" w-24 h-24 bg-huddle rounded-full p-2 text-center mx-auto items-center justify-center flex ">25 October 2023
+            </p>
+            <p class=" p-4">Final selection of startups by the Corporates</p>
+          </div>
+         </div>
+          <div class="dotted-line w-full flex mx-auto my-auto"></div>
+      </div>
+
+      <div class="  flex event">
+        <div class="event">
+          <div class="event-circle">5</div>
+          <div class="event-description">
+            <p class=" w-24 h-24 bg-huddle rounded-full p-2 text-center mx-auto items-center justify-center flex ">16 & 17 November 2023
+            </p>
+            <p class=" p-4">Corporate-Startup Matchmaking </p>
+          </div>
+         </div>
+         <div class="w-2/3"></div>
+
+      </div>
+  </div>
+  </section> -->
+
+
+
+    <div class="fixed right-0 bottom-12 m-4  z-50 bg-white shadow-md rounded-md hidden  md:w-72 animate__animated  animate__fadeInDown" id="pop_up">
+        <div class="relative overflow-hidden">
+					<img src="/img/485 (4).png" alt="Your Image" class=" ">
+					<div class="absolute bottom-0 left-0  text-white md:p-2.5 p-1 bg-cover bg-bottom bg- w-full text-center uppercase md:text-lg text-sm font-bold  bg-sdg1 bg-opacity-90">
+            <div class="flex">
+              <a href="https://forms.zohopublic.com/keralastartupmission/form/Sponsorshiphuddle/formperma/zR1bnepv1alAUbFQOEFUL3ylyM6KrBVTP1ZeIWibhmQ" class=" cursor-pointer border text-sm hover:bg-huddle hover:text-white border-huddle p-2 m-auto text-huddle" target="_blank" >Apply Now</a>
+              <a href="https://drive.google.com/file/d/1ihhiF6yWNcfmJ7RpBRV-sJAj-9rBRNCE/view?usp=sharing" class="p-2 border border-huddle m-auto text-huddle hover:bg-huddle hover:text-white text-sm cursor-pointer" target="_blank" >Sponsorship Deck</a>
+            </div>
+          </div>
+         
+				</div>
         <button class="absolute -top-2 -left-2 rounded-full bg-slate-900 text-white " id="closePopup">
           <svg class="h-5 w-5" fill="white" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
-      </div> 
+      </div>
+
 </Layout>
 
 <style lang="scss" is:global>
@@ -125,11 +353,12 @@ let investors = [
     font-family: 'Lato';
     font-size: 16px;
     line-height: 24px;
-    background: black;
     overflow-X: hidden;
     transition: all 0.5s;
+    background: black;
     color: #eee;
   }
+
 
 </style>
 
@@ -142,304 +371,7 @@ let investors = [
   
   </script>
 
-<style is:global>
-    button.collision {
-     text-decoration: none;
-     color: #fff;
-     text-transform: uppercase;
-     font-family: 'Poppins', sans-serif;
-     font-weight: bold;
-     display: block;
-     height: 50px;
-     width: 150px;
-     overflow: hidden;
-     line-height: 50px;
-     text-align: center;
-     position: relative;
-     border: 1px solid #C70000;
-   }
- 
-   button.collision::before,
-   button.collision::after {
-     position: absolute;
-     content: '';
-     width: 20px;
-     height: 20px;
-     background:#C70000;
-     top: 50%;
-     border-radius: 50%;
-     z-index: -1;
-   }
- 
-   button.collision::before {
-     transform: translate(-50%, -50%);
-     left: -20px;
-   }
- 
-   button.collision::after {
-     transform: translate(50%, -50%);
-     right: -20px;
-   }
- 
-   button.collision:hover::before {
-     animation: move-left .8s both;
-     animation-direction: alternate;
-   }
-   button.collision:hover::after {
-     animation: move-right .8s both;
-     animation-direction: alternate;
-   }
- 
-   button.collision:hover{
-     animation: button-color .8s both;
-   }
- 
-   @keyframes button-color {
-     0% {
-       color: #fff;
-     }
-     100% {
-       color: #c70000;
-     }
-   }
- 
-   @keyframes move-left {
-     0% {
-       left: -20px;
-     }
-     50% {
-       left: 50%;
-       width: 20px;
-       height: 20px;
-     }
-     100% {
-       left: 50%;
-       height: 400px;
-       width: 400px;
-     }
-   }
- 
-   @keyframes move-right {
-     0% {
-       right: -20px;
-     }
-     50% {
-       right: 50%;
-       width: 20px;
-       height: 20px;
-     }
-     100% {
-       right: 50%;
-       height: 400px;
-       width: 400px;
-     }
-   }
- 
-   .button{
-     position: relative;
-     display: block;
-     width: 200px;
-     height: 45px;
-     line-height: 40px;
-     color: #fff;
-     font-size: 16px;
-     font-weight: 500;
-     text-align: center;
-     text-transform: uppercase;
-     overflow: hidden;
-     border-radius: 50px;
-     border: 2px solid #c70000;
-     transition: all 2s ease;
- 
-     &:hover{
-       color: #fff;
-       position: relative;
-       z-index: 1;
- 
-       &::before{
-         left: 0%;
-         right: auto;
-         width: 100%;
-         z-index: -1;
-       }
- 
-       &::after{
- 
-       }
-     }
- 
-     &::before{
-       position: absolute;
-       top: 0px;
-       right: 0px;
-       height: 100%;
-       width: 0px;
-       content: '';
-       background: #c70000;
-       transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-     }
- 
-     &::after{
-       content: "";
-       position: absolute;
-       height: 0%;
-       left: 50%;
-       top: 50%;
-       width: 150%;
-       transition: all 0.75s ease 0s;
-     }
-   }
- </style>
- 
- <style is:global>
-   button.collision {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    display: block;
-    height: 50px;
-    width: 150px;
-    overflow: hidden;
-    line-height: 50px;
-    text-align: center;
-    position: relative;
-    border: 1px solid #C70000;
-  }
- 
-  button.collision::before,
-  button.collision::after {
-    position: absolute;
-    content: '';
-    width: 20px;
-    height: 20px;
-    background:#C70000;
-    top: 50%;
-    border-radius: 50%;
-    z-index: -1;
-  }
- 
-  button.collision::before {
-    transform: translate(-50%, -50%);
-    left: -20px;
-  }
- 
-  button.collision::after {
-    transform: translate(50%, -50%);
-    right: -20px;
-  }
- 
-  button.collision:hover::before {
-    animation: move-left .8s both;
-    animation-direction: alternate;
-  }
-  button.collision:hover::after {
-    animation: move-right .8s both;
-    animation-direction: alternate;
-  }
- 
-  button.collision:hover{
-    animation: button-color .8s both;
-  }
- 
-  @keyframes button-color {
-    0% {
-      color: #fff;
-    }
-    100% {
-      color: #c70000;
-    }
-  }
- 
-  @keyframes move-left {
-    0% {
-      left: -20px;
-    }
-    50% {
-      left: 50%;
-      width: 20px;
-      height: 20px;
-    }
-    100% {
-      left: 50%;
-      height: 400px;
-      width: 400px;
-    }
-  }
- 
-  @keyframes move-right {
-    0% {
-      right: -20px;
-    }
-    50% {
-      right: 50%;
-      width: 20px;
-      height: 20px;
-    }
-    100% {
-      right: 50%;
-      height: 400px;
-      width: 400px;
-    }
-  }
- 
-  .button_black{
-    position: relative;
-    display: block;
-    width: 200px;
-    height: 45px;
-    line-height: 40px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
-    overflow: hidden;
-    border-radius: 50px;
-    border: 2px solid #0f0e0e;
-    transition: all 2s ease;
- 
-    &:hover{
-      color: #fff;
-      position: relative;
-      z-index: 1;
- 
-      &::before{
-        left: 0%;
-        right: auto;
-        width: 100%;
-        z-index: -1;
-      }
- 
-      &::after{
- 
-      }
-    }
- 
-    &::before{
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      height: 100%;
-      width: 0px;
-      content: '';
-      background: #0e0d0d;
-      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-    }
- 
-    &::after{
-      content: "";
-      position: absolute;
-      height: 0%;
-      left: 50%;
-      top: 50%;
-      width: 150%;
-      transition: all 0.75s ease 0s;
-    }
-  }
- </style>
- 
+
 
 <script is:inline>
 	function functionshow(d) {
@@ -448,3 +380,41 @@ let investors = [
   
 	}
   </script>
+
+  <style is:global>
+ 
+    .roadmap {
+           
+            justify-content: space-between;
+            align-items: center;
+            
+            padding: 20px;
+           
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .event {
+            text-align: center;
+        }
+
+        .event-circle {
+            width: 30px;
+            height: 30px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            display: none;
+        }
+
+
+        .dotted-line {
+          
+            height: 4px;
+            background: repeating-linear-gradient(to right, #ccc, #ccc 10px, transparent 10px, transparent 20px);
+        }
+    </style>
