@@ -1,15 +1,181 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Navbar from "../../components/Navbar_c.svelte";
+import Layout from '../layouts/Layout.astro';
+import Navbar from "../components/Navbar_c.svelte";
 
 let investors = [
   {
-    "image" : "/img/close_the_deal/landt.png",
-    "link"  :"/close_the_deal/landt",
-    "title":"L&T Digital Energy Solutions"
-  }
-];
+    "image" : "/img/close_the_deal/kssc.png",
+    "link"  :"/close_the_deal_government/office_for_sc",
+    "title":"Asst District Development Officer for SC"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 238.png",
+    "link"  :"/close_the_deal_government/cooperative_department",
+    "title":"Cooperative Department"
 
+  },
+  {
+    "image" : "/img/close_the_deal/Group 212.png",
+    "link"  :"/close_the_deal_government/department_factories_boilers",
+    "title":"Department of Factories and Boilers"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 213.png",
+    "link"  :"/close_the_deal_government/department_education",
+    "title":"Department of General Education"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 215 (1).png",
+    "link"  :"/close_the_deal_government/department_operative",
+    "title":"Department of Cooperation"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 211.png",
+    "link"  :"/close_the_deal_government/department_technical_education",
+    "title":"Directorate of Technical Education Kerala"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 211 (1).png",
+    "link"  :"/close_the_deal_government/industries_centre",
+    "title":"District Industries Centre"
+  },
+  {
+    "image" : "/img/close_the_deal/care.png",
+    "link"  :"/close_the_deal_government/social_justice",
+    "title":"District Social Justice Office, Kasaragod"
+  },
+  {
+    "image" : "/img/close_the_deal/education.png",
+    "link"  :"/close_the_deal_government/education_department",
+    "title":"Education Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 213.png",
+    "link"  :"/close_the_deal_government/general_education_department",
+    "title":"GENERAL EDUCATION DEPARTMENT"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 216.png",
+    "link"  :"/close_the_deal_government/finance_department",
+    "title":"Finance Department , Government Secretariat"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 213.png",
+    "link"  :"/close_the_deal_government/general_education",
+    "title":"GENERAL EDUCATION DEPARTMENT"
+  },
+  {
+    "image" : "/img/close_the_deal/Group.png",
+    "link"  :"/close_the_deal_government/kdisc",
+    "title":"Kerala Development Innovation and Strategic Council"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 218.png",
+    "link"  :"/close_the_deal_government/krwssa",
+    "title":"Kerala Rural Water Supply & Sanitation Agency"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 219.png",
+    "link"  :"/close_the_deal_government/ksad",
+    "title":"Kerala State Audit Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 220.png",
+    "link"  :"/close_the_deal_government/it_mission",
+    "title":"Kerala State IT MISSION"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 222.png",
+    "link"  :"/close_the_deal_government/kerala_tourism",
+    "title":"Kerala Tourism"
+  },
+  {
+    "image" : "/img/close_the_deal/Kochi Metro Rail Ltd",
+    "link"  :"/close_the_deal_government/kochi_metro",
+    "title":"Kochi Metro Rail Ltd"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 224.png",
+    "link"  :"/close_the_deal_government/kuttanad_irrigation",
+    "title":"Kuttanad Development Circle (Irrigation)"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 226.png",
+    "link"  :"/close_the_deal_government/land_revenue",
+    "title":"Land Revenue"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 228.png",
+    "link"  :"/close_the_deal_government/lsgd",
+    "title":"Local Self Government Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 228.png",
+    "link"  :"/close_the_deal_government/lsgd1",
+    "title":"Local Self Government Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 228.png",
+    "link"  :"/close_the_deal_government/lsgd2",
+    "title":"Local Self Government Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 228.png",
+    "link"  :"/close_the_deal_government/lsgd3",
+    "title":"Local Self Government Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 228.png",
+    "link"  :"/close_the_deal_government/lsgd4",
+    "title":"Local Self Government Department"
+  },
+  {
+    "image" : "/img/close_the_deal/mvd.png",
+    "link"  :"/close_the_deal_government/mvd",
+    "title":"Motor Vehicles Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 232.png",
+    "link"  :"/close_the_deal_government/pwd",
+    "title":"Public Works Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 231.png",
+    "link"  :"/close_the_deal_government/pw_irrigation",
+    "title":"PW Irrigation"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 232.png",
+    "link"  :"/close_the_deal_government/pwd_building",
+    "title":"Pwd (Buildings) North Circle Kozhikode"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 233.png",
+    "link"  :"/close_the_deal_government/registration_department",
+    "title":"Registration Department"
+  },
+  {
+    "image" : "/img/close_the_deal/care.png",
+    "link"  :"/close_the_deal_government/rehabilitation",
+    "title":"Rehabilitation of Endosulfan Victims Cell, Kasaragod"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 234.png",
+    "link"  :"/close_the_deal_government/sribs",
+    "title":"Srinivasa Ramanujan Institute for Basic Sciences"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 235.png",
+    "link"  :"/close_the_deal_government/gst",
+    "title":"State GST Department"
+  },
+  {
+    "image" : "/img/close_the_deal/Group 236.png",
+    "link"  :"/close_the_deal_government/vssc",
+    "title":"Vikram Sarabhai Space Centre"
+  }
+  
+];
 
 ---
 <!-- // import MarketingAgenda from "../components/MarketingAgenda.svelte"; -->
@@ -17,97 +183,52 @@ let investors = [
 <Layout>
   <Navbar client:load></Navbar>
 
-	<section class="pt-24 pb-20 px-5 z-[10]  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
-        
-		<div class="absolute z-[1] w-full h-full top-0 left-0 bg-black bg-opacity-40"></div>
-        
-		<div class="container mx-auto text-center z-[2] pt-10">
-            <div class=" absolute left-0 px-2">
-                <a class=" border border-huddle  flex text-center my-10 rounded-full w-fit px-4 text-sm py-1 "  href="/close_the_deal/Vedanta" >Back</a>
-            </div>
-            <div class="text-base font-bold mb-5 text-huddle"><span class="text-2xl">&#x2022</span>&nbsp; Close the deal</div>
-            
-            <div class="text-base md:text-3xl mb-5 max-w-4xl mx-auto">
-                Hindustan Zinc Limited (HZL), Vedanta Resources' copper and Vedanta Zinc International (VZI) ,by Vedanta Spark
+  
 
-            </div>
-            <div class="text-base md:text-lg max-w-5xl mx-auto">
-                <p>
-                    Seeking startups with expertise in drone-based surveys for confined spaces, shaft rope and conveyor belt health monitoring, and smart safety chatbots. Focus areas include blend optimization, automated thickener clarity measurement, process optimization for hydro plants, roaster airflow CFD, and utility efficiency monitoring for improved operational performance and safety.
-                </p>
+	<section class="pt-24 pb-20 px-5 z-[10]  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
+		<div class="absolute z-[1] w-full h-full top-0 left-0 bg-black bg-opacity-40"></div>
+
+		<div class="container mx-auto text-center z-[2] pt-10">
+            <div class="text-6xl md:text-8xl font-bold mb-5 text-huddle">Close the deal</div>
+
+            <div class="text-base md:text-xl max-w-4xl mx-auto">
+                Get your Deal from Huddle Global. CTD will get you connected with corporates and Government. If the product is good and can be adopted by respective partners, get your deal closed at Huddle Global.
             </div>
         </div>
 
-       
 	</section>
 
     <section class=" px-5">
 		<div class="container mx-auto">
-            <div class="text-base font-bold  text-huddle"><span class="text-2xl">&#x2022</span>&nbsp; Corporate Problem Statements/Focus Areas</div>
+            <!-- <a class="button  flex text-center mb-10  border rounded-full w-fit px-6 py-1 "  href="/2023/close_the_deal" >Back</a> -->
+                        
+                <div class=" grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 gap-3 ">
 
-            <div class="flex md:flex-row flex-col gap-4 ">
-              <div class="md:w-2/3 w-full">
-                <section  class="max-w-3xl mx-auto py-12 px-4">
-                    <ul class=" list-outside list-disc">
+                    {investors.map((item) => (
+                        <a  href={item.link??"#"}  class=" items-center justify-center text-center flex ">
 
-                      
-                        <li class="text-lg padding1">
-                            Drone based survey in confined spaces.
+                            <div class="p-3 group rounded-md shadow-md  bg-white w-2/3 h-60 md:h-72 md:w-60  flex flex-col relative cursor-pointer">
+                                <div class="rounded-md overflow-hidden">
+                                <img src={item.image} alt="Partner logo  " class=" group-hover:scale-110 duration-500">
+                                </div>
+                                <div class=" text-[#002060] py-8">
+                                    <h1 class=" text-lg text-center uppercase " >{item.title}</h1>
+                                </div>
+                                <div class=" bg-huddle w-fit rounded-full p-1 animate-pulse absolute bottom-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    ))}
 
-                        </li>
-                        <li class="text-lg padding1">
-                            Shaft rope health monitoring.
-                        </li>
-                      <li class="text-lg padding1">
-
-                            Smart Safety based chatbot.
-                        </li>
-                      <li class="text-lg padding1">
-
-                            Conveyor belt health monitoring.
-                        </li>
-                     <li class="text-lg padding1">
-
-                        Blend Optimization
-                       </li>
-                     <li class="text-lg padding1">
-
-                        Automatic Thickener Clarity Measurement
-                       </li>
-                     <li class="text-lg padding1">
-
-                        Optimization of Roaster, Acid treatment and other Plants in hydro line
-                       </li>
-                     <li class="text-lg padding1">
-
-                        Roaster Air flow CFD 
-                       </li>
-                     <li class="text-lg padding1">
-
-                        Efficiency monitoring for Utilities
-
-                       </li>
-
-
-                    </ul>
-                    <div class="flex items-center justify-center">
-                        <a href="https://zfrmz.com/qAihdZG9CIoGj8NZehk7" target="_blank" class="button  flex text-center my-10 items-center  border rounded-full w-fit px-8 text-sm "  >Apply Now</a>
-        
-                    </div>
-                </section>
-              </div>
-                <div class="md:w-1/3 w-full">
-                    <img src="/img/close_the_deal/img1.png">
-                </div>
-            </div>
-  
+        </div>
 
             <div class="flex items-end justify-end">
-                <a class=" border border-huddle  flex text-center my-10 rounded-full w-fit px-4 text-sm py-1 "  href="/close_the_deal/Vedanta" >Back</a>
+                <a class=" border border-huddle  flex text-center my-10 rounded-full w-fit px-4 text-sm py-1 "  href="/close_the_deal" >Back</a>
             </div>
-			
-		</div>
-  
+       
 	</section>
 
   
@@ -152,14 +273,6 @@ let investors = [
 
   
   </script>
-
-
-<style>
-    .padding1 {
-        padding-bottom: 10px;
-    }
-</style>
-
 
 <style is:global>
     button.collision {
