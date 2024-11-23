@@ -11,31 +11,31 @@
     {
       name: "Registration",
       icon: ClipboardList,
-      campaign_id: "pL8WjH66WUxffoYRroSmFS3z",
+      campaign_id: "KKbSKG3UQcNTuxfvKYMJ9RQs",
       journey: "feedback",
     },
     {
       name: "Parking",
       icon: Car,
-      campaign_id: "pL8WjH66WUxffoYRroSmFS3z",
+      campaign_id: "3YCLyamjeNJPAQKePN3dFJ3H",
       journey: "feedback",
     },
     {
       name: "Washroom",
       icon: Bath,
-      campaign_id: "pL8WjH66WUxffoYRroSmFS3z",
+      campaign_id: "NcS2T4zwEbud7sbB3N4VUPW6",
       journey: "feedback",
     },
     {
       name: "Food",
       icon: Utensils,
-      campaign_id: "pL8WjH66WUxffoYRroSmFS3z",
+      campaign_id: "oraECAR8M8aoVcQ4L8vr7iNn",
       journey: "feedback",
     },
     {
       name: "Sound System",
       icon: MicVocal,
-      campaign_id: "pL8WjH66WUxffoYRroSmFS3z",
+      campaign_id: "bqVKjTkjbo6fvao8qoNLTXrR",
       journey: "feedback",
     },
     {
