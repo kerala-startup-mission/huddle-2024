@@ -203,7 +203,7 @@ let tracks1 = [
 
 
  
-  <div class="grid gap-8 md:grid-cols-2 mx-auto md:w-1/2 container mx-auto pb-24">
+  <div class="grid gap-8 md:grid-cols-2 mx-auto md:w-1/2 container mx-auto pb-24 px-5">
     {tracks1.map((item) => (
       <a class={"flipbox readmore-wrapper " + ((tracks1.indexOf(item) % 2 == 0) ? "flip-bottom" : "flip-right") } href={item.link??"#"} >
         <div class="flipbox-wrapper">

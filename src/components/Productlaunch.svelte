@@ -140,14 +140,7 @@
               {item.attributes.name}
             </div>
           </div>
-          <div class="pt-2">
-            <div
-              class="text-white w-full text-start text-xs flex font-normal"
-              style="font-family: Jost, sans-serif;"
-            >
-              {item.attributes.sector}
-            </div>
-          </div>
+         
           <div
             class="h-0.5 bg-white bg-opacity-50 bottom-6 absolute z-[10] group-hover:bg-huddle w-full"
           >
@@ -195,14 +188,7 @@
           {item.attributes.name}
         </div>
       </div>
-      <div class="pt-2">
-        <div
-          class="text-white w-full text-start text-xs flex font-normal"
-          style="font-family: Jost, sans-serif;"
-        >
-          {item.attributes.sector}
-        </div>
-      </div>
+     
       <div
         class="h-0.5 bg-white bg-opacity-50 bottom-6 absolute z-[10] group-hover:bg-huddle w-full"
       >

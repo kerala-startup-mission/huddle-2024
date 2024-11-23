@@ -115,7 +115,7 @@
       </button>
   
       {#if showSectors}
-        <div class=" left-0 z-10 bg-white shadow-lg rounded mt-2 w-1/2 h-52 overflow-x-hidden overflow-y-scroll">
+        <div class=" left-0 z-10 bg-white shadow-lg rounded mt-2 md:w-1/3 sm:w-2/3 w-full h-52 overflow-x-hidden overflow-y-scroll">
           {#each sectors as sector}
             <div
               on:click={() => selectSector(sector)}
