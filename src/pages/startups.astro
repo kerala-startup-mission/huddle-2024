@@ -1,17 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layoutapp.astro';
 import Navbar from "../components/Navbar_c.svelte";
 
 let tracks1 = [
 {
-  "image": "/img/close_the_deal/gov.png",
-  "link":"/government",
-  "name": "Government Departments"
+  "image": "/img/launch.png",
+  "link":"/product_launch",
+  "name": "Product Launch"
  },
  {
-  "image": "/img/close_the_deal/164326897561f24b6fc923a.jpg",
-  "link":"/corporate",
-  "name": "Corporates"
+  "image": "/img/21.png",
+  "link":"/product_expo",
+  "name": "Product Expo",
+ 
  }
 
  
@@ -103,7 +104,7 @@ let tracks1 = [
           transform-style: preserve-3d;
           perspective: inherit;
           backface-visibility: hidden;
-          font-size: 35px;
+          font-size: 40px;
           font-weight: 900;
           line-height: 1.2;
           text-shadow: 2px 2px 3px rgba(0, 0, 0, .75);
@@ -187,14 +188,13 @@ let tracks1 = [
     <Navbar client:load></Navbar>
 
 
-	<section class=" bg-black pt-32 pb-10  px-5  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
+	<section class=" bg-black  pt-32 px-5  min-h-[50vh] flex flex-col justify-center items-center overflow-hidden relative">
 		<div class="absolute z-[1] w-full h-full top-0 left-0 bg-black bg-opacity-40"></div>
 
 		<div class="container mx-auto text-center z-[2]">
-      <div class="text-6xl md:text-7xl font-bold mb-5 text-huddle">Close the deal</div>
+      <div class="text-4xl md:text-6xl font-bold mb-5 text-huddle">Huddle Global 2024 Expo</div>
 
       <div class="text-base md:text-xl mb-5 max-w-4xl mx-auto">
-				Get your Deal from Huddle Global. CTD will get you connected with corporates and Government. If the product is good and can be adopted by respective partners, get your deal closed at Huddle Global.
 			</div>
     </div>
 	</section>
@@ -224,9 +224,6 @@ let tracks1 = [
       </a>
     ))}
   </div>
-  
-
-
 
     <div class="fixed right-0 bottom-12 m-4  z-50 bg-white shadow-md rounded-md hidden  md:w-72 animate__animated  animate__fadeInDown" id="pop_up">
         <div class="relative overflow-hidden">
