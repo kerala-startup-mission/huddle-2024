@@ -147,7 +147,7 @@
             <div class="py-2 text-white" style="font-family: Jost, sans-serif;">
                 <div class="text-xs flex gap-4 pt-1">
                    
-                        <div class=" text-white">view</div>
+                        <div class=" text-black">view</div>
                         <div class="w-fit rounded-full bg-black group-hover:bg-huddle duration-500 p-1">
                         <span>
                             <svg

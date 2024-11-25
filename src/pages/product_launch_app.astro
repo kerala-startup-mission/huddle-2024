@@ -7,17 +7,12 @@ import Productexpo from '../components/Productlaunchapp.svelte';
 
 <Layout title="Kerala Startup Mission">
 
-    <div class="min-h-screen pt-8 md:pt-40 bg-[#f7f3f3]">
-        
-        <div class="container mx-auto text-center z-[2]">
-            <div class="text-4xl md:text-6xl font-bold  text-huddle">Product Expo</div>
-           
-            <section class="px-5  pb-24  pt-10 bg-[#f7f3f3]" id="tracks">
-               
-                <div class="container mx-auto">
-                    <Productexpo client:load></Productexpo>
-                </div>
-            </section>
+    <div class="min-h-screen  bg-[#f7f3f3]">
+      <section class="px-5  pb-24  pt-3 bg-[#f7f3f3]" id="tracks">
+          <div class="container mx-auto">
+              <Productexpo client:load></Productexpo>
+          </div>
+      </section>
     </div>
 
 
