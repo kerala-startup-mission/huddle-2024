@@ -57,27 +57,25 @@
       }
     }
   
-    async function getData() {
+     async function getData() {
       loading = true;
-  
-      try {
-        const response = await axios.get(
-          `https://cms.startupmission.in/api/productexpo2024s?populate=*&pagination[page]=${page}&pagination[pageSize]=100`
-        );
-        newBatch = response.data.data;
-        meta = response.data.meta;
-        loading = false;
-  
-        // Populate sectors
-        const uniqueSectors = [
-          ...new Set(response.data.data.map(item => item.attributes.sector)),
-        ];
-        sectors = ['All', ...uniqueSectors];
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        loading = false;
+        try {
+          const response = await axios.get(
+            `https://cms.startupmission.in/api/productexpo2024s?populate=*&pagination[page]=${page}&pagination[pageSize]=100`
+          );
+          newBatch = response.data.data;
+          meta = response.data.meta;
+          loading = false;
+          const uniqueSectors = [
+            ...new Set(response.data.data.map(item => item.attributes.sector)),
+          ].sort((a, b) => a.localeCompare(b)); // Sort sectors alphabetically
+          sectors = ['All', ...uniqueSectors];
+        } 
+        catch (error) {
+          console.error('Error fetching data:', error);
+          loading = false;
+        }
       }
-    }
   
     onMount(async () => {
       is_react = window.ReactNativeWebView && window.ReactNativeWebView.postMessage;
