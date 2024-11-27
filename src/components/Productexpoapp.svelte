@@ -57,25 +57,28 @@
       }
     }
   
-     async function getData() {
-      loading = true;
-        try {
-          const response = await axios.get(
-            `https://cms.startupmission.in/api/productexpo2024s?populate=*&pagination[page]=${page}&pagination[pageSize]=100`
-          );
-          newBatch = response.data.data;
-          meta = response.data.meta;
-          loading = false;
-          const uniqueSectors = [
-            ...new Set(response.data.data.map(item => item.attributes.sector)),
-          ].sort((a, b) => a.localeCompare(b)); // Sort sectors alphabetically
-          sectors = ['All', ...uniqueSectors];
-        } 
-        catch (error) {
-          console.error('Error fetching data:', error);
-          loading = false;
-        }
-      }
+    async function getData() {
+  loading = true;
+  try {
+    const response = await axios.get(
+      `https://cms.startupmission.in/api/productexpo2024s?populate=*&pagination[page]=${page}&pagination[pageSize]=100`
+    );
+    newBatch = response.data.data.sort((a, b) => {
+      const stallA = parseInt(a.attributes.stall_number, 10);
+      const stallB = parseInt(b.attributes.stall_number, 10);
+      return stallA - stallB; // Ascending order
+    });
+    meta = response.data.meta;
+    loading = false;
+    const uniqueSectors = [
+      ...new Set(response.data.data.map(item => item.attributes.sector)),
+    ].sort((a, b) => a.localeCompare(b)); // Sort sectors alphabetically
+    sectors = ['All', ...uniqueSectors];
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    loading = false;
+  }
+}
   
     onMount(async () => {
       is_react = window.ReactNativeWebView && window.ReactNativeWebView.postMessage;
@@ -158,31 +161,34 @@
               {item.attributes.sector}
             </div>
           </div>
-          <div
-            class="h-0.5 bg-black bg-opacity-50 bottom-6 absolute z-[10] group-hover:bg-huddle w-full"
-          >
-            <div class="py-2 text-white" style="font-family: Jost, sans-serif;">
-              <div class="text-xs flex gap-4 pt-1">
-                <div class=" text-black">Read More</div>
-                <div class="w-fit rounded-full bg-black group-hover:bg-huddle duration-500 p-1">
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                      />
-                    </svg>
-                  </span>
+          <div class="bottom-6 absolute w-full">
+            <div class="h-0.5 bg-black bg-opacity-50  z-[10] group-hover:bg-huddle w-full">
+              <div class="py-2 text-black" style="font-family: Jost, sans-serif;">
+                <div class="text-xs flex gap-4 pt-1">
+                  <div>Read More</div>
+                  <div class="w-fit rounded-full bg-black group-hover:bg-huddle duration-500 p-1">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </div>
+            </div>
+            <div class=" absolute right-0 text-black">
+              Stall Number - {item.attributes.stall_number}
             </div>
           </div>
         </div>
@@ -214,12 +220,6 @@
       </div>
     {/if}
   </div>
-  
-  {#if popup_open}
-    <!-- Popup Content -->
-    <!-- Content code remains the same -->
-  {/if}
-  
   
   {#if popup_open}
     <div>
@@ -257,9 +257,12 @@
                     <div class=" text-xs italic text-start items-start justify-start">
                         {item.attributes.sector}
                     </div>
+                    <div class="  text-black text-sm items-end justify-end flex flex-col w-full">
+                      Stall Number - {item.attributes.stall_number}
+                    </div>
                   </div>
                 </div>
-                
+               
                 <div class=" items-end justify-end flex ">
                     <button
                     on:click={() => chatMessage(item)}
